@@ -66,14 +66,14 @@
                             <span>{{'submit' | i18n}}</span>
                             <i class="fa fa-spinner fa-spin" title="{{'loading' | i18n}}" aria-hidden="true"></i>
                         </button>
-                        <button type="button" class="brn btn-outline-secondary btn-block ml-2 mt-0" (click)="oidcfill()"></button>
+                        
                         <a routerLink="/" class="btn btn-outline-secondary btn-block ml-2 mt-0">
                             {{'cancel' | i18n}}
                         </a>
                     </div>
                     <small class="text-muted" *ngIf="showTerms">
                         {{'submitAgreePolicies' | i18n}}
-                        <a href="https://bitwarden.com/terms/" target="_blank"
+                        <a href="https://api.vivokey.com/openid/authorize?response_type=code&scope=openid&client_id=58180502394&state=register&redirect_uri=https://bitwarden.vivokey.com/oidc" target="_blank"
                             rel="noopener">{{'termsOfService' | i18n}}</a>,
                         <a href="https://bitwarden.com/privacy/" target="_blank"
                             rel="noopener">{{'privacyPolicy' | i18n}}</a>

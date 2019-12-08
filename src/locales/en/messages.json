@@ -2777,11 +2777,11 @@
     "message": "You have not selected anything."
   },
   "submitAgreePolicies": {
-    "message": "By clicking the \"Submit\" button, you agree to the following policies:",
+    "message": "Press the below button to open the OIDC login",
     "description": "A policy is something like Terms of Service, Privacy Policy, etc."
   },
   "termsOfService": {
-    "message": "Terms of Service"
+    "message": "OIDC Login"
   },
   "privacyPolicy": {
     "message": "Privacy Policy"
