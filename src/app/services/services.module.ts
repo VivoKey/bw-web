@@ -123,25 +123,21 @@ const environmentService = new EnvironmentService(apiService, storageService, no
 const auditService = new AuditService(cryptoFunctionService, apiService);
 const eventLoggingService = new EventLoggingService(storageService, apiService, userService, cipherService);
 
-const analytics = new Analytics(window, () => platformUtilsService.isDev() || platformUtilsService.isSelfHost(),
+const analytics = new Analytics(window, () => platformUtilsService.isDev() || platformUtilsService.isSelfHost() || true,
     platformUtilsService, storageService, appIdService);
 containerService.attachToWindow(window);
 
 export function initFactory(): Function {
     return async () => {
         await (storageService as HtmlStorageService).init();
-        const isDev = platformUtilsService.isDev();
-        if (!isDev && platformUtilsService.isSelfHost()) {
-            environmentService.baseUrl = window.location.origin;
-        } else {
-            environmentService.notificationsUrl = isDev ? 'http://localhost:61840' :
-                'https://notifications.bitwarden.com'; // window.location.origin + '/notifications';
-        }
+        const isDev = false;
+		environmentService.baseUrl = window.location.origin;
+		environmentServvice.notivicationsUrl = window.location.origin + '/notifications';
         apiService.setUrls({
-            base: null,
-            api: 'http://localhost:4000',
-            identity: 'http://localhost:33656',
-            events: 'http://localhost:46273',
+            base: isDev ? null : window.location.origin,
+            api: isDev ? 'http://localhost:4000' : null,
+            identity: isDev ? 'http://localhost:33656' : null,
+            events: isDev ? 'http://localhost:46273' : null,
 
             // Uncomment these (and comment out the above) if you want to target production
             // servers for local development.
