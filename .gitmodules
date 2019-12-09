@@ -1,4 +1,0 @@
-[submodule "jslib"]
-	path = jslib
-	url = https://github.com/VivoKey/jslib.git
-	branch = master
