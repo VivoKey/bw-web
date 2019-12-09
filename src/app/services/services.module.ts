@@ -132,7 +132,7 @@ export function initFactory(): Function {
         await (storageService as HtmlStorageService).init();
         const isDev = false;
 		environmentService.baseUrl = window.location.origin;
-		environmentServvice.notivicationsUrl = window.location.origin + '/notifications';
+		environmentService.notivicationsUrl = window.location.origin + '/notifications';
         apiService.setUrls({
             base: isDev ? null : window.location.origin,
             api: isDev ? 'http://localhost:4000' : null,
