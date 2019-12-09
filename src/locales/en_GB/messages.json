@@ -2777,7 +2777,7 @@
     "message": "You have not selected anything."
   },
   "submitAgreePolicies": {
-    "message": "Press the below button to open the OIDC login",
+    "message": "You agree not to be a ding-dong.",
     "description": "A policy is something like Terms of Service, Privacy Policy, etc."
   },
   "termsOfService": {
