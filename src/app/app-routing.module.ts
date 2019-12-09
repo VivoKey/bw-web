@@ -86,6 +86,8 @@ import { AuthGuardService } from 'jslib/angular/services/auth-guard.service';
 
 import { OrganizationUserType } from 'jslib/enums/organizationUserType';
 
+import { OIDCComponent } from './components/oidc.component';
+
 const routes: Routes = [
     {
         path: '',
@@ -93,6 +95,11 @@ const routes: Routes = [
         children: [
             { path: '', pathMatch: 'full', component: LoginComponent, canActivate: [UnauthGuardService] },
             { path: '2fa', component: TwoFactorComponent, canActivate: [UnauthGuardService] },
+            {
+                path: 'oidc', component: OIDCComponent,
+                canActivate: [UnauthGuardService],
+                data: { titleId: 'oidc' }
+            },
             {
                 path: 'register', component: RegisterComponent,
                 canActivate: [UnauthGuardService],

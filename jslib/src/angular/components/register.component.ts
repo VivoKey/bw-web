@@ -65,8 +65,7 @@ export class RegisterComponent {
         window.open("https://api.vivokey.com/openid/authorize?response_type=code&scope=openid&client_id=58180502394&state=register&redirect_uri=https://bitwarden.vivokey.com/oidc");
     }
     async submit() {
-        this.platformUtilsService.launchUri("https://api.vivokey.com/openid/authorize?response_type=code&scope=openid&client_id=58180502394&state=register&redirect_uri=https://bitwarden.vivokey.com/oidc");
-        if (this.email == null || this.email === '') {
+            if (this.email == null || this.email === '') {
             this.platformUtilsService.showToast('error', this.i18nService.t('errorOccurred'),
                 this.i18nService.t('emailRequired'));
             return;
