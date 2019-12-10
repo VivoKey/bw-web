@@ -365,6 +365,7 @@ registerLocaleData(localeZhTw, 'zh-TW');
         VerifyEmailTokenComponent,
         VerifyRecoverDeleteComponent,
         WeakPasswordsReportComponent,
+        OIDCComponent,
     ],
     entryComponents: [
         AddEditComponent,
