@@ -9,7 +9,7 @@ import { I18nService } from 'jslib/abstractions/i18n.service';
 import { PlatformUtilsService } from 'jslib/abstractions/platformUtils.service';
 @Component({
     selector: 'app-register',
-    
+    templateUrl: '../layouts/frontend-layout.component.html',
 })
 export class OIDCComponent implements OnInit {
     oidcstate = '';
