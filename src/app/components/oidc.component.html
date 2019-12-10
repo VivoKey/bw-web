@@ -1,0 +1,22 @@
+<form #form (ngSubmit)="submit()" [appApiAction]="formPromise" class="container" ngNativeValidate>
+    <div class="row justify-content-md-center mt-5">
+        <div class="col-5">
+            <img src="../../images/logo-dark@2x.png" class="logo mb-2" alt="Bitwarden">
+            <p class="lead text-center mx-4 mb-4">{{'loginOrCreateNewAccount' | i18n}}</p>
+            <div class="card d-block">
+                <div class="card-body">
+                    
+                    
+                    <hr>
+                    <div class="d-flex">
+                        
+                        <a href="http://api.vivokey.com/openid/authorize?response_type=code&scope=openid%20email%20profile&client_id=58180502394&state=register&redirect_uri=https://bitwarden.vivokey.com/%23/oidc"
+                            class="btn btn-outline-secondary btn-block ml-2 mt-0">
+                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i> {{'createAccount' | i18n}}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
