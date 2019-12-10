@@ -11,7 +11,6 @@ import { I18nService } from '../../abstractions/i18n.service';
 import { PlatformUtilsService } from '../../abstractions/platformUtils.service';
 import { StateService } from '../../abstractions/state.service';
 import { StorageService } from '../../abstractions/storage.service';
-
 import { ConstantsService } from '../../services/constants.service';
 
 import { Utils } from '../../misc/utils';
@@ -34,6 +33,7 @@ export class LoginComponent implements OnInit {
 
     protected twoFactorRoute = '2fa';
     protected successRoute = 'vault';
+    
 
     constructor(protected authService: AuthService, protected router: Router,
         protected platformUtilsService: PlatformUtilsService, protected i18nService: I18nService,

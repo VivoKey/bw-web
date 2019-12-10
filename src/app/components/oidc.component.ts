@@ -2,33 +2,31 @@ import {
     Input,
     OnInit,
 } from '@angular/core';
-import { Router, ActivatedRoute, NavigationExtras } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { AuthResult } from '../../models/domain/authResult';
-
-import { AuthService } from '../../abstractions/auth.service';
-import { I18nService } from '../../abstractions/i18n.service';
-import { PlatformUtilsService } from '../../abstractions/platformUtils.service';
-import { StateService } from '../../abstractions/state.service';
-import { StorageService } from '../../abstractions/storage.service';
-
-import { ConstantsService } from '../../services/constants.service';
-
-import { Utils } from '../../misc/utils';
 export class OIDCComponent implements OnInit {
     oidcstate = '';
     oidccode = '';
-    constructor(private route: ActivatedRoute, private router: Router) {}
+    oidctok = '';
+    headers: new HttpHeaders({
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Authorization: Basic ': "NTgxODA1MDIzOTQ6ZmRlYjEzYzJhMzQzNDdhY2NjYTkxOWQzZjVhZmQ2MWMzZjM3ZmJlNjRmYzNlYTMyNTQ2ZDgxZGM"
+    })
+    constructor(private route: ActivatedRoute, private router: Router, private http: HttpClient) {}
 
 
-    ngOnInit() {
-        this.oidcstate = this.route.snapshot.params.state;
-        this.oidccode = this.route.snapshot.params.code;
-        let navExtra: NavigationExtras = {
-            queryParams: {
-                // TODO: get the oidc access token via code, then get user details and pre-fill the reg form (somehow getting a password!)
-            }
-        }
-        }
+ngOnInit() {
+    this.snap = this.route.snapshot.params;
+    this.oidcstate = this.snap.state;
+    this.oidccode = this.snap.code;
+        // TODO: get the oidc access token via code, then get user details and pre-fill the reg form (somehow getting a password!)
+    this.http.post("https://api.vivokey.com/openid/token/", "redirect_uri=https://bitwarden.vivokey.com/oidc&grant_type=authorization_code&code=" + this.oidccode, this.headers)
+        .subscribe(
+            (jstok: string) => { this.oidctok = JSON.parse(jstok) },
+            () => { continue; },
+            () => {
+                this.router.navigate(["/login", "&access_token="+this.oidctok.access_token]);
+            });
     }
 }
