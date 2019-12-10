@@ -100,7 +100,6 @@ const routes: Routes = [
             },
             {
                 path: 'register', component: RegisterComponent,
-                canActivate: [UnauthGuardService],
                 data: { titleId: 'createAccount' },
             },
             {
