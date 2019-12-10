@@ -26,7 +26,7 @@ ngOnInit() {
         }
     });
     
-    headers: new HttpHeaders({
+    this.headers = new HttpHeaders({
         'Content-Type': 'application/x-www-form-urlencoded',
         'Authorization: Basic ': "NTgxODA1MDIzOTQ6ZmRlYjEzYzJhMzQzNDdhY2NjYTkxOWQzZjVhZmQ2MWMzZjM3ZmJlNjRmYzNlYTMyNTQ2ZDgxZGM"
     });
