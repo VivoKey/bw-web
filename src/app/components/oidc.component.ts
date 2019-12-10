@@ -10,31 +10,30 @@ export class OIDCComponent implements OnInit {
     oidccode = '';
     oidctok = {"access_token":''};
     headers: {};
-    snap: {
-        "state": "",
-        "code": ""
-    };
 constructor(private route: ActivatedRoute, private router: Router, private http: HttpClient) { }
 
 
 ngOnInit() {
-    this.snap = this.route.snapshot.params;
-    if (this.snap.state != null) {
-        this.oidcstate = this.snap.state;
-    }
-    if (this.snap.code != null) {
-        this.oidccode = this.snap.code;
-    }
+    const queryParamsSub = this.route.queryParams.subscribe((qParams) => {
+        if (qParams.state != null) {
+            this.oidcstate = qParams.state;
+        }
+        if (qParams.code != null) {
+            this.oidccode = qParams.code;
+        }
+        if (queryParamsSub != null) {
+            queryParamsSub.unsubscribe();
+        }
+    });
     
     headers: new HttpHeaders({
         'Content-Type': 'application/x-www-form-urlencoded',
         'Authorization: Basic ': "NTgxODA1MDIzOTQ6ZmRlYjEzYzJhMzQzNDdhY2NjYTkxOWQzZjVhZmQ2MWMzZjM3ZmJlNjRmYzNlYTMyNTQ2ZDgxZGM"
     });
-        // TODO: get the oidc access token via code, then get user details and pre-fill the reg form (somehow getting a password!)
     this.http.post("https://api.vivokey.com/openid/token/", "redirect_uri=https://bitwarden.vivokey.com/oidc&grant_type=authorization_code&code=" + this.oidccode, this.headers)
         .subscribe(
             (jstok: string) => { this.oidctok = JSON.parse(jstok) },
-            () => { this.router.navigate("")},
+            () => { this.router.navigate("/login")},
             () => {
                 this.router.navigate(["/login", "&access_token="+this.oidctok.access_token]);
             });
