@@ -28,7 +28,7 @@ ngOnInit() {
     
     this.headers = new HttpHeaders({
         'Content-Type': 'application/x-www-form-urlencoded',
-        'Authorization: Basic ': "NTgxODA1MDIzOTQ6ZmRlYjEzYzJhMzQzNDdhY2NjYTkxOWQzZjVhZmQ2MWMzZjM3ZmJlNjRmYzNlYTMyNTQ2ZDgxZGM"
+        'Authorization': "Basic NTgxODA1MDIzOTQ6ZmRlYjEzYzJhMzQzNDdhY2NjYTkxOWQzZjVhZmQ2MWMzZjM3ZmJlNjRmYzNlYTMyNTQ2ZDgxZGM"
     });
     this.http.post("https://api.vivokey.com/openid/token/", "redirect_uri=https://bitwarden.vivokey.com/%23/oidc&grant_type=authorization_code&code=" + this.oidccode, this.headers)
         .subscribe(
