@@ -16,6 +16,7 @@ export class OIDCComponent implements OnInit {
     oidccode = '';
     oidctok = {"access_token":''};
     headers: {};
+    formPromise: Promise<any>;
     constructor(private route: ActivatedRoute, private router: Router, private http: HttpClient, protected i18nService: I18nService, protected platformUtilsService: PlatformUtilsService) { }
 
 
@@ -48,5 +49,9 @@ ngOnInit() {
             () => {
                 this.router.navigate(["register", "&access_token="+this.oidctok.access_token]);
             });
+}
+    submit() {
+        // Does nothing
+        return;
     }
 }
