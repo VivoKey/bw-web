@@ -21,9 +21,13 @@ import { RegisterComponent as BaseRegisterComponent } from 'jslib/angular/compon
 export class RegisterComponent extends BaseRegisterComponent {
     showCreateOrgMessage = false;
     showTerms = true;
-    protected headers;
+    protected headers: {};
     protected oidctoken = '';
-    protected jsoninfo;
+    protected jsoninfo: {
+        "email": "",
+        "full_name": "",
+        "sub": ""
+    };
 
     constructor(authService: AuthService, router: Router,
         i18nService: I18nService, cryptoService: CryptoService,
