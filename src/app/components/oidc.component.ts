@@ -1,12 +1,16 @@
 import {
     Input,
     OnInit,
+    Component,
 } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { I18nService } from 'jslib/abstractions/i18n.service';
 import { PlatformUtilsService } from 'jslib/abstractions/platformUtils.service';
-
+@Component({
+    selector: 'app-register',
+    templateUrl: 'register.component.html',
+})
 export class OIDCComponent implements OnInit {
     oidcstate = '';
     oidccode = '';
