@@ -96,9 +96,7 @@ const routes: Routes = [
             { path: '', pathMatch: 'full', component: LoginComponent, canActivate: [UnauthGuardService] },
             { path: '2fa', component: TwoFactorComponent, canActivate: [UnauthGuardService] },
             {
-                path: 'oidc', component: OIDCComponent,
-                canActivate: [UnauthGuardService],
-                data: { titleId: 'oidc' }
+                path: 'oidc', component: OIDCComponent
             },
             {
                 path: 'register', component: RegisterComponent,
