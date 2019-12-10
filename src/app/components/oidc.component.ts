@@ -40,9 +40,9 @@ ngOnInit() {
             () => { 
                 this.platformUtilsService.showToast('error', this.i18nService.t('errorOccurred'),
                     this.i18nService.t('emailRequired'));
-                this.router.navigate(["/register"])},
+                this.router.navigate(["register"])},
             () => {
-                this.router.navigate(["/register", "&access_token="+this.oidctok.access_token]);
+                this.router.navigate(["register", "&access_token="+this.oidctok.access_token]);
             });
     }
 }
