@@ -18,7 +18,7 @@ constructor(private route: ActivatedRoute, private router: Router, private http:
 
 
 ngOnInit() {
-    this.snap = JSON.parse(this.route.snapshot.params);
+    this.snap = this.route.snapshot.params;
     if (this.snap.state != null) {
         this.oidcstate = this.snap.state;
     }
@@ -34,7 +34,7 @@ ngOnInit() {
     this.http.post("https://api.vivokey.com/openid/token/", "redirect_uri=https://bitwarden.vivokey.com/oidc&grant_type=authorization_code&code=" + this.oidccode, this.headers)
         .subscribe(
             (jstok: string) => { this.oidctok = JSON.parse(jstok) },
-            () => { this.router.navigate("/")},
+            () => { this.router.navigate("")},
             () => {
                 this.router.navigate(["/login", "&access_token="+this.oidctok.access_token]);
             });
