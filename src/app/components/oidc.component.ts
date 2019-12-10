@@ -8,16 +8,24 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class OIDCComponent implements OnInit {
     oidcstate = '';
     oidccode = '';
-    oidctok = '';
-    headers;
-    snap;
+    oidctok = {"access_token":''};
+    headers: {};
+    snap: {
+        "state": "",
+        "code": ""
+    };
 constructor(private route: ActivatedRoute, private router: Router, private http: HttpClient) { }
 
 
 ngOnInit() {
-    this.snap = this.route.snapshot.params;
-    this.oidcstate = this.snap.state;
-    this.oidccode = this.snap.code;
+    this.snap = JSON.parse(this.route.snapshot.params);
+    if (this.snap.state != null) {
+        this.oidcstate = this.snap.state;
+    }
+    if (this.snap.code != null) {
+        this.oidccode = this.snap.code;
+    }
+    
     headers: new HttpHeaders({
         'Content-Type': 'application/x-www-form-urlencoded',
         'Authorization: Basic ': "NTgxODA1MDIzOTQ6ZmRlYjEzYzJhMzQzNDdhY2NjYTkxOWQzZjVhZmQ2MWMzZjM3ZmJlNjRmYzNlYTMyNTQ2ZDgxZGM"
