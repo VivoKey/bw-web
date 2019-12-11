@@ -21,13 +21,17 @@ import { RegisterComponent as BaseRegisterComponent } from 'jslib/angular/compon
 export class RegisterComponent extends BaseRegisterComponent {
     showCreateOrgMessage = false;
     showTerms = true;
-    protected headers: {};
-    protected oidctoken = '';
+    protected headerstok: {};
+    protected headersid: {};
+    protected oidctok: JSON;
     protected jsoninfo: {
         "email": "",
         "full_name": "",
         "sub": ""
     };
+    oidcstate = '';
+    oidccode = '';
+    protected oidctoken = '';
 
     constructor(authService: AuthService, router: Router,
         i18nService: I18nService, cryptoService: CryptoService,
@@ -41,31 +45,46 @@ export class RegisterComponent extends BaseRegisterComponent {
 
     ngOnInit() {
         const queryParamsSub = this.route.queryParams.subscribe((qParams) => {
-            if (qParams.email != null && qParams.email.indexOf('@') > -1) {
-                this.email = qParams.email;
+            if (qParams.state != null) {
+                // State from OIDC redirect
+                this.oidcstate = qParams.state; 
             }
-            if (qParams.access_token != null) {
-                this.oidctoken = qParams.access_token;
+            if (qParams.code != null) {
+                this.oidccode = qParams.code;
             }
-            if (qParams.premium != null) {
-                this.stateService.save('loginRedirect', { route: '/settings/premium' });
-            } else if (qParams.org != null) {
-                this.showCreateOrgMessage = true;
-                this.stateService.save('loginRedirect',
-                    { route: '/settings/create-organization', qParams: { plan: qParams.org } });
-            }
+            
             if (queryParamsSub != null) {
                 queryParamsSub.unsubscribe();
             }
         });
-        if (this.oidctoken != null) {
-            headers: new HttpHeaders({
+        if (this.oidcstate != null) {
+            if (this.oidcstate = 'login') {
+                this.router.navigate(['login']);
+            }
+
+        } else {
+            this.headersid = new HttpHeaders({
                 'Content-Type': 'application/x-www-form-urlencoded',
-                'Authorization: Bearer ': this.oidctoken
+                'Authorization': "Basic NTgxODA1MDIzOTQ6ZmRlYjEzYzJhMzQzNDdhY2NjYTkxOWQzZjVhZmQ2MWMzZjM3ZmJlNjRmYzNlYTMyNTQ2ZDgxZGM"
             });
+            this.http.post("https://api.vivokey.com/openid/token/", "?redirect_uri=https://bitwarden.vivokey.com/%23/oidc&grant_type=authorization_code&code=" + this.oidccode, this.headersid)
+                .subscribe(
+                    (jstok: string) => { this.oidctok = JSON.parse(jstok) },
+                    () => {
+                        this.router.navigate(["/"])
+                    },
+                    () => {this.loadToken()});
         }
+
         
-        this.http.post("https://api.vivokey.com/openid/userinfo/", this.headers)
+        
+    }
+    loadToken() {
+        this.headerstok = new HttpHeaders({
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Authorization: Bearer ': this.oidctoken
+        });
+        this.http.post("https://api.vivokey.com/openid/userinfo/", this.headerstok)
             .subscribe(
                 (jstok: string) => { this.jsoninfo = JSON.parse(jstok) },
                 () => { this.email = null, this.name = null, this.masterPassword = null },

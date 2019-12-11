@@ -7,10 +7,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { I18nService } from 'jslib/abstractions/i18n.service';
 import { PlatformUtilsService } from 'jslib/abstractions/platformUtils.service';
-@Component({
-    selector: 'app-register',
-    templateUrl: 'oidc.component.html',
-})
+
 export class OIDCComponent implements OnInit {
     oidcstate = '';
     oidccode = '';
@@ -45,10 +42,11 @@ ngOnInit() {
             () => { 
                 this.platformUtilsService.showToast('error', this.i18nService.t('errorOccurred'),
                     this.i18nService.t('emailRequired'));
-                this.router.navigate(["register"])},
+                this.router.navigate(["register"])}
             () => {
                 this.router.navigate(["register", "&access_token="+this.oidctok.access_token]);
-            });
+        });
+    return;
 }
     submit() {
         // Does nothing

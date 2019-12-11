@@ -195,7 +195,7 @@ import localeSv from '@angular/common/locales/sv';
 import localeUk from '@angular/common/locales/uk';
 import localeZhCn from '@angular/common/locales/zh-Hans';
 import localeZhTw from '@angular/common/locales/zh-Hant';
-import { OIDCComponent } from './components/oidc.component';
+
 
 registerLocaleData(localeCa, 'ca');
 registerLocaleData(localeCs, 'cs');
@@ -366,7 +366,6 @@ registerLocaleData(localeZhTw, 'zh-TW');
         VerifyEmailTokenComponent,
         VerifyRecoverDeleteComponent,
         WeakPasswordsReportComponent,
-        OIDCComponent,
     ],
     entryComponents: [
         AddEditComponent,
