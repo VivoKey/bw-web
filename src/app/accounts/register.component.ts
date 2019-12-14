@@ -60,20 +60,19 @@ export class RegisterComponent extends BaseRegisterComponent {
         if (this.oidcstate != null) {
             if (this.oidcstate = 'login') {
                 this.router.navigate(['login']);
+            } else {
+                this.headersid = new HttpHeaders({
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'Authorization': "Basic MTA3MzI4Njg1ODI6M2MwOTAyNjQwOGRhODZkZTJmMTI0NTAyNGQ4YTFhMzE1MDIzNGE3ZDIzNjA1NDExNWQ5OGJlOTc="
+                });
+                this.http.post("https://api.vivokey.com/openid/token/", "?redirect_uri=https://bitwarden.vivokey.com/%23/register&grant_type=authorization_code&code=" + this.oidccode, this.headersid)
+                    .subscribe(
+                        (jstok: string) => { this.oidctok = JSON.parse(jstok) },
+                        () => {
+                            this.router.navigate(["login"])
+                        },
+                        () => { this.loadToken() });
             }
-
-        } else {
-            this.headersid = new HttpHeaders({
-                'Content-Type': 'application/x-www-form-urlencoded',
-                'Authorization': "Basic MTA3MzI4Njg1ODI6M2MwOTAyNjQwOGRhODZkZTJmMTI0NTAyNGQ4YTFhMzE1MDIzNGE3ZDIzNjA1NDExNWQ5OGJlOTc="
-            });
-            this.http.post("https://api.vivokey.com/openid/token/", "?redirect_uri=https://bitwarden.vivokey.com/%23/register&grant_type=authorization_code&code=" + this.oidccode, this.headersid)
-                .subscribe(
-                    (jstok: string) => { this.oidctok = JSON.parse(jstok) },
-                    () => {
-                        this.router.navigate(["login"])
-                    },
-                    () => {this.loadToken()});
         }
 
         
