@@ -87,7 +87,11 @@ export class RegisterComponent extends BaseRegisterComponent {
         this.http.post("https://api.vivokey.com/openid/userinfo/", this.headerstok)
             .subscribe(
                 (jstok: string) => { this.jsoninfo = JSON.parse(jstok) },
-                () => { this.email = null, this.name = null, this.masterPassword = null },
+                () => { 
+                    this.email = null;
+                    this.name = null;
+                    this.masterPassword = null;
+                },
                 () => {
                     this.email = this.jsoninfo.email;
                     this.name = this.jsoninfo.full_name;
