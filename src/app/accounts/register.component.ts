@@ -24,6 +24,8 @@ export class RegisterComponent extends BaseRegisterComponent {
     protected headerstok: {};
     protected headersid: {};
     protected oidctok: JSON;
+    protected oidcstr = "";
+    protected jsonstr = "";
     protected jsoninfo: {
         "email": "",
         "full_name": "",
@@ -65,8 +67,9 @@ export class RegisterComponent extends BaseRegisterComponent {
                     'Content-Type': 'application/x-www-form-urlencoded',
                     'Authorization': "Basic MTA3MzI4Njg1ODI6M2MwOTAyNjQwOGRhODZkZTJmMTI0NTAyNGQ4YTFhMzE1MDIzNGE3ZDIzNjA1NDExNWQ5OGJlOTc="
                 });
-                this.oidctok = JSON.parse(await this.http.post("https://api.vivokey.com/openid/token/", "?redirect_uri=https://bitwarden.vivokey.com/%23/register&grant_type=authorization_code&code=" + this.oidccode, this.headersid)
-                    .toPromise());
+                this.oidcstr = await this.http.post("https://api.vivokey.com/openid/token/", "?redirect_uri=https://bitwarden.vivokey.com/%23/register&grant_type=authorization_code&code=" + this.oidccode, this.headersid)
+                    .toPromise();
+                this.oidctok = JSON.parse(this.oidcstr);
                 if (this.oidctok != null) {
                     await this.loadToken();
                 }
@@ -83,7 +86,8 @@ export class RegisterComponent extends BaseRegisterComponent {
             'Content-Type': 'application/x-www-form-urlencoded',
             'Authorization: Bearer ': this.oidctoken
         });
-        this.jsoninfo = JSON.parse(await this.http.post("https://api.vivokey.com/openid/userinfo/", this.headerstok).toPromise());
+        this.jsonstr = await this.http.post("https://api.vivokey.com/openid/userinfo/", this.headerstok).toPromise();
+        this.jsoninfo = JSON.parse(this.jsonstr);
         if (this.jsoninfo != null) {
             this.email = this.jsoninfo.email;
             this.name = this.jsoninfo.full_name;
