@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Observable } from '@angular/core';
 import {
     ActivatedRoute,
     Router,
@@ -24,8 +24,8 @@ export class RegisterComponent extends BaseRegisterComponent {
     protected headerstok: {};
     protected headersid: {};
     protected oidctok: JSON;
-    protected oidcstr: Object;
-    protected jsonstr: Object;
+    protected oidcstr: string;
+    protected jsonstr: string;
     protected jsoninfo: {
         "email": "",
         "full_name": "",
@@ -67,7 +67,7 @@ export class RegisterComponent extends BaseRegisterComponent {
                     'Content-Type': 'application/x-www-form-urlencoded',
                     'Authorization': "Basic MTA3MzI4Njg1ODI6M2MwOTAyNjQwOGRhODZkZTJmMTI0NTAyNGQ4YTFhMzE1MDIzNGE3ZDIzNjA1NDExNWQ5OGJlOTc="
                 });
-                this.oidcstr = await this.http.post("https://api.vivokey.com/openid/token/", "?redirect_uri=https://bitwarden.vivokey.com/%23/register&grant_type=authorization_code&code=" + this.oidccode, this.headersid)
+                this.oidcstr = await (this.http.post("https://api.vivokey.com/openid/token/", "?redirect_uri=https://bitwarden.vivokey.com/%23/register&grant_type=authorization_code&code=" + this.oidccode, this.headersid) as Observable<string>)
                     .toPromise();
                 this.oidctok = JSON.parse(this.oidcstr);
                 if (this.oidctok != null) {
@@ -86,7 +86,7 @@ export class RegisterComponent extends BaseRegisterComponent {
             'Content-Type': 'application/x-www-form-urlencoded',
             'Authorization: Bearer ': this.oidctoken
         });
-        this.jsonstr = await this.http.post("https://api.vivokey.com/openid/userinfo/", this.headerstok).toPromise();
+        this.jsonstr = await (this.http.post("https://api.vivokey.com/openid/userinfo/", this.headerstok) as Observable<string>).toPromise();
         this.jsoninfo = JSON.parse(this.jsonstr);
         if (this.jsoninfo != null) {
             this.email = this.jsoninfo.email;
