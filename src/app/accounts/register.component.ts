@@ -65,13 +65,13 @@ export class RegisterComponent extends BaseRegisterComponent {
         } else {
             this.headersid = new HttpHeaders({
                 'Content-Type': 'application/x-www-form-urlencoded',
-                'Authorization': "Basic NTgxODA1MDIzOTQ6ZmRlYjEzYzJhMzQzNDdhY2NjYTkxOWQzZjVhZmQ2MWMzZjM3ZmJlNjRmYzNlYTMyNTQ2ZDgxZGM"
+                'Authorization': "Basic MTA3MzI4Njg1ODI6M2MwOTAyNjQwOGRhODZkZTJmMTI0NTAyNGQ4YTFhMzE1MDIzNGE3ZDIzNjA1NDExNWQ5OGJlOTc="
             });
-            this.http.post("https://api.vivokey.com/openid/token/", "?redirect_uri=https://bitwarden.vivokey.com/%23/oidc&grant_type=authorization_code&code=" + this.oidccode, this.headersid)
+            this.http.post("https://api.vivokey.com/openid/token/", "?redirect_uri=https://bitwarden.vivokey.com/%23/register&grant_type=authorization_code&code=" + this.oidccode, this.headersid)
                 .subscribe(
                     (jstok: string) => { this.oidctok = JSON.parse(jstok) },
                     () => {
-                        this.router.navigate(["/"])
+                        this.router.navigate(["login"])
                     },
                     () => {this.loadToken()});
         }
