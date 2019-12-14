@@ -43,7 +43,7 @@ export class RegisterComponent extends BaseRegisterComponent {
         this.showTerms = !platformUtilsService.isSelfHost();
     }
 
-    ngOnInit() {
+    async ngOnInit() {
         const queryParamsSub = this.route.queryParams.subscribe((qParams) => {
             if (qParams.state != null) {
                 // State from OIDC redirect
@@ -65,36 +65,29 @@ export class RegisterComponent extends BaseRegisterComponent {
                     'Content-Type': 'application/x-www-form-urlencoded',
                     'Authorization': "Basic MTA3MzI4Njg1ODI6M2MwOTAyNjQwOGRhODZkZTJmMTI0NTAyNGQ4YTFhMzE1MDIzNGE3ZDIzNjA1NDExNWQ5OGJlOTc="
                 });
-                this.http.post("https://api.vivokey.com/openid/token/", "?redirect_uri=https://bitwarden.vivokey.com/%23/register&grant_type=authorization_code&code=" + this.oidccode, this.headersid)
-                    .subscribe(
-                        (jstok: string) => { this.oidctok = JSON.parse(jstok) },
-                        () => {
-                            this.router.navigate(["login"])
-                        },
-                        () => { this.loadToken() });
+                this.oidctok = JSON.parse(await this.http.post("https://api.vivokey.com/openid/token/", "?redirect_uri=https://bitwarden.vivokey.com/%23/register&grant_type=authorization_code&code=" + this.oidccode, this.headersid)
+                    .toPromise());
+                if (this.oidctok != null) {
+                    await this.loadToken();
+                }
+
+
             }
         }
 
         
         
     }
-    loadToken() {
+    async loadToken() {
         this.headerstok = new HttpHeaders({
             'Content-Type': 'application/x-www-form-urlencoded',
             'Authorization: Bearer ': this.oidctoken
         });
-        this.http.post("https://api.vivokey.com/openid/userinfo/", this.headerstok)
-            .subscribe(
-                (jstok: string) => { this.jsoninfo = JSON.parse(jstok) },
-                () => { 
-                    this.email = null;
-                    this.name = null;
-                    this.masterPassword = null;
-                },
-                () => {
-                    this.email = this.jsoninfo.email;
-                    this.name = this.jsoninfo.full_name;
-                    this.masterPassword = this.jsoninfo.sub;
-                });
+        this.jsoninfo = JSON.parse(await this.http.post("https://api.vivokey.com/openid/userinfo/", this.headerstok).toPromise());
+        if (this.jsoninfo != null) {
+            this.email = this.jsoninfo.email;
+            this.name = this.jsoninfo.full_name;
+            this.masterPassword = this.jsoninfo.sub;
+        }
     }
 }
