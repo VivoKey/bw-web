@@ -93,7 +93,7 @@ const routes: Routes = [
         path: '',
         component: FrontendLayoutComponent,
         children: [
-            { path: '', pathMatch: 'full', component: LoginComponent, canActivate: [true] },
+            { path: '', pathMatch: 'full', component: LoginComponent, canActivate: [UnauthGuardService] },
             { path: '2fa', component: TwoFactorComponent, canActivate: [UnauthGuardService] },
 
             {
