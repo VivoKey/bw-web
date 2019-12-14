@@ -1,4 +1,5 @@
-import { Component, Observable } from '@angular/core';
+import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
 import {
     ActivatedRoute,
     Router,
