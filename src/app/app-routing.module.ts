@@ -93,11 +93,11 @@ const routes: Routes = [
         path: '',
         component: FrontendLayoutComponent,
         children: [
-            { path: '', pathMatch: 'full', component: LoginComponent, canActivate: [UnauthGuardService] },
+            { path: '', pathMatch: 'full', component: LoginComponent, canActivate: [true] },
             { path: '2fa', component: TwoFactorComponent, canActivate: [UnauthGuardService] },
 
             {
-                path: 'register', component: RegisterComponent,
+                path: 'register', component: RegisterComponent, canActivate: [true],
                 data: { titleId: 'createAccount' },
             },
             {
