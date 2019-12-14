@@ -97,7 +97,7 @@ const routes: Routes = [
             { path: '2fa', component: TwoFactorComponent, canActivate: [UnauthGuardService] },
 
             {
-                path: 'register', component: RegisterComponent, canActivate: [true],
+                path: 'register', component: RegisterComponent, canActivate: [UnauthGuardService],
                 data: { titleId: 'createAccount' },
             },
             {
