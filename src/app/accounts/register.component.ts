@@ -24,8 +24,8 @@ export class RegisterComponent extends BaseRegisterComponent {
     protected headerstok: {};
     protected headersid: {};
     protected oidctok: JSON;
-    protected oidcstr = "";
-    protected jsonstr = "";
+    protected oidcstr;
+    protected jsonstr;
     protected jsoninfo: {
         "email": "",
         "full_name": "",
