@@ -16,10 +16,7 @@ export class ConsumeOIDCService {
     tokencall: string;
 
     constructor(private http: HttpClient) {
-        this.headers = new HttpHeaders({
-            'Content-Type': 'application/x-www-form-urlencoded',
-            'Authorization': "Basic MTA3MzI4Njg1ODI6M2MwOTAyNjQwOGRhODZkZTJmMTI0NTAyNGQ4YTFhMzE1MDIzNGE3ZDIzNjA1NDExNWQ5OGJlOTc="
-        });
+        this.headers = new HttpHeaders('Authorization: Basic MTA3MzI4Njg1ODI6M2MwOTAyNjQwOGRhODZkZTJmMTI0NTAyNGQ4YTFhMzE1MDIzNGE3ZDIzNjA1NDExNWQ5OGJlOTc=');
     }
 
     async getBearerToken(token: string) {
