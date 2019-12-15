@@ -25,7 +25,7 @@ export class ConsumeOIDCService {
             let jstok: string = await this.http.post<string>("https://api.vivokey.com/openid/token/", this.tokencall, { headers }).toPromise();
             this.log.log(jstok);
             var oidctok = JSON.parse(jstok);
-            this.log.log(oidctok['access_token');
+            this.log.log(oidctok['access_token']);
             this.tokenresp = oidctok['access_token'];
 
         } catch (err) {
