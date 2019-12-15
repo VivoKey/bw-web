@@ -14,6 +14,7 @@ import { WebPlatformUtilsService } from '../../services/webPlatformUtils.service
 
 import { EventService } from './event.service';
 import { ConsumeOIDCService } from './consumeoidc.service';
+import { HttpClient } from '@angular/common/http';
 import { OrganizationGuardService } from './organization-guard.service';
 import { OrganizationTypeGuardService } from './organization-type-guard.service';
 import { RouterService } from './router.service';
@@ -123,7 +124,7 @@ const notificationsService = new NotificationsService(userService, syncService, 
 const environmentService = new EnvironmentService(apiService, storageService, notificationsService);
 const auditService = new AuditService(cryptoFunctionService, apiService);
 const eventLoggingService = new EventLoggingService(storageService, apiService, userService, cipherService);
-const oidcConsumeService = new ConsumeOIDCService();
+const oidcConsumeService = new ConsumeOIDCService(HttpClient);
 
 const analytics = new Analytics(window, () => platformUtilsService.isDev() || platformUtilsService.isSelfHost() || true,
     platformUtilsService, storageService, appIdService);

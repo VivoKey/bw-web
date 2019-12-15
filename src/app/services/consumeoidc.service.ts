@@ -7,9 +7,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
     providedIn: 'root',
 })
 export class ConsumeOIDCService {
-    headers: HttpHeaders;
+    headers: any;
     oidctok: {'access_token': ''};
-    headers2: HttpHeaders;
+    headers2: any;
     infotok: string;
     infojs: any;
     jstok: string;
@@ -30,7 +30,7 @@ export class ConsumeOIDCService {
         this.headers2 = new HttpHeaders({
             'Authorization': "Bearer " + token.access_token
         })
-        this.infotok = await this.http.post("https://api.vivokey.com/openid/userinfo/", headers2).toPromise();
+        this.infotok = await this.http.post("https://api.vivokey.com/openid/userinfo/", this.headers2).toPromise();
         this.infojs = JSON.parse(this.infotok);
         return {
             'name': this.infojs.full_name,
