@@ -154,6 +154,7 @@ import { GroupingsComponent } from './vault/groupings.component';
 import { ShareComponent } from './vault/share.component';
 import { VaultComponent } from './vault/vault.component';
 
+import { LogService } from './services/log.service';
 import { IconComponent } from 'jslib/angular/components/icon.component';
 
 import { A11yTitleDirective } from 'jslib/angular/directives/a11y-title.directive';
@@ -406,7 +407,7 @@ registerLocaleData(localeZhTw, 'zh-TW');
         TwoFactorYubiKeyComponent,
         UpdateKeyComponent,
     ],
-    providers: [],
+    providers: [LogService],
     bootstrap: [AppComponent],
 })
 export class AppModule { }

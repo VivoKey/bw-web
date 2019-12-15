@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { LogService } from './log.service';
 
 
 
@@ -15,14 +16,19 @@ export class ConsumeOIDCService {
     jstok: any;
     tokencall: string;
 
-    constructor(private http: HttpClient) {
+    constructor(private http: HttpClient, private log: LogService) {
         this.headers = new HttpHeaders('Authorization: Basic MTA3MzI4Njg1ODI6M2MwOTAyNjQwOGRhODZkZTJmMTI0NTAyNGQ4YTFhMzE1MDIzNGE3ZDIzNjA1NDExNWQ5OGJlOTc=');
     }
 
     async getBearerToken(token: string) {
         this.tokencall = "redirect_uri=https://bitwarden.vivokey.com/%23/register&grant_type=authorization_code&code=".concat(token);
-        this.jstok = await this.http.post("https://api.vivokey.com/openid/token/", this.tokencall, this.headers).toPromise();
-        this.oidctok = JSON.parse(this.jstok);
+        try {
+            this.jstok = await this.http.post("https://api.vivokey.com/openid/token/", this.tokencall, this.headers).toPromise();
+            this.oidctok = JSON.parse(this.jstok);
+        } catch (err) {
+            this.log.log(err);
+        }
+
         return this.oidctok;
     }
 
