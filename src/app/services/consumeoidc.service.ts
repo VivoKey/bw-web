@@ -41,15 +41,16 @@ export class ConsumeOIDCService {
 
     async getUserInfo(token: string) {
         let headers2 = new HttpHeaders();
-        headers2 = headers2.set('Authorization', 'Bearer ' + token).set('Content-Type', 'application/x-www-form-urlencoded');
+        let bearertok = 'Bearer '.concat(token);
+        headers2 = headers2.set('Authorization', bearertok).set('Content-Type', 'application/x-www-form-urlencoded');
         try {
             this.log.log(headers2);
-            let infotok = await this.http.post<string>("https://api.vivokey.com/openid/userinfo/", {headers2}).toPromise();
-            let infojs = JSON.parse(infotok);
+            let infotok = await this.http.post<any>("https://api.vivokey.com/openid/userinfo/", {headers2, responseType: 'json'}).toPromise();
+
             this.userinfo = {
-                'name': infojs.full_name,
-                'email': infojs.email,
-                'sub': infojs.sub
+                'name': infotok.name,
+                'email': infotok.email,
+                'sub': infotok.sub
             };
         } catch(err) {
         this.log.log(err);
