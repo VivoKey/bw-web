@@ -23,8 +23,9 @@ export class ConsumeOIDCService {
         this.tokencall = "redirect_uri=https://bitwarden.vivokey.com/%23/register&grant_type=authorization_code&code=".concat(token);
         try {
             let jstok: string = await this.http.post<string>("https://api.vivokey.com/openid/token/", this.tokencall, { headers }).toPromise();
+            let conv = (key: string, value: string) => oidctok = {key: value};
             this.log.log(jstok);
-            var oidctok = JSON.parse(jstok);
+            var oidctok = JSON.parse(jstok, conv);
             this.log.log(oidctok['access_token']);
             this.tokenresp = oidctok['access_token'];
 
