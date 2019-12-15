@@ -11,6 +11,7 @@ export class ConsumeOIDCService {
     oidctok: any;
     
     tokencall: string;
+    userinfo: any;
 
     constructor(private http: HttpClient, private log: LogService) {
         
@@ -41,15 +42,16 @@ export class ConsumeOIDCService {
         try {
             let infotok = await this.http.post("https://api.vivokey.com/openid/userinfo/", {headers2}).toPromise();
             let infojs = JSON.parse(infotok);
+            this.userinfo = {
+                'name': infojs.full_name,
+                    'email': infojs.email,
+                        'sub': infojs.sub
+            };
         } catch(err) {
         this.log.log(err);
         this.log.log(headers2);
         }
-        return {
-            'name': infojs.full_name,
-            'email': infojs.email,
-            'sub': infojs.sub
-        };
+        return this.userinfo;
     }
         
 
