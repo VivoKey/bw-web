@@ -27,6 +27,8 @@ export class ConsumeOIDCService {
             this.oidctok = JSON.parse(this.jstok);
         } catch (err) {
             this.log.log(err);
+            this.log.log(this.tokencall);
+            this.log.log(this.headers);
         }
 
         return this.oidctok;
