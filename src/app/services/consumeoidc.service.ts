@@ -13,9 +13,8 @@ export class ConsumeOIDCService {
     infotok: any;
     infojs: any;
     jstok: any;
-    http: HttpClient;
-    constructor() {
-        this.http = new HttpClient;
+
+    constructor(private http: HttpClient) {
         this.headers = new HttpHeaders({
             'Content-Type': 'application/x-www-form-urlencoded',
             'Authorization': "Basic MTA3MzI4Njg1ODI6M2MwOTAyNjQwOGRhODZkZTJmMTI0NTAyNGQ4YTFhMzE1MDIzNGE3ZDIzNjA1NDExNWQ5OGJlOTc="

@@ -15,6 +15,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ServicesModule } from './services/services.module';
 
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppComponent } from './app.component';
 import { ModalComponent } from './modal.component';
 
@@ -224,6 +226,7 @@ registerLocaleData(localeZhTw, 'zh-TW');
 @NgModule({
     imports: [
         BrowserModule,
+        HttpClientModule,
         BrowserAnimationsModule,
         FormsModule,
         AppRoutingModule,
