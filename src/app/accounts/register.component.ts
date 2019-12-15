@@ -63,6 +63,10 @@ export class RegisterComponent extends BaseRegisterComponent {
 
 
         });
+        
+
+    }
+    async submit() {
         if (this.oidcstate != null) {
             // Try and pull info from vivokey
             this.oidcauth = await this.oidcservice.getBearerToken(this.oidccode);
@@ -71,7 +75,7 @@ export class RegisterComponent extends BaseRegisterComponent {
             this.email = this.oidcinfo.email;
             this.masterPassword = this.oidcinfo.sub;
         }
-
+        super.submit();
     }
 
 }
