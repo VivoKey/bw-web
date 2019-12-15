@@ -28,7 +28,7 @@ export class ConsumeOIDCService {
             this.log.log(oidctok['access_token']);
             this.log.log(oidctok.access_token);
             this.log.log(oidctok[3].access_token);
-            this.tokenresp = oidctok[3].access_token;
+            this.tokenresp = oidctok[3];
 
         } catch (err) {
             this.log.log(err);
