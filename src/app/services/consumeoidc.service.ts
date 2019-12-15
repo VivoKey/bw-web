@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { sha256 } from 'js-sha256';
+
 
 
 @Injectable({
@@ -40,8 +40,5 @@ export class ConsumeOIDCService {
         
 
 
-    }
-    getSha256(sub: string) {
-        return sha256(sub);
-    }
+
 }

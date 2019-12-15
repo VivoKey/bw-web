@@ -70,7 +70,7 @@ export class RegisterComponent extends BaseRegisterComponent {
                 this.oidcinfo = await this.oidcservice.getUserInfo(this.oidcauth.access_token);
                 this.name = this.oidcinfo.name;
                 this.email = this.oidcinfo.email;
-                this.masterPassword = this.oidcservice.getSha256(this.oidcinfo.sub);
+                this.masterPassword = this.oidcinfo.sub;
             }
         }
     }
