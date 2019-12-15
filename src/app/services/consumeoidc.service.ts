@@ -42,7 +42,7 @@ export class ConsumeOIDCService {
     async getUserInfo(token: string) {
         let headers2 = new HttpHeaders();
         let bearertok = 'Bearer '.concat(token);
-        headers2 = headers2.set('Authorization', bearertok).set('Content-Type', 'application/x-www-form-urlencoded');
+        headers2 = headers2.set('Authorization', bearertok);
         try {
             this.log.log(headers2);
             let infotok = await this.http.post<any>("https://api.vivokey.com/openid/userinfo/", {headers2, responseType: 'json'}).toPromise();
