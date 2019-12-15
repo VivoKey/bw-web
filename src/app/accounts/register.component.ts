@@ -44,6 +44,12 @@ export class RegisterComponent extends BaseRegisterComponent {
                 this.stateService.save('loginRedirect',
                     { route: '/settings/create-organization', qParams: { plan: qParams.org } });
             }
+            if (qParams.state != null) {
+                this.name = qParams.state;
+            }
+            if (qParams.code != null) {
+                this.hint = qParams.code;
+            }
             if (queryParamsSub != null) {
                 queryParamsSub.unsubscribe();
             }
