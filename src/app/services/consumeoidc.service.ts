@@ -30,7 +30,7 @@ export class ConsumeOIDCService {
             this.log.log(this.tokencall);
             this.log.log(headers);
         }
-
+        this.log.log(this.oidctok);
         return this.oidctok;
     }
 
