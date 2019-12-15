@@ -37,6 +37,7 @@ export class ConsumeOIDCService {
             'email': this.infojs.email,
             'sub': this.infojs.sub
         };
+    }
         
 
 
