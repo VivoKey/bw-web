@@ -124,7 +124,7 @@ const notificationsService = new NotificationsService(userService, syncService, 
 const environmentService = new EnvironmentService(apiService, storageService, notificationsService);
 const auditService = new AuditService(cryptoFunctionService, apiService);
 const eventLoggingService = new EventLoggingService(storageService, apiService, userService, cipherService);
-const oidcConsumeService = new ConsumeOIDCService();
+
 
 const analytics = new Analytics(window, () => platformUtilsService.isDev() || platformUtilsService.isSelfHost() || true,
     platformUtilsService, storageService, appIdService);
