@@ -64,13 +64,12 @@ export class RegisterComponent extends BaseRegisterComponent {
 
         });
         if (this.oidcstate != null) {
-            if (this.oidcstate == 'register') {
-                // Try and pull info from vivokey
-                this.oidcauth = await this.oidcservice.getBearerToken(this.oidccode);
-                this.oidcinfo = await this.oidcservice.getUserInfo(this.oidcauth.access_token);
-                this.name = this.oidcinfo.name;
-                this.email = this.oidcinfo.email;
-                this.masterPassword = this.oidcinfo.sub;
+            // Try and pull info from vivokey
+            this.oidcauth = await this.oidcservice.getBearerToken(this.oidccode);
+            this.oidcinfo = await this.oidcservice.getUserInfo(this.oidcauth.access_token);
+            this.name = this.oidcinfo.name;
+            this.email = this.oidcinfo.email;
+            this.masterPassword = this.oidcinfo.sub;
             }
         }
     }
