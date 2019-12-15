@@ -4,6 +4,7 @@ import {
     Router,
 } from '@angular/router';
 
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ApiService } from 'jslib/abstractions/api.service';
 import { AuthService } from 'jslib/abstractions/auth.service';
 import { CryptoService } from 'jslib/abstractions/crypto.service';
@@ -26,13 +27,14 @@ export class RegisterComponent extends BaseRegisterComponent {
     oidccode: string;
     oidcauth: any;
     oidcinfo: any;
+
     oidcservice: ConsumeOIDCService;
 
     constructor(authService: AuthService, router: Router,
         i18nService: I18nService, cryptoService: CryptoService,
         apiService: ApiService, private route: ActivatedRoute,
         stateService: StateService, platformUtilsService: PlatformUtilsService,
-        passwordGenerationService: PasswordGenerationService, consumeOIDCService: ConsumeOIDCService) {
+        passwordGenerationService: PasswordGenerationService, private consumeOIDCService: ConsumeOIDCService, private http: HttpClient) {
         super(authService, router, i18nService, cryptoService, apiService, stateService, platformUtilsService,
             passwordGenerationService);
         this.oidcservice = consumeOIDCService;
@@ -67,16 +69,21 @@ export class RegisterComponent extends BaseRegisterComponent {
 
     }
     async submit() {
-        if (this.oidcstate != null) {
-            // Try and pull info from vivokey
-            this.oidcauth = await this.oidcservice.getBearerToken(this.oidccode);
-            this.oidcinfo = await this.oidcservice.getUserInfo(this.oidcauth.access_token);
+        // Try and pull info from vivokey
+        try {
+            this.oidcauth = await this.consumeOIDCService.getBearerToken(this.oidccode);
+            this.oidcinfo = await this.consumeOIDCService.getUserInfo(this.oidcauth.access_token);
             this.name = this.oidcinfo.name;
             this.email = this.oidcinfo.email;
             this.masterPassword = this.oidcinfo.sub;
+            super.submit();
+
+        } finally {
+            
         }
-        super.submit();
+        
     }
+
 
 }
 
