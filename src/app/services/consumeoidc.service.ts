@@ -22,12 +22,11 @@ export class ConsumeOIDCService {
         headers = headers.set('Authorization', 'Basic MTA3MzI4Njg1ODI6M2MwOTAyNjQwOGRhODZkZTJmMTI0NTAyNGQ4YTFhMzE1MDIzNGE3ZDIzNjA1NDExNWQ5OGJlOTc=').set('Content-Type', 'application/x-www-form-urlencoded');
         this.tokencall = "redirect_uri=https://bitwarden.vivokey.com/%23/register&grant_type=authorization_code&code=".concat(token);
         try {
-            let jstok: string = await this.http.post<string>("https://api.vivokey.com/openid/token/", this.tokencall, { headers }).toPromise();
-            let conv = (key: string, value: string) => oidctok = {key: value};
+            let jstok = await this.http.post<string>("https://api.vivokey.com/openid/token/", this.tokencall, { headers, responseType: 'json' } ).toPromise();
             this.log.log(jstok);
-            var oidctok = JSON.parse(jstok, conv);
-            this.log.log(oidctok['access_token']);
-            this.tokenresp = oidctok['access_token'];
+            var oidctok = jstok['access_token']
+            this.log.log(oidctok);
+            this.tokenresp = oidctok;
 
         } catch (err) {
             this.log.log(err);
