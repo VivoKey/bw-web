@@ -10,10 +10,12 @@ export class ConsumeOIDCService {
     headers: any;
     oidctok: {'access_token': ''};
     headers2: any;
-    infotok: string;
+    infotok: any;
     infojs: any;
-    jstok: string;
-    constructor(private http: HttpClient) {
+    jstok: any;
+    http: HttpClient;
+    constructor() {
+        this.http = new HttpClient;
         this.headers = new HttpHeaders({
             'Content-Type': 'application/x-www-form-urlencoded',
             'Authorization': "Basic MTA3MzI4Njg1ODI6M2MwOTAyNjQwOGRhODZkZTJmMTI0NTAyNGQ4YTFhMzE1MDIzNGE3ZDIzNjA1NDExNWQ5OGJlOTc="
