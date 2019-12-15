@@ -13,6 +13,7 @@ import { MemoryStorageService } from '../../services/memoryStorage.service';
 import { WebPlatformUtilsService } from '../../services/webPlatformUtils.service';
 
 import { EventService } from './event.service';
+import { ConsumeOIDC } from './consumeoidc.service.ts';
 import { OrganizationGuardService } from './organization-guard.service';
 import { OrganizationTypeGuardService } from './organization-type-guard.service';
 import { RouterService } from './router.service';

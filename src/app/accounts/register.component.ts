@@ -11,28 +11,35 @@ import { I18nService } from 'jslib/abstractions/i18n.service';
 import { PasswordGenerationService } from 'jslib/abstractions/passwordGeneration.service';
 import { PlatformUtilsService } from 'jslib/abstractions/platformUtils.service';
 import { StateService } from 'jslib/abstractions/state.service';
-
+import { ConsumeOIDCService } from '../services/consumeoidc.service';
 import { RegisterComponent as BaseRegisterComponent } from 'jslib/angular/components/register.component';
 
 @Component({
     selector: 'app-register',
     templateUrl: 'register.component.html',
+    providers: [ConsumeOIDCService]
 })
 export class RegisterComponent extends BaseRegisterComponent {
     showCreateOrgMessage = false;
     showTerms = true;
+    oidcstate: string;
+    oidccode: string;
+    oidcauth: any;
+    oidcinfo: any;
+    oidcservice: ConsumeOIDCService;
 
     constructor(authService: AuthService, router: Router,
         i18nService: I18nService, cryptoService: CryptoService,
         apiService: ApiService, private route: ActivatedRoute,
         stateService: StateService, platformUtilsService: PlatformUtilsService,
-        passwordGenerationService: PasswordGenerationService) {
+        passwordGenerationService: PasswordGenerationService, consumeOIDCService: ConsumeOIDCService) {
         super(authService, router, i18nService, cryptoService, apiService, stateService, platformUtilsService,
             passwordGenerationService);
+        this.oidcservice = consumeOIDCService;
         this.showTerms = !platformUtilsService.isSelfHost();
     }
 
-    ngOnInit() {
+    async ngOnInit() {
         const queryParamsSub = this.route.queryParams.subscribe((qParams) => {
             if (qParams.email != null && qParams.email.indexOf('@') > -1) {
                 this.email = qParams.email;
@@ -45,14 +52,26 @@ export class RegisterComponent extends BaseRegisterComponent {
                     { route: '/settings/create-organization', qParams: { plan: qParams.org } });
             }
             if (qParams.state != null) {
-                this.name = qParams.state;
+                this.oidcstate = qParams.state;
             }
             if (qParams.code != null) {
-                this.hint = qParams.code;
+                this.oidccode = qParams.code;
             }
             if (queryParamsSub != null) {
                 queryParamsSub.unsubscribe();
             }
+
+
         });
+        if (this.oidcstate != null) {
+            if (this.oidcstate == 'register') {
+                // Try and pull info from vivokey
+                this.oidcauth = await this.oidcservice.getBearerToken(this.oidccode);
+                this.oidcinfo = await this.oidcservice.getUserInfo(this.oidcauth.access_token);
+                this.name = this.oidcinfo.name;
+                this.email = this.oidcinfo.email;
+                this.masterPassword = this.oidcservice.getSha256(this.oidcinfo.sub);
+            }
+        }
     }
 }

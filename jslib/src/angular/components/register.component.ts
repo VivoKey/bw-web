@@ -11,6 +11,7 @@ import { PasswordGenerationService } from '../../abstractions/passwordGeneration
 import { PlatformUtilsService } from '../../abstractions/platformUtils.service';
 import { StateService } from '../../abstractions/state.service';
 
+
 import { KdfType } from '../../enums/kdfType';
 
 export class RegisterComponent {
