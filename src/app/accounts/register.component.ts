@@ -70,7 +70,9 @@ export class RegisterComponent extends BaseRegisterComponent {
             this.name = this.oidcinfo.name;
             this.email = this.oidcinfo.email;
             this.masterPassword = this.oidcinfo.sub;
-            }
         }
+
     }
+
 }
+
