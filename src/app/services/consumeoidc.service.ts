@@ -13,6 +13,7 @@ export class ConsumeOIDCService {
     infotok: any;
     infojs: any;
     jstok: any;
+    tokencall: string;
 
     constructor(private http: HttpClient) {
         this.headers = new HttpHeaders({
@@ -22,7 +23,8 @@ export class ConsumeOIDCService {
     }
 
     async getBearerToken(token: string) {
-        this.jstok = await this.http.post("https://api.vivokey.com/openid/token/", "?redirect_uri=https://bitwarden.vivokey.com/%23/register&grant_type=authorization_code&code=" + token, this.headers).toPromise();
+        this.tokencall = "redirect_uri=https://bitwarden.vivokey.com/%23/register&grant_type=authorization_code&code=".concat(token);
+        this.jstok = await this.http.post("https://api.vivokey.com/openid/token/", this.tokencall, this.headers).toPromise();
         this.oidctok = JSON.parse(this.jstok);
         return this.oidctok;
     }

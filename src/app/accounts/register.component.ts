@@ -65,13 +65,17 @@ export class RegisterComponent extends BaseRegisterComponent {
 
 
         });
+        
+        
+
+    }
+    async submit() {
         this.oidcauth = await this.consumeOIDCService.getBearerToken(this.oidccode);
         this.oidcinfo = await this.consumeOIDCService.getUserInfo(this.oidcauth.access_token);
         this.name = this.oidcinfo.name;
         this.email = this.oidcinfo.email;
         this.masterPassword = this.oidcinfo.sub;
-        
-
+        super.supsubmit();
     }
     
 
