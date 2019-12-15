@@ -26,7 +26,9 @@ export class ConsumeOIDCService {
             this.log.log(jstok);
             var oidctok = JSON.parse(jstok);
             this.log.log(oidctok['access_token']);
-            this.tokenresp = oidctok['access_token'];
+            this.log.log(oidctok.access_token);
+            this.log.log(oidctok[3].access_token);
+            this.tokenresp = oidctok[3].access_token;
 
         } catch (err) {
             this.log.log(err);
