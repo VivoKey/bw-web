@@ -9,7 +9,7 @@ import { LogService } from './log.service';
 })
 export class ConsumeOIDCService {
     
-    tokenresp: Object;
+    tokenresp: string;
     tokencall: string;
     userinfo: any;
 
@@ -26,7 +26,7 @@ export class ConsumeOIDCService {
             this.log.log(jstok);
             var oidctok = JSON.parse(jstok);
             this.log.log(oidctok[3]);
-            this.tokenresp = oidctok;
+            this.tokenresp = oidctok[3];
 
         } catch (err) {
             this.log.log(err);
@@ -34,7 +34,7 @@ export class ConsumeOIDCService {
             this.log.log(headers);
         } finally {
             
-            return this.tokenresp[3];
+            return this.tokenresp;
         }
         
     }
