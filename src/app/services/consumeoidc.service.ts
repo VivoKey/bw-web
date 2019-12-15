@@ -8,8 +8,8 @@ import { LogService } from './log.service';
     providedIn: 'root',
 })
 export class ConsumeOIDCService {
-    oidctok: any;
     
+    tokenresp: Object;
     tokencall: string;
     userinfo: any;
 
@@ -24,22 +24,24 @@ export class ConsumeOIDCService {
         try {
             let jstok: string = await this.http.post<string>("https://api.vivokey.com/openid/token/", this.tokencall, { headers }).toPromise();
             this.log.log(jstok);
-            this.oidctok = JSON.parse(jstok);
+            var oidctok = JSON.parse(jstok);
+            this.log.log(oidctok);
+            this.tokenresp = oidctok;
 
         } catch (err) {
             this.log.log(err);
             this.log.log(this.tokencall);
             this.log.log(headers);
         } finally {
-            this.log.log(this.oidctok);
-            return this.oidctok;
+            
+            return this.tokenresp;
         }
         
     }
 
-    async getUserInfo(token: any) {
+    async getUserInfo(token: string) {
         let headers2 = new HttpHeaders();
-        headers2 = headers2.set('Authorization', 'Bearer ' + token.access_token).set('Content-Type', 'application/x-www-form-urlencoded');
+        headers2 = headers2.set('Authorization', 'Bearer ' + token).set('Content-Type', 'application/x-www-form-urlencoded');
         try {
             let infotok = await this.http.post<string>("https://api.vivokey.com/openid/userinfo/", {headers2}).toPromise();
             let infojs = JSON.parse(infotok);
