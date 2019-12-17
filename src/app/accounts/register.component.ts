@@ -64,6 +64,10 @@ export class RegisterComponent extends BaseRegisterComponent {
         if (this.oidcstate == "login") {
             this.router.navigate(['login'], { queryParams: { state: this.oidcstate, code: this.oidccode} });
         }
+        if (this.oidcstate == "unlock") {
+            this.router.navigate(['lock']);
+
+        }
     }
 
     async ngAfterViewInit() {
