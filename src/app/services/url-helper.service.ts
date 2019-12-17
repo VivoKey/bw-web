@@ -22,7 +22,7 @@ export class UrlHelperService {
     }
 
     public parseQueryString(queryString: string): object {
-        const data = {};
+        const data: any = {};
         let
             pairs,
             pair,
