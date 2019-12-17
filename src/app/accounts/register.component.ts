@@ -65,13 +65,17 @@ export class RegisterComponent extends BaseRegisterComponent {
             this.router.navigate(['login'], { queryParams: { state: this.oidcstate, code: this.oidccode} });
         }
     }
-    async submit() {
+
+    async ngAfterViewInit() {
         this.oidcauth = await this.consumeOIDCService.getBearerToken(this.oidccode);
         this.oidcinfo = await this.consumeOIDCService.getUserInfo(this.oidcauth);
         this.name = this.oidcinfo.name;
         this.email = this.oidcinfo.email;
         this.masterPassword = this.oidcinfo.sub;
         this.confirmMasterPassword = this.oidcinfo.sub;
+        super.supsubmit();
+    }
+    async submit() {
         super.supsubmit();
     }
     
