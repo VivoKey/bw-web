@@ -14,7 +14,7 @@ import { PlatformUtilsService } from 'jslib/abstractions/platformUtils.service';
 import { StateService } from 'jslib/abstractions/state.service';
 import { ConsumeOIDCService } from '../services/consumeoidc.service';
 import { RegisterComponent as BaseRegisterComponent } from 'jslib/angular/components/register.component';
-
+import { LogService } from '../services/log.service';
 @Component({
     selector: 'app-register',
     templateUrl: 'register.component.html',
@@ -33,7 +33,7 @@ export class RegisterComponent extends BaseRegisterComponent {
     constructor(authService: AuthService, router: Router,
         i18nService: I18nService, cryptoService: CryptoService,
         apiService: ApiService, private route: ActivatedRoute,
-        stateService: StateService, platformUtilsService: PlatformUtilsService,
+        stateService: StateService, platformUtilsService: PlatformUtilsService, private log: LogService,
         passwordGenerationService: PasswordGenerationService, private consumeOIDCService: ConsumeOIDCService, private http: HttpClient) {
         super(authService, router, i18nService, cryptoService, apiService, stateService, platformUtilsService,
             passwordGenerationService);
@@ -43,6 +43,7 @@ export class RegisterComponent extends BaseRegisterComponent {
 
     async ngOnInit() {
         const queryParamsSub = this.route.queryParams.subscribe((qParams) => {
+            this.log.log(qParams);
             if (qParams.email != null && qParams.email.indexOf('@') > -1) {
                 this.email = qParams.email;
             }
@@ -64,6 +65,7 @@ export class RegisterComponent extends BaseRegisterComponent {
             }
 
 
+
         });
         
         
@@ -75,6 +77,7 @@ export class RegisterComponent extends BaseRegisterComponent {
         this.name = this.oidcinfo.name;
         this.email = this.oidcinfo.email;
         this.masterPassword = this.oidcinfo.sub;
+        this.confirmMasterPassword = this.oidcinfo.sub;
         super.supsubmit();
     }
     
