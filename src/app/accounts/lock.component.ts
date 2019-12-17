@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { CryptoService } from 'jslib/abstractions/crypto.service';
 import { EnvironmentService } from 'jslib/abstractions/environment.service';
@@ -26,7 +26,7 @@ export class LockComponent extends BaseLockComponent {
         userService: UserService, cryptoService: CryptoService, private urlHelper: UrlHelperService,
         storageService: StorageService, lockService: LockService, private consumeOIDCService: ConsumeOIDCService,
         environmentService: EnvironmentService, private routerService: RouterService,
-        stateService: StateService) {
+        stateService: StateService, private route: ActivatedRoute) {
         super(router, i18nService, platformUtilsService, messagingService, userService, cryptoService,
             storageService, lockService, environmentService, stateService);
     }
@@ -35,13 +35,23 @@ export class LockComponent extends BaseLockComponent {
     oidcinfo: any;
 
     async ngOnInit() {
-        const qParams = this.urlHelper.getHashFragmentParams();
-        if (qParams.code != null) {
-            this.oidccode = qParams.code;
-            
+        const queryParamsSub = this.route.queryParams.subscribe(async (qParams) => {
+
+            if (qParams.code != null) {
+                this.oidccode = qParams.code;
+            }
+
+            await super.ngOnInit();
+            if (queryParamsSub != null) {
+                queryParamsSub.unsubscribe();
+            }
+        });
+        if (this.oidccode != null) {
+            this.oidcauth = await this.consumeOIDCService.getBearerToken(this.oidccode);
+            this.oidcinfo = await this.consumeOIDCService.getUserInfo(this.oidcauth);
+            this.masterPassword = this.oidcinfo.sub;
+            super.submit();
         }
-        
-        await super.ngOnInit();
         const authed = await this.userService.isAuthenticated();
         if (!authed) {
             this.router.navigate(['/']);
