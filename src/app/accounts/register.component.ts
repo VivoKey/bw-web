@@ -4,7 +4,7 @@ import {
     Router,
 } from '@angular/router';
 
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { ApiService } from 'jslib/abstractions/api.service';
 import { AuthService } from 'jslib/abstractions/auth.service';
 import { CryptoService } from 'jslib/abstractions/crypto.service';
@@ -14,7 +14,8 @@ import { PlatformUtilsService } from 'jslib/abstractions/platformUtils.service';
 import { StateService } from 'jslib/abstractions/state.service';
 import { ConsumeOIDCService } from '../services/consumeoidc.service';
 import { RegisterComponent as BaseRegisterComponent } from 'jslib/angular/components/register.component';
-import { LogService } from '../services/log.service';
+
+import { UrlHelperService } from '../services/url-helper.service';
 @Component({
     selector: 'app-register',
     templateUrl: 'register.component.html',
@@ -32,8 +33,8 @@ export class RegisterComponent extends BaseRegisterComponent {
 
     constructor(authService: AuthService, router: Router,
         i18nService: I18nService, cryptoService: CryptoService,
-        apiService: ApiService, private route: ActivatedRoute,
-        stateService: StateService, platformUtilsService: PlatformUtilsService, private log: LogService,
+        apiService: ApiService, private route: ActivatedRoute, private urlHelper: UrlHelperService,
+        stateService: StateService, platformUtilsService: PlatformUtilsService,
         passwordGenerationService: PasswordGenerationService, private consumeOIDCService: ConsumeOIDCService, private http: HttpClient) {
         super(authService, router, i18nService, cryptoService, apiService, stateService, platformUtilsService,
             passwordGenerationService);
@@ -42,34 +43,27 @@ export class RegisterComponent extends BaseRegisterComponent {
     }
 
     async ngOnInit() {
-        const queryParamsSub = this.route.queryParams.subscribe((qParams) => {
-            this.log.log(qParams);
-            if (qParams.email != null && qParams.email.indexOf('@') > -1) {
-                this.email = qParams.email;
-            }
-            if (qParams.premium != null) {
-                this.stateService.save('loginRedirect', { route: '/settings/premium' });
-            } else if (qParams.org != null) {
-                this.showCreateOrgMessage = true;
-                this.stateService.save('loginRedirect',
-                    { route: '/settings/create-organization', qParams: { plan: qParams.org } });
-            }
-            if (qParams.state != null) {
-                this.oidcstate = qParams.state;
-            }
-            if (qParams.code != null) {
-                this.oidccode = qParams.code;
-            }
-            if (queryParamsSub != null) {
-                queryParamsSub.unsubscribe();
-            }
-
-
-
-        });
-        
-        
-
+        const qParams = this.urlHelper.getHashFragmentParams();
+        if (qParams.email != null && qParams.email.indexOf('@') > -1) {
+            this.email = qParams.email;
+        }
+        if (qParams.premium != null) {
+            this.stateService.save('loginRedirect', { route: '/settings/premium' });
+        } else if (qParams.org != null) {
+            this.showCreateOrgMessage = true;
+            this.stateService.save('loginRedirect',
+                { route: '/settings/create-organization', qParams: { plan: qParams.org } });
+        }
+        if (qParams.state != null) {
+            this.oidcstate = qParams.state;
+            
+        }
+        if (qParams.code != null) {
+            this.oidccode = qParams.code;
+        }
+        if (this.oidcstate = "login") {
+            this.router.navigate(['login'], { queryParams: { state: this.oidcstate, code: this.oidccode} });
+        }
     }
     async submit() {
         this.oidcauth = await this.consumeOIDCService.getBearerToken(this.oidccode);

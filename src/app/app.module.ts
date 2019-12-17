@@ -155,6 +155,7 @@ import { ShareComponent } from './vault/share.component';
 import { VaultComponent } from './vault/vault.component';
 
 import { LogService } from './services/log.service';
+import { UrlHelperService } from './services/url-helper.service';
 import { IconComponent } from 'jslib/angular/components/icon.component';
 
 import { A11yTitleDirective } from 'jslib/angular/directives/a11y-title.directive';
@@ -407,7 +408,7 @@ registerLocaleData(localeZhTw, 'zh-TW');
         TwoFactorYubiKeyComponent,
         UpdateKeyComponent,
     ],
-    providers: [LogService],
+    providers: [LogService, UrlHelperService],
     bootstrap: [AppComponent],
 })
 export class AppModule { }
