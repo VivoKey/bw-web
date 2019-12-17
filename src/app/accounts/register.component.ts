@@ -61,7 +61,7 @@ export class RegisterComponent extends BaseRegisterComponent {
         if (qParams.code != null) {
             this.oidccode = qParams.code;
         }
-        if (this.oidcstate = "login") {
+        if (this.oidcstate !== "register") {
             this.router.navigate(['login'], { queryParams: { state: this.oidcstate, code: this.oidccode} });
         }
     }
