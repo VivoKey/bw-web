@@ -35,7 +35,7 @@ export class RegisterComponent extends BaseRegisterComponent {
         i18nService: I18nService, cryptoService: CryptoService,
         apiService: ApiService, private route: ActivatedRoute, private urlHelper: UrlHelperService,
         stateService: StateService, platformUtilsService: PlatformUtilsService,
-        passwordGenerationService: PasswordGenerationService, private consumeOIDCService: ConsumeOIDCService, private http: HttpClient) {
+        passwordGenerationService: PasswordGenerationService, private consumeOIDCService: ConsumeOIDCService) {
         super(authService, router, i18nService, cryptoService, apiService, stateService, platformUtilsService,
             passwordGenerationService);
         this.oidcservice = consumeOIDCService;

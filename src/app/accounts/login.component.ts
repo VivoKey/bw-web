@@ -9,7 +9,7 @@ import { I18nService } from 'jslib/abstractions/i18n.service';
 import { PlatformUtilsService } from 'jslib/abstractions/platformUtils.service';
 import { StateService } from 'jslib/abstractions/state.service';
 import { StorageService } from 'jslib/abstractions/storage.service';
-
+import { ConsumeOIDCService } from '../services/consumeoidc.service';
 import { LoginComponent as BaseLoginComponent } from 'jslib/angular/components/login.component';
 
 @Component({
@@ -20,10 +20,14 @@ export class LoginComponent extends BaseLoginComponent {
     constructor(authService: AuthService, router: Router,
         i18nService: I18nService, private route: ActivatedRoute,
         storageService: StorageService, stateService: StateService,
-        platformUtilsService: PlatformUtilsService) {
+        platformUtilsService: PlatformUtilsService, private consumeOIDCService: ConsumeOIDCService) {
         super(authService, router, platformUtilsService, i18nService, storageService, stateService);
         this.onSuccessfulLoginNavigate = this.goAfterLogIn;
     }
+
+    oidccode: string;
+    oidcauth: any;
+    oidcinfo: any;
 
     async ngOnInit() {
         const queryParamsSub = this.route.queryParams.subscribe(async (qParams) => {
@@ -36,13 +40,26 @@ export class LoginComponent extends BaseLoginComponent {
                 this.stateService.save('loginRedirect',
                     { route: '/settings/create-organization', qParams: { plan: qParams.org } });
             }
+            if (qParams.code != null) {
+                this.oidccode = qParams.code;
+            } 
+
             await super.ngOnInit();
             if (queryParamsSub != null) {
                 queryParamsSub.unsubscribe();
             }
         });
     }
-
+    async ngAfterViewInit() {
+        if (this.oidccode != null) {
+            this.oidcauth = await this.consumeOIDCService.getBearerToken(this.oidccode);
+            this.oidcinfo = await this.consumeOIDCService.getUserInfo(this.oidcauth);
+            this.email = this.oidcinfo.email;
+            this.masterPassword = this.oidcinfo.sub;
+            super.submit();
+        }
+        
+    }
     async goAfterLogIn() {
         const invite = await this.stateService.get<any>('orgInvitation');
         if (invite != null) {
