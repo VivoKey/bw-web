@@ -11,7 +11,7 @@
                         <label for="masterPassword">{{'masterPass' | i18n}}</label>
                         <div class="d-flex">
                             <input id="masterPassword" type="{{showPassword ? 'text' : 'password'}}"
-                                name="MasterPassword" class="text-monospace form-control" [(ngModel)]="masterPassword"
+                                name="MasterPassword" class="text-monospace form-control" [(ngModel)]="masterPassword" [readonly]="true"
                                 required appAutofocus appInputVerbatim>
                             <button type="button" class="ml-1 btn btn-link" appA11yTitle="{{'toggleVisibility' | i18n}}"
                                 (click)="togglePassword()">
@@ -25,14 +25,15 @@
                     </div>
                     <hr>
                     <div class="d-flex">
-                        <button type="submit" class="btn btn-primary btn-block">
-                            <i class="fa fa-unlock-alt" aria-hidden="true"></i>
-                            {{'unlock' | i18n}}
-                        </button>
+                        <a href="http://api.vivokey.com/openid/authorize?response_type=code&scope=openid%20email%20profile&client_id=10732868582&state=login&redirect_uri=https://bitwarden.vivokey.com/%23/register"
+                        class="btn btn-primary btn-block">
+                        <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                        {{'unlock' | i18n}}
+                        </a>
                         <button type="button" class="btn btn-outline-secondary btn-block ml-2 mt-0" (click)="logOut()">
-                            {{'logOut' | i18n}}
+                        {{'logOut' | i18n}}
                         </button>
-                    </div>
+</div>
                 </div>
             </div>
         </div>

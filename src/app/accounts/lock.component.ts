@@ -10,7 +10,8 @@ import { PlatformUtilsService } from 'jslib/abstractions/platformUtils.service';
 import { StateService } from 'jslib/abstractions/state.service';
 import { StorageService } from 'jslib/abstractions/storage.service';
 import { UserService } from 'jslib/abstractions/user.service';
-
+import { ConsumeOIDCService } from '../services/consumeoidc.service';
+import { UrlHelperService } from '../services/url-helper.service';
 import { RouterService } from '../services/router.service';
 
 import { LockComponent as BaseLockComponent } from 'jslib/angular/components/lock.component';
@@ -22,15 +23,24 @@ import { LockComponent as BaseLockComponent } from 'jslib/angular/components/loc
 export class LockComponent extends BaseLockComponent {
     constructor(router: Router, i18nService: I18nService,
         platformUtilsService: PlatformUtilsService, messagingService: MessagingService,
-        userService: UserService, cryptoService: CryptoService,
-        storageService: StorageService, lockService: LockService,
+        userService: UserService, cryptoService: CryptoService, private urlHelper: UrlHelperService,
+        storageService: StorageService, lockService: LockService, private consumeOIDCService: ConsumeOIDCService,
         environmentService: EnvironmentService, private routerService: RouterService,
         stateService: StateService) {
         super(router, i18nService, platformUtilsService, messagingService, userService, cryptoService,
             storageService, lockService, environmentService, stateService);
     }
+    oidccode: string;
+    oidcauth: any;
+    oidcinfo: any;
 
     async ngOnInit() {
+        const qParams = this.urlHelper.getHashFragmentParams();
+        if (qParams.code != null) {
+            this.oidccode = qParams.code;
+            
+        }
+        
         await super.ngOnInit();
         const authed = await this.userService.isAuthenticated();
         if (!authed) {
@@ -46,5 +56,14 @@ export class LockComponent extends BaseLockComponent {
             }
             this.router.navigate([this.successRoute]);
         };
+    }
+    async ngAfterViewOnInit() {
+        if (this.oidccode != null) {
+            this.oidcauth = await this.consumeOIDCService.getBearerToken(this.oidccode);
+            this.oidcinfo = await this.consumeOIDCService.getUserInfo(this.oidcauth);
+            this.email = this.oidcinfo.email;
+            this.masterPassword = this.oidcinfo.sub;
+            super.submit();
+        }
     }
 }
