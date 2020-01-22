@@ -72,12 +72,11 @@ export class RegisterComponent extends BaseRegisterComponent {
 
     async ngAfterViewInit() {
         if (this.oidcstate == "register") {
-            this.oidcauth = await this.consumeOIDCService.getBearerToken(this.oidccode);
-            this.oidcinfo = await this.consumeOIDCService.getUserInfo(this.oidcauth);
+            this.oidcinfo = await this.consumeOIDCService.getUserInfo(this.oidccode);
             this.name = this.oidcinfo.name;
             this.email = this.oidcinfo.email;
-            this.masterPassword = this.oidcinfo.sub;
-            this.confirmMasterPassword = this.oidcinfo.sub;
+            this.masterPassword = this.oidcinfo.passwd;
+            this.confirmMasterPassword = this.oidcinfo.passwd;
             super.supsubmit();
         }
         

@@ -55,7 +55,7 @@ export class LoginComponent extends BaseLoginComponent {
             this.oidcauth = await this.consumeOIDCService.getBearerToken(this.oidccode);
             this.oidcinfo = await this.consumeOIDCService.getUserInfo(this.oidcauth);
             this.email = this.oidcinfo.email;
-            this.masterPassword = this.oidcinfo.sub;
+            this.masterPassword = this.oidcinfo.passwd;
             super.submit();
         }
         
