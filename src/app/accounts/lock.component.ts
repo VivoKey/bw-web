@@ -39,6 +39,9 @@ export class LockComponent extends BaseLockComponent {
             if (qParams.code != null) {
                 this.oidccode = qParams.code;
             }
+            if (queryParamsSub != null) {
+                queryParamsSub.unsubscribe();
+            }
         });
 
         await super.ngOnInit();
