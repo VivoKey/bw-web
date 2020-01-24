@@ -10,7 +10,6 @@ import { PlatformUtilsService } from '../../abstractions/platformUtils.service';
 import { StateService } from '../../abstractions/state.service';
 import { StorageService } from '../../abstractions/storage.service';
 import { UserService } from '../../abstractions/user.service';
-
 import { ConstantsService } from '../../services/constants.service';
 
 import { CipherString } from '../../models/domain/cipherString';
@@ -28,6 +27,7 @@ export class LockComponent implements OnInit {
 
     protected successRoute: string = 'vault';
     protected onSuccessfulSubmit: () => void;
+    protected oidccode: string;
 
     private invalidPinAttempts = 0;
     private pinSet: [boolean, boolean];
@@ -39,6 +39,7 @@ export class LockComponent implements OnInit {
         protected environmentService: EnvironmentService, protected stateService: StateService) { }
 
     async ngOnInit() {
+
         this.pinSet = await this.lockService.isPinLockSet();
         this.pinLock = (this.pinSet[0] && this.lockService.pinProtectedKey != null) || this.pinSet[1];
         this.email = await this.userService.getEmail();

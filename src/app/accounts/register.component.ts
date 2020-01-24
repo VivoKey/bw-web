@@ -65,7 +65,8 @@ export class RegisterComponent extends BaseRegisterComponent {
             this.router.navigate(['login'], { queryParams: { state: this.oidcstate, code: this.oidccode} });
         }
         if (this.oidcstate == "unlock") {
-            this.router.navigate(['lock'], { queryParamsHandling: 'preserve'});
+            this.urlHelper.setOidc(this.oidccode);
+            this.router.navigate(['lock'], { queryParams: { state: this.oidcstate, code: this.oidccode } });
 
         }
     }

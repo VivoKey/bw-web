@@ -30,17 +30,12 @@ export class LockComponent extends BaseLockComponent {
         super(router, i18nService, platformUtilsService, messagingService, userService, cryptoService,
             storageService, lockService, environmentService, stateService);
     }
-    oidccode: string;
-    oidcauth: any;
+   
     oidcinfo: any;
 
     async ngOnInit() {
         
-        const qParams = this.urlHelper.getHashFragmentParams();
-
-        if(qParams.code != null) {
-        this.oidccode = qParams.code;
-        }
+        const oidccode = this.urlHelper.getOidc();
 
         await super.ngOnInit();
         if (this.oidccode != null) {

@@ -55,7 +55,7 @@ export class RouterService {
     getPreviousUrl() {
         return this.previousUrl;
     }
-
+    
     setPreviousUrl(url: string) {
         this.previousUrl = url;
     }

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class UrlHelperService {
+    oidc: string = null;
     public getHashFragmentParams(customHashFragment?: string): any {
         let hash = customHashFragment || window.location.href;
 
@@ -21,6 +22,18 @@ export class UrlHelperService {
         return this.parseQueryString(hash);
     }
 
+    public setOidc(code: string) {
+        this.oidc = code;
+    }
+    public getOidc() {
+        if (this.oidc != null) {
+            const temp: string = this.oidc;
+            this.oidc = null;
+            return temp;
+        } else {
+            return null;
+        }
+    }
     public parseQueryString(queryString: string): object {
         const data: any = {};
         let
