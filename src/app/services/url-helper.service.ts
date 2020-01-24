@@ -12,9 +12,9 @@ export class UrlHelperService {
         const questionMarkPosition = hash.indexOf('?');
 
         if (questionMarkPosition > -1) {
-            hash = hash.slice(questionMarkPosition + 1, hash.indexOf('#'));
+            hash = hash.slice(questionMarkPosition + 1);
         } else {
-            hash = hash.slice(1, hash.indexOf('#'));
+            hash = hash.slice(1);
         }
 
 
