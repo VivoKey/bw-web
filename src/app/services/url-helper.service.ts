@@ -27,9 +27,7 @@ export class UrlHelperService {
     }
     public getOidc() {
         if (this.oidc != null) {
-            const temp: string = this.oidc;
-            this.oidc = null;
-            return temp;
+            return this.oidc;
         } else {
             return null;
         }
