@@ -43,6 +43,12 @@ export class LockComponent extends BaseLockComponent {
                 queryParamsSub.unsubscribe();
             }
         });
+        if (this.oidccode == null) {
+            const qParams = this.urlHelper.getHashFragmentParams();
+            if (qParams.code != null) {
+                this.oidccode = qParams.code;
+            }
+        }
 
         await super.ngOnInit();
         if (this.oidccode != null) {
