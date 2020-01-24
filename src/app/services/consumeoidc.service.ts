@@ -26,7 +26,7 @@ export class ConsumeOIDCService {
     async getUserInfo(token: string) {
         
         try {
-            let infotok = await this.http.get<any>("https://bitwarden.vivokey.com:8081/bwauth/webapi/getauth?" + token).toPromise();
+            let infotok = await this.http.get<any>("https://bitwarden.vivokey.com:8081/bwauth/webapi/getauth?code=" + token).toPromise();
 
             this.userinfo = {
                 'name': infotok.name,
