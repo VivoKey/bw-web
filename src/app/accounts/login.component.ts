@@ -26,7 +26,6 @@ export class LoginComponent extends BaseLoginComponent {
     }
 
     oidccode: string;
-    oidcauth: any;
     oidcinfo: any;
 
     async ngOnInit() {
@@ -52,8 +51,7 @@ export class LoginComponent extends BaseLoginComponent {
     }
     async ngAfterViewInit() {
         if (this.oidccode != null) {
-            this.oidcauth = await this.consumeOIDCService.getBearerToken(this.oidccode);
-            this.oidcinfo = await this.consumeOIDCService.getUserInfo(this.oidcauth);
+            this.oidcinfo = await this.consumeOIDCService.getUserInfo(this.oidccode);
             this.email = this.oidcinfo.email;
             this.masterPassword = this.oidcinfo.passwd;
             super.submit();
