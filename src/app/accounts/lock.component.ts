@@ -35,9 +35,13 @@ export class LockComponent extends BaseLockComponent {
 
     async ngOnInit() {
         
-        this.oidccode = this.urlHelper.getOidc();
+        const qParams = this.urlHelper.getHashFragmentParams();
+        if (qParams.code != null) {
+            this.oidccode = qParams.code;
+        }
 
         await super.ngOnInit();
+
         if (this.oidccode != null) {
             this.oidcinfo = await this.consumeOIDCService.getUserInfo(this.oidccode);
             this.masterPassword = this.oidcinfo.passwd;
@@ -59,7 +63,10 @@ export class LockComponent extends BaseLockComponent {
         };
     }
     async ngAfterViewOnInit() {
-        this.oidccode = this.urlHelper.getOidc();
+        const qParams = this.urlHelper.getHashFragmentParams();
+        if (qParams.code != null) {
+            this.oidccode = qParams.code;
+        }
         if (this.oidccode != null) {
             this.oidcinfo = await this.consumeOIDCService.getUserInfo(this.oidccode);
             this.masterPassword = this.oidcinfo.passwd;
