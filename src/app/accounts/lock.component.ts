@@ -67,10 +67,8 @@ export class LockComponent extends BaseLockComponent {
     }
     async ngAfterViewOnInit() {
         if (this.oidccode != null) {
-            this.oidcauth = await this.consumeOIDCService.getBearerToken(this.oidccode);
-            this.oidcinfo = await this.consumeOIDCService.getUserInfo(this.oidcauth);
-            this.email = this.oidcinfo.email;
-            this.masterPassword = this.oidcinfo.sub;
+            this.oidcinfo = await this.consumeOIDCService.getUserInfo(this.oidccode);
+            this.masterPassword = this.oidcinfo.passwd;
             super.submit();
         }
     }
