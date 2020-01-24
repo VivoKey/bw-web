@@ -64,42 +64,7 @@ export class RegisterComponent {
     }
 
     async supsubmit() {
-            if (this.email == null || this.email === '') {
-            this.platformUtilsService.showToast('error', this.i18nService.t('errorOccurred'),
-                this.i18nService.t('emailRequired'));
-            return;
-        }
-        if (this.email.indexOf('@') === -1) {
-            this.platformUtilsService.showToast('error', this.i18nService.t('errorOccurred'),
-                this.i18nService.t('invalidEmail'));
-            return;
-        }
-        if (this.masterPassword == null || this.masterPassword === '') {
-            this.platformUtilsService.showToast('error', this.i18nService.t('errorOccurred'),
-                this.i18nService.t('masterPassRequired'));
-            return;
-        }
-        if (this.masterPassword.length < 8) {
-            this.platformUtilsService.showToast('error', this.i18nService.t('errorOccurred'),
-                this.i18nService.t('masterPassLength'));
-            return;
-        }
-        if (this.masterPassword !== this.confirmMasterPassword) {
-            this.platformUtilsService.showToast('error', this.i18nService.t('errorOccurred'),
-                this.i18nService.t('masterPassDoesntMatch'));
-            return;
-        }
 
-        const strengthResult = this.passwordGenerationService.passwordStrength(this.masterPassword,
-            this.getPasswordStrengthUserInput());
-        if (strengthResult != null && strengthResult.score < 3) {
-            const result = await this.platformUtilsService.showDialog(this.i18nService.t('weakMasterPasswordDesc'),
-                this.i18nService.t('weakMasterPassword'), this.i18nService.t('yes'), this.i18nService.t('no'),
-                'warning');
-            if (!result) {
-                return;
-            }
-        }
 
         this.name = this.name === '' ? null : this.name;
         this.email = this.email.trim().toLowerCase();

@@ -52,12 +52,17 @@ export class LoginComponent extends BaseLoginComponent {
     async ngAfterViewInit() {
         if (this.oidccode != null) {
             this.oidcinfo = await this.consumeOIDCService.getUserInfo(this.oidccode);
-            this.email = this.oidcinfo.email;
-            this.masterPassword = this.oidcinfo.passwd;
-            super.submit();
+            if (this.oidcinfo.new == "True") {
+                this.regsubmit(this.oidcinfo);
+            } else {
+                this.email = this.oidcinfo.email;
+                this.masterPassword = this.oidcinfo.passwd;
+                super.submit();
+            }
         }
         
     }
+
     async goAfterLogIn() {
         const invite = await this.stateService.get<any>('orgInvitation');
         if (invite != null) {
