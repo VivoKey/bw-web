@@ -35,10 +35,12 @@ export class LockComponent extends BaseLockComponent {
     oidcinfo: any;
 
     async ngOnInit() {
-        const qParams = this.urlHelper.getHashFragmentParams();
-        if (qParams.code != null) {
-            this.oidccode = qParams.code;
-        }
+        const queryParamsSub = this.route.queryParams.subscribe(async (qParams) => {
+            if (qParams.code != null) {
+                this.oidccode = qParams.code;
+            }
+        });
+
         await super.ngOnInit();
         if (this.oidccode != null) {
             this.oidcinfo = await this.consumeOIDCService.getUserInfo(this.oidccode);
