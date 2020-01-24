@@ -28,6 +28,7 @@ export class RegisterComponent extends BaseRegisterComponent {
     oidccode: string;
     oidcauth: any;
     oidcinfo: any;
+    new: string;
 
     oidcservice: ConsumeOIDCService;
 
@@ -54,20 +55,27 @@ export class RegisterComponent extends BaseRegisterComponent {
             this.stateService.save('loginRedirect',
                 { route: '/settings/create-organization', qParams: { plan: qParams.org } });
         }
+        /**
         if (qParams.state != null) {
             this.oidcstate = qParams.state;
             
         }
+        **/
         if (qParams.code != null) {
             this.oidccode = qParams.code;
+        }
+        if (qParams.new != null) {
+            this.new = qParams.new;
+            if (this.new == "True") {
+                this.oidcstate == "register";
+            } else if (this.new == "False") {
+                this.oidcstate == "login";
+            }
         }
         if (this.oidcstate == "login") {
             this.router.navigate(['login'], { queryParams: { state: this.oidcstate, code: this.oidccode} });
         }
-        if (this.oidcstate == "unlock") {
-            this.router.navigate(['lock'], { queryParams: { state: this.oidcstate, code: this.oidccode } });
 
-        }
     }
 
     async ngAfterViewInit() {
