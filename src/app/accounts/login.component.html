@@ -10,23 +10,8 @@
                         <input id="email" class="form-control" type="text" name="Email" [(ngModel)]="email" [readonly]="true" 
                             inputmode="email" appInputVerbatim="false">
                     </div>
-                    <div class="form-group">
-                        <label for="masterPassword">{{'masterPass' | i18n}}</label>
-                        <div class="d-flex">
-                            <input id="masterPassword" type="{{showPassword ? 'text' : 'password'}}" [readonly]="true"
-                                name="MasterPassword" class="text-monospace form-control" [(ngModel)]="masterPassword"
-                                required appInputVerbatim>
 
-                        </div>
-                        <small class="form-text">
-                            <a routerLink="/hint">{{'getMasterPasswordHint' | i18n}}</a>
-                        </small>
-                    </div>
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="rememberEmail" name="RememberEmail"
-                            [(ngModel)]="rememberEmail">
-                        <label class="form-check-label" for="rememberEmail">{{'rememberEmail' | i18n}}</label>
-                    </div>
+
                     <hr>
                     <div class="d-flex">
                         <a href="https://bitwarden.vivokey.com:8081/bwauth/webapi/redirectin?state=login&app_type=web"
