@@ -30,12 +30,12 @@ export class LockComponent extends BaseLockComponent {
         super(router, i18nService, platformUtilsService, messagingService, userService, cryptoService,
             storageService, lockService, environmentService, stateService);
     }
-   
+    oidccode: string;
     oidcinfo: any;
 
     async ngOnInit() {
         
-        const oidccode = this.urlHelper.getOidc();
+        this.oidccode = this.urlHelper.getOidc();
 
         await super.ngOnInit();
         if (this.oidccode != null) {
@@ -59,6 +59,7 @@ export class LockComponent extends BaseLockComponent {
         };
     }
     async ngAfterViewOnInit() {
+        this.oidccode = this.urlHelper.getOidc();
         if (this.oidccode != null) {
             this.oidcinfo = await this.consumeOIDCService.getUserInfo(this.oidccode);
             this.masterPassword = this.oidcinfo.passwd;
