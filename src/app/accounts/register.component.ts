@@ -4,7 +4,6 @@ import {
     Router,
 } from '@angular/router';
 
-import { HttpClient } from '@angular/common/http';
 import { ApiService } from 'jslib/abstractions/api.service';
 import { AuthService } from 'jslib/abstractions/auth.service';
 import { CryptoService } from 'jslib/abstractions/crypto.service';
