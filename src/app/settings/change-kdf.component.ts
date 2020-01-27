@@ -41,5 +41,29 @@ export class ChangeKdfComponent implements OnInit {
         this.kdfIterations = await this.userService.getKdfIterations();
     }
 
+    async submit() {
+        const hasEncKey = await this.cryptoService.hasEncKey();
+        if (!hasEncKey) {
+            this.toasterService.popAsync('error', null, this.i18nService.t('updateKey'));
+            return;
+        }
 
+        const request = new KdfRequest();
+        request.kdf = this.kdf;
+        request.kdfIterations = this.kdfIterations;
+        request.masterPasswordHash = await this.cryptoService.hashPassword(this.masterPassword, null);
+        const email = await this.userService.getEmail();
+        const newKey = await this.cryptoService.makeKey(this.masterPassword, email, this.kdf, this.kdfIterations);
+        request.newMasterPasswordHash = await this.cryptoService.hashPassword(this.masterPassword, newKey);
+        const newEncKey = await this.cryptoService.remakeEncKey(newKey);
+        request.key = newEncKey[1].encryptedString;
+        try {
+            this.formPromise = this.apiService.postAccountKdf(request);
+            await this.formPromise;
+            this.analytics.eventTrack.next({ action: 'Changed KDF' });
+            this.toasterService.popAsync('success', this.i18nService.t('encKeySettingsChanged'),
+                this.i18nService.t('logBackIn'));
+            this.messagingService.send('logout');
+        } catch { }
+    }
 }
