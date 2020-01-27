@@ -584,7 +584,7 @@
     "message": "Email Address"
   },
   "yourVaultIsLocked": {
-    "message": "Your vault is locked. Verify your master password to continue."
+    "message": "Your vault is locked. Re-authenticate with Vivokey (press the unlock button) to unlock."
   },
   "unlock": {
     "message": "Unlock"
@@ -2793,7 +2793,7 @@
     "message": "Lock Options"
   },
   "lockOptionsDesc": {
-    "message": "Choose when your vault locks. A locked vault requires that you re-enter your master password to access it again."
+    "message": "Choose when your vault locks. A locked vault requires that you re-authenticate to access it again."
   },
   "oneMinute": {
     "message": "1 minute"
