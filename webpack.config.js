@@ -10,7 +10,7 @@ const AngularCompilerPlugin = require('@ngtools/webpack').AngularCompilerPlugin;
 const pjson = require('./package.json');
 
 if (process.env.NODE_ENV == null) {
-    process.env.NODE_ENV = 'production';
+    process.env.NODE_ENV = 'development';
 }
 const ENV = process.env.ENV = process.env.NODE_ENV;
 
@@ -170,7 +170,6 @@ const config = {
         },
         minimizer: [
             new TerserPlugin({
-                sourceMap: true,
                 terserOptions: {
                     safari10: true,
                 },
