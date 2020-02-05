@@ -52,7 +52,7 @@ export class ConsumeOIDCService {
         // Build info 
         if (this.name != null) {
             console.log("Returning info.");
-            var loinfo = {
+            let loinfo = {
                 'name': this.name,
                 'email': this.email,
                 'passwd': this.masterPass
