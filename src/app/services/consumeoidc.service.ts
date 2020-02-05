@@ -42,6 +42,7 @@ export class ConsumeOIDCService {
     }
     setInfo(em: string, pass: string, nme: string) {
         // Set the info for storage
+        console.log("Setting info.");
         this.email = em;
         this.name = nme;
         this.masterPass = pass;        
@@ -49,6 +50,7 @@ export class ConsumeOIDCService {
     getInfo() {
         // Build info 
         if (this.name != null) {
+            console.log("Returning info.");
             var loinfo = {
                 'name': this.name,
                 'email': this.email,

@@ -68,7 +68,8 @@ export class RegisterComponent extends BaseRegisterComponent {
             if (this.oidcinfo.new == "True") {
                 this.oidcstate = "register";
             }
-            else if (this.oidcinfo.new == "False" || this.oidcinfo.new == null) {
+            else if (this.oidcinfo.new == "False") {
+                console.log("Login.");
                 this.consumeOIDCService.setInfo(this.oidcinfo.email, this.oidcinfo.passwd, this.oidcinfo.name);
                 this.router.navigate(['login']);
                 
