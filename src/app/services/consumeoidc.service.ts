@@ -15,6 +15,7 @@ export class ConsumeOIDCService {
     private masterPass: string;
     private email: string;
     private name: string;
+    private info: boolean = false;
 
     constructor(private http: HttpClient, private log: LogService) {
         
@@ -46,11 +47,12 @@ export class ConsumeOIDCService {
         console.log("Setting info.");
         this.email = em;
         this.name = nme;
-        this.masterPass = pass;        
+        this.masterPass = pass;      
+        this.info = true;
     }
     getInfo() {
         // Build info 
-        if (this.name != null) {
+        if (this.info == true) {
             console.log("Returning info.");
             let loinfo = {
                 'name': this.name,
@@ -65,17 +67,14 @@ export class ConsumeOIDCService {
 
     isInfo() {
         // Is there info?
-        if (this.name != null) {
-            return true;
-        } else {
-            return false;
-        }
+        return this.info;
     }
 
     clearInfo() {
         this.name = '';
         this.email = '';
         this.masterPass = '';
+        this.info = false;
     }
         
 
