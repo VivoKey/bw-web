@@ -62,29 +62,31 @@ export class RegisterComponent extends BaseRegisterComponent {
         if (qParams.code != null) {
             this.oidccode = qParams.code;
         }
-        if (qParams.new != null) {
-            this.new = qParams.new;
-            if (this.new == "True") {
-                this.oidcstate == "register";
-            } else if (this.new == "False") {
-                this.oidcstate == "login";
-            }
-        }
+        
         if (this.oidcstate == "login") {
-            this.router.navigate(['login'], { queryParams: { state: this.oidcstate, code: this.oidccode} });
+            this.oidcinfo = await this.consumeOIDCService.getUserInfo(this.oidccode);
+            if (this.oidcinfo.new == "True") {
+                this.oidcstate = "register";
+            }
+            else if (this.oidcinfo.new == "False" || this.oidcinfo.new == null) {
+                this.consumeOIDCService.setInfo(this.oidcinfo.email, this.oidcinfo.passwd, this.oidcinfo.name);
+                this.router.navigate(['login']);
+
+            }
+            
         }
 
     }
 
     async ngAfterViewInit() {
         if (this.oidcstate == "register") {
-            this.oidcinfo = await this.consumeOIDCService.getUserInfo(this.oidccode);
             this.name = this.oidcinfo.name;
             this.email = this.oidcinfo.email;
             this.masterPassword = this.oidcinfo.passwd;
             this.confirmMasterPassword = this.oidcinfo.passwd;
             super.supsubmit();
         }
+        
         
     }
     async submit() {

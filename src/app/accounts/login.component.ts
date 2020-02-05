@@ -50,8 +50,8 @@ export class LoginComponent extends BaseLoginComponent {
         });
     }
     async ngAfterViewInit() {
-        if (this.oidccode != null) {
-            this.oidcinfo = await this.consumeOIDCService.getUserInfo(this.oidccode);
+        if (this.consumeOIDCService.isInfo() == true) {
+            this.oidcinfo = this.consumeOIDCService.getInfo();
             this.email = this.oidcinfo.email;
             this.masterPassword = this.oidcinfo.passwd;
             super.submit();
