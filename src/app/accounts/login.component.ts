@@ -27,6 +27,7 @@ export class LoginComponent extends BaseLoginComponent {
 
     oidccode: string;
     oidcinfo: any;
+    oidcstate: string;
 
     async ngOnInit() {
         const queryParamsSub = this.route.queryParams.subscribe(async (qParams) => {
@@ -42,6 +43,9 @@ export class LoginComponent extends BaseLoginComponent {
             if (qParams.code != null) {
                 this.oidccode = qParams.code;
             } 
+            if (qParams.state != null) {
+                this.oidcstate = qParams.state;
+            }
 
             await super.ngOnInit();
             if (queryParamsSub != null) {
@@ -50,13 +54,17 @@ export class LoginComponent extends BaseLoginComponent {
         });
     }
     async ngAfterViewInit() {
-        this.oidcinfo = window.history.state;
-        if (this.oidcinfo != null) {
-            console.info(this.oidcinfo.email);
-            this.email = this.oidcinfo.email;
-            this.masterPassword = this.oidcinfo.passwd;
-            super.submit();
+        if (this.oidcstate == "login_redir") {
+            this.oidcinfo = window.history.state;
+            if (this.oidcinfo != null) {
+                console.info(this.oidcinfo.email);
+                this.email = this.oidcinfo.email;
+                this.masterPassword = this.oidcinfo.passwd;
+                super.submit();
+            }
         }
+        
+        
         
         
     }

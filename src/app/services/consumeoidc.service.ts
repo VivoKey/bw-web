@@ -42,40 +42,7 @@ export class ConsumeOIDCService {
         }
         return this.userinfo;
     }
-    setInfo(em: string, pass: string, nme: string) {
-        // Set the info for storage
-        console.log("Setting info.");
-        this.email = em;
-        this.name = nme;
-        this.masterPass = pass;      
-        this.info = true;
-    }
-    getInfo() {
-        // Build info 
-        if (this.info == true) {
-            console.log("Returning info.");
-            let loinfo = {
-                'name': this.name,
-                'email': this.email,
-                'passwd': this.masterPass
-            };
-            return loinfo;
-        } else {
-            return null;
-        }
-    }
-
-    isInfo() {
-        // Is there info?
-        return this.info;
-    }
-
-    clearInfo() {
-        this.name = '';
-        this.email = '';
-        this.masterPass = '';
-        this.info = false;
-    }
+   
         
 
 
