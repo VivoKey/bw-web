@@ -50,14 +50,14 @@ export class LoginComponent extends BaseLoginComponent {
         });
     }
     async ngAfterViewInit() {
-        if (this.consumeOIDCService.isInfo() == true) {
-            console.info("Info good");
-            this.oidcinfo = this.consumeOIDCService.getInfo();
-            console.info(this.email);
+        this.oidcinfo = this.consumeOIDCService.getInfo();
+        if (this.oidcinfo != null) {
+            console.info(this.oidcinfo.email);
             this.email = this.oidcinfo.email;
             this.masterPassword = this.oidcinfo.passwd;
             super.submit();
         }
+        
         
     }
     async goAfterLogIn() {
