@@ -34,7 +34,8 @@ export class ConsumeOIDCService {
             this.userinfo = {
                 'name': infotok.name,
                 'email': infotok.email,
-                'passwd': infotok.passwd
+                'passwd': infotok.passwd,
+                'new': infotok.new
             };
         } catch(err) {
         }
