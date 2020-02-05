@@ -70,7 +70,7 @@ export class RegisterComponent extends BaseRegisterComponent {
             }
             else if (this.oidcinfo.new == "False" || this.oidcinfo.new == null) {
                 this.consumeOIDCService.setInfo(this.oidcinfo.email, this.oidcinfo.passwd, this.oidcinfo.name);
-                this.router.navigate(['login'], {query_param: {'state': "login"}});
+                this.router.navigate(['login']);
                 
             }
             
