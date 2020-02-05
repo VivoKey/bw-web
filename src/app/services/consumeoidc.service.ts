@@ -49,15 +49,12 @@ export class ConsumeOIDCService {
     getInfo() {
         // Build info 
         if (this.name != null) {
-            var userinfo = {
+            var loinfo = {
                 'name': this.name,
                 'email': this.email,
                 'passwd': this.masterPass
             };
-            this.name = '';
-            this.email = '';
-            this.masterPass = '';
-            return userinfo;
+            return loinfo;
         } else {
             return null;
         }
@@ -70,6 +67,12 @@ export class ConsumeOIDCService {
         } else {
             return false;
         }
+    }
+
+    clearInfo() {
+        this.name = '';
+        this.email = '';
+        this.masterPass = '';
     }
         
 
