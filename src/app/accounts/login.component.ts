@@ -57,7 +57,6 @@ export class LoginComponent extends BaseLoginComponent {
         if (this.oidcstate == "login_redir") {
             this.oidcinfo = window.history.state;
             if (this.oidcinfo != null) {
-                console.info(this.oidcinfo.email);
                 this.email = this.oidcinfo.email;
                 this.masterPassword = this.oidcinfo.passwd;
                 super.submit();
