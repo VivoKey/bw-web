@@ -506,7 +506,7 @@
     "message": "No"
   },
   "loginOrCreateNewAccount": {
-    "message": "Log in or create a new account to access your secure vault."
+    "message": "Press the below button to access your secure vault."
   },
   "createAccount": {
     "message": "Create Account"
