@@ -124,7 +124,7 @@ export class RegisterComponent {
             await this.formPromise;
             this.platformUtilsService.eventTrack('Registered');
             this.platformUtilsService.showToast('success', null, this.i18nService.t('newAccountCreated'));
-            this.router.navigate([this.successRoute], { queryParams: { email: this.email } });
+            this.router.navigate([this.successRoute], { queryParams: { state: "login_redir" }, state: { email: this.email, passwd: this.masterPassword } });
         } catch { }
     }
 
