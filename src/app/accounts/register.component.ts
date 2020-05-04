@@ -98,17 +98,6 @@ export class RegisterComponent extends BaseRegisterComponent {
         }
     }
 
-    async submit() {
-        if (this.enforcedPolicyOptions != null &&
-            !this.policyService.evaluateMasterPassword(this.masterPasswordScore, this.masterPassword,
-                this.enforcedPolicyOptions)) {
-            this.platformUtilsService.showToast('error', this.i18nService.t('errorOccurred'),
-                this.i18nService.t('masterPasswordPolicyRequirementsNotMet'));
-            return;
-        }
-
-        await super.submit();
-    }
 
     async ngAfterViewInit() {
         if (this.oidcstate == "register") {
@@ -116,13 +105,13 @@ export class RegisterComponent extends BaseRegisterComponent {
             this.email = this.oidcinfo.email;
             this.masterPassword = this.oidcinfo.passwd;
             this.confirmMasterPassword = this.oidcinfo.passwd;
-            super.supsubmit();
+            super.submit();
         }
         
         
     }
     async submit() {
-        super.supsubmit();
+        super.submit();
     }
     
 
