@@ -80,7 +80,8 @@ export class RegisterComponent extends BaseRegisterComponent {
                 this.router.navigate(['login'], { state: { email: this.oidcinfo.email, passwd: this.oidcinfo.passwd }, queryParams: { state: "login_redir" } });
                 
             }
-        });
+        }
+
         const invite = await this.stateService.get<any>('orgInvitation');
         if (invite != null) {
             try {
