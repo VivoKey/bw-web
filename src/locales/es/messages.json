@@ -805,6 +805,9 @@
   "passwordGenerator": {
     "message": "Generador de contraseñas"
   },
+  "minComplexityScore": {
+    "message": "Puntuación de Complejidad Mínima"
+  },
   "minNumbers": {
     "message": "Mínimo de caracteres numéricos"
   },
@@ -2047,6 +2050,12 @@
   "people": {
     "message": "Personas"
   },
+  "policies": {
+    "message": "Políticas"
+  },
+  "editPolicy": {
+    "message": "Editar política"
+  },
   "groups": {
     "message": "Grupos"
   },
@@ -2356,6 +2365,15 @@
       }
     }
   },
+  "editedPolicyId": {
+    "message": "Política $ID$ editada.",
+    "placeholders": {
+      "id": {
+        "content": "$1",
+        "example": "Master Password"
+      }
+    }
+  },
   "createdGroupId": {
     "message": "Grupo $ID$ creado.",
     "placeholders": {
@@ -2559,6 +2577,15 @@
   },
   "inviteAcceptFailed": {
     "message": "No se puede aceptar la invitación. Pida a un administrador de la organización que envíe una nueva invitación."
+  },
+  "inviteAcceptFailedShort": {
+    "message": "No se puede aceptar la invitación. $DESCRIPTION$",
+    "placeholders": {
+      "description": {
+        "content": "$1",
+        "example": "You must enable 2FA on your user account before you can join this organization."
+      }
+    }
   },
   "rememberEmail": {
     "message": "Recordar correo electrónico"
@@ -2938,5 +2965,80 @@
   },
   "manageSubscriptionFromStore": {
     "message": "Debes administrar tu suscripción desde la tienda donde se hizo tu compra en la aplicación."
+  },
+  "minLength": {
+    "message": "Longitud mínima"
+  },
+  "clone": {
+    "message": "Clonar"
+  },
+  "masterPassPolicyDesc": {
+    "message": "Establecer requisitos mínimos para la fortaleza de la contraseña maestra."
+  },
+  "twoStepLoginPolicyDesc": {
+    "message": "Requiere que los usuarios establezcan un inicio de sesión en dos pasos en sus cuentas personales."
+  },
+  "twoStepLoginPolicyWarning": {
+    "message": "Los miembros de la organización que no tengan habilitado el inicio de sesión en dos pasos para su cuenta personal serán eliminados de la organización y recibirán un correo electrónico notificándoles del cambio."
+  },
+  "twoStepLoginPolicyUserWarning": {
+    "message": "Usted es miembro de una organización que requiere que el inicio de sesión en dos pasos esté habilitado en su cuenta de usuario. Si desactiva todos los proveedores de inicio de sesión en dos pasos, será automáticamente eliminado de estas organizaciones."
+  },
+  "passwordGeneratorPolicyDesc": {
+    "message": "Establecer requisitos mínimos para la configuración del generador de contraseñas."
+  },
+  "passwordGeneratorPolicyInEffect": {
+    "message": "Una o más políticas de la organización están afectando su configuración del generador."
+  },
+  "masterPasswordPolicyInEffect": {
+    "message": "Una o más políticas de la organización requieren que su contraseña maestra cumpla con los siguientes requisitos:"
+  },
+  "policyInEffectMinComplexity": {
+    "message": "Puntuación de complejidad mínima $SCORE$",
+    "placeholders": {
+      "score": {
+        "content": "$1",
+        "example": "4"
+      }
+    }
+  },
+  "policyInEffectMinLength": {
+    "message": "Longitud mínima $LENGTH$",
+    "placeholders": {
+      "length": {
+        "content": "$1",
+        "example": "14"
+      }
+    }
+  },
+  "policyInEffectUppercase": {
+    "message": "Contiene uno o más caracteres en mayúsculas"
+  },
+  "policyInEffectLowercase": {
+    "message": "Contiene uno o más caracteres en minúsculas"
+  },
+  "policyInEffectNumbers": {
+    "message": "Contiene uno o más números"
+  },
+  "policyInEffectSpecial": {
+    "message": "Contienen uno o más de los siguientes caracteres especiales $CHARS$",
+    "placeholders": {
+      "chars": {
+        "content": "$1",
+        "example": "!@#$%^&*"
+      }
+    }
+  },
+  "masterPasswordPolicyRequirementsNotMet": {
+    "message": "Su nueva contraseña maestra no cumple con los requisitos de la política."
+  },
+  "minimumNumberOfWords": {
+    "message": "Número mínimo de palabras"
+  },
+  "defaultType": {
+    "message": "Tipo por defecto"
+  },
+  "userPreference": {
+    "message": "Preferencia de usuario"
   }
 }

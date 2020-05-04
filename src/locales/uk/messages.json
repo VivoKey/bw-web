@@ -805,6 +805,9 @@
   "passwordGenerator": {
     "message": "Генератор паролів"
   },
+  "minComplexityScore": {
+    "message": "Мінімальна оцінка складності"
+  },
   "minNumbers": {
     "message": "Мінімум цифр"
   },
@@ -1200,7 +1203,7 @@
     "message": "Веб-сховище, програма для комп'ютера, CLI, а також усі розширення браузера на пристроях, де можливо під'єднати YubiKey до USB."
   },
   "twoFactorYubikeySupportMobile": {
-    "message": "Мобільні програми на пристроях з NFC або портом USB, до якого можна під'єднати ваш YubiKey."
+    "message": "Мобільні програми на пристроях з NFC, або порт даних, який може приймати YubiKey."
   },
   "yubikeyX": {
     "message": "YubiKey $INDEX$",
@@ -2047,6 +2050,12 @@
   "people": {
     "message": "Люди"
   },
+  "policies": {
+    "message": "Політики"
+  },
+  "editPolicy": {
+    "message": "Змінити політику"
+  },
   "groups": {
     "message": "Групи"
   },
@@ -2356,6 +2365,15 @@
       }
     }
   },
+  "editedPolicyId": {
+    "message": "$ID$ зміненої політики.",
+    "placeholders": {
+      "id": {
+        "content": "$1",
+        "example": "Master Password"
+      }
+    }
+  },
   "createdGroupId": {
     "message": "Створена група $ID$.",
     "placeholders": {
@@ -2560,6 +2578,15 @@
   "inviteAcceptFailed": {
     "message": "Не вдалося прийняти запрошення. Попросіть адміністратора організації надіслати вам нове."
   },
+  "inviteAcceptFailedShort": {
+    "message": "Не вдається прийняти запрошення. $DESCRIPTION$",
+    "placeholders": {
+      "description": {
+        "content": "$1",
+        "example": "You must enable 2FA on your user account before you can join this organization."
+      }
+    }
+  },
   "rememberEmail": {
     "message": "Запам'ятати е-пошту"
   },
@@ -2620,7 +2647,7 @@
     "description": "A billing plan/package. For example: families, teams, enterprise, etc."
   },
   "changeBillingPlanUpgrade": {
-    "message": "Перейдіть на передплату вищого рівня, вказавши інформацію внизу. Переконайтеся, що у вашому обліковому записі є активний спосіб оплати.",
+    "message": "Перейдіть на передплату вищого рівня, вказавши інформацію внизу. Переконайтеся, що ваш обліковий запис має актуальні дані про спосіб оплати.",
     "description": "A billing plan/package. For example: families, teams, enterprise, etc."
   },
   "changeBillingPlanDesc": {
@@ -2814,7 +2841,7 @@
     "message": "4 години"
   },
   "onRefresh": {
-    "message": "Оновлення в браузері"
+    "message": "Перезавантаження сторінки"
   },
   "dateUpdated": {
     "message": "Оновлено",
@@ -2938,5 +2965,80 @@
   },
   "manageSubscriptionFromStore": {
     "message": "Ви повинні керувати своєю передплатою з магазину, в якому виконали покупку в додатку."
+  },
+  "minLength": {
+    "message": "Мінімальна довжина"
+  },
+  "clone": {
+    "message": "Клонувати"
+  },
+  "masterPassPolicyDesc": {
+    "message": "Встановіть мінімальні вимоги надійності головного пароля."
+  },
+  "twoStepLoginPolicyDesc": {
+    "message": "Зобов'язувати користувачів встановлювати двохетапну перевірку в їхніх особистих облікових записах."
+  },
+  "twoStepLoginPolicyWarning": {
+    "message": "Учасники організації, в яких не увімкнено двохетапну перевірку для їхніх особистих облікових записів, будуть вилучені з організації та отримають поштове повідомлення про зміну."
+  },
+  "twoStepLoginPolicyUserWarning": {
+    "message": "Ви включені до організації, яка зобов'язує використання двохетапної перевірки у вашому обліковому записі. Якщо ви вимкнете всі способи двохетапної перевірки, вас буде автоматично вилучено з цієї організації."
+  },
+  "passwordGeneratorPolicyDesc": {
+    "message": "Встановіть мінімальні вимоги для параметрів генерування пароля."
+  },
+  "passwordGeneratorPolicyInEffect": {
+    "message": "Політика однієї або декількох організацій впливає на ваші параметри генерування."
+  },
+  "masterPasswordPolicyInEffect": {
+    "message": "Політика однієї або декількох організацій зобов'язує дотримання таких вимог для головного пароля:"
+  },
+  "policyInEffectMinComplexity": {
+    "message": "Мінімальна оцінка складності $SCORE$",
+    "placeholders": {
+      "score": {
+        "content": "$1",
+        "example": "4"
+      }
+    }
+  },
+  "policyInEffectMinLength": {
+    "message": "Мінімальна довжина $LENGTH$",
+    "placeholders": {
+      "length": {
+        "content": "$1",
+        "example": "14"
+      }
+    }
+  },
+  "policyInEffectUppercase": {
+    "message": "Наявність одного чи більше символів верхнього регістру"
+  },
+  "policyInEffectLowercase": {
+    "message": "Наявність одного чи більше символів нижнього регістру"
+  },
+  "policyInEffectNumbers": {
+    "message": "Наявність однієї чи більше цифр"
+  },
+  "policyInEffectSpecial": {
+    "message": "Наявність одного чи більше таких спеціальних символів $CHARS$",
+    "placeholders": {
+      "chars": {
+        "content": "$1",
+        "example": "!@#$%^&*"
+      }
+    }
+  },
+  "masterPasswordPolicyRequirementsNotMet": {
+    "message": "Ваш новий головний пароль не відповідає вимогам політики."
+  },
+  "minimumNumberOfWords": {
+    "message": "Мінімальна кількість слів"
+  },
+  "defaultType": {
+    "message": "Стандартний тип"
+  },
+  "userPreference": {
+    "message": "Користувацьке налаштування"
   }
 }

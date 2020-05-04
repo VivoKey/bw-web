@@ -805,6 +805,9 @@
   "passwordGenerator": {
     "message": "Gerador de senha"
   },
+  "minComplexityScore": {
+    "message": "Pontuação Mínima de Complexidade"
+  },
   "minNumbers": {
     "message": "Mínimo de Números"
   },
@@ -2047,6 +2050,12 @@
   "people": {
     "message": "Pessoas"
   },
+  "policies": {
+    "message": "Políticas"
+  },
+  "editPolicy": {
+    "message": "Editar Política"
+  },
   "groups": {
     "message": "Grupos"
   },
@@ -2356,6 +2365,15 @@
       }
     }
   },
+  "editedPolicyId": {
+    "message": "Política $ID$ editada.",
+    "placeholders": {
+      "id": {
+        "content": "$1",
+        "example": "Master Password"
+      }
+    }
+  },
   "createdGroupId": {
     "message": "Grupo criado $ID$.",
     "placeholders": {
@@ -2559,6 +2577,15 @@
   },
   "inviteAcceptFailed": {
     "message": "Não é possível aceitar o convite. Peça a um administrador da organização para enviar um novo convite."
+  },
+  "inviteAcceptFailedShort": {
+    "message": "Não foi possível aceitar o convite. $DESCRIPTION$",
+    "placeholders": {
+      "description": {
+        "content": "$1",
+        "example": "You must enable 2FA on your user account before you can join this organization."
+      }
+    }
   },
   "rememberEmail": {
     "message": "Lembrar e-mail"
@@ -2928,7 +2955,7 @@
     "message": "Você deve selecionar pelo menos uma coleção."
   },
   "couldNotChargeCardPayInvoice": {
-    "message": "Não foi possível faturar no seu cartão. Por favor, veja e pague a fatura pendente listada abaixo."
+    "message": "Não foi possível cobrar no seu cartão. Por favor, veja e pague a fatura pendente listada abaixo."
   },
   "inAppPurchase": {
     "message": "Compra no Aplicativo"
@@ -2938,5 +2965,80 @@
   },
   "manageSubscriptionFromStore": {
     "message": "Você deve gerenciar sua assinatura na loja onde sua compra pelo aplicativo foi feita."
+  },
+  "minLength": {
+    "message": "Comprimento Mínimo"
+  },
+  "clone": {
+    "message": "Clonar"
+  },
+  "masterPassPolicyDesc": {
+    "message": "Defina os requisitos mínimos para a força da senha mestra."
+  },
+  "twoStepLoginPolicyDesc": {
+    "message": "Exigir que os usuários definam a autenticação de dois passos nas suas contas pessoais."
+  },
+  "twoStepLoginPolicyWarning": {
+    "message": "Os membros da organização que não possuam a autenticação de dois passos ativa para sua conta pessoal serão removidos da organização e receberão um e-mail notificando-os da mudança."
+  },
+  "twoStepLoginPolicyUserWarning": {
+    "message": "Você é um membro de uma organização que exige que a autenticação de dois passos seja ativada na sua conta de usuário. Se desativar todos os serviços de autenticação de dois passos, você será automaticamente removido dessas organizações."
+  },
+  "passwordGeneratorPolicyDesc": {
+    "message": "Defina os requisitos mínimos para configuração do gerador de senhas."
+  },
+  "passwordGeneratorPolicyInEffect": {
+    "message": "Uma ou mais políticas da organização estão afetando as suas configurações do gerador."
+  },
+  "masterPasswordPolicyInEffect": {
+    "message": "Uma ou mais políticas da organização exigem que a sua senha mestra cumpra aos seguintes requisitos:"
+  },
+  "policyInEffectMinComplexity": {
+    "message": "Pontuação mínima de complexidade de $SCORE$",
+    "placeholders": {
+      "score": {
+        "content": "$1",
+        "example": "4"
+      }
+    }
+  },
+  "policyInEffectMinLength": {
+    "message": "Comprimento mínimo de $LENGTH$",
+    "placeholders": {
+      "length": {
+        "content": "$1",
+        "example": "14"
+      }
+    }
+  },
+  "policyInEffectUppercase": {
+    "message": "Contém um ou mais caracteres em maiúsculo"
+  },
+  "policyInEffectLowercase": {
+    "message": "Contém um ou mais caracteres em minúsculo"
+  },
+  "policyInEffectNumbers": {
+    "message": "Contém um ou mais números"
+  },
+  "policyInEffectSpecial": {
+    "message": "Contém um ou mais dos seguintes caracteres especiais $CHARS$",
+    "placeholders": {
+      "chars": {
+        "content": "$1",
+        "example": "!@#$%^&*"
+      }
+    }
+  },
+  "masterPasswordPolicyRequirementsNotMet": {
+    "message": "A sua nova senha mestra não cumpre aos requisitos da política."
+  },
+  "minimumNumberOfWords": {
+    "message": "Número Mínimo de Palavras"
+  },
+  "defaultType": {
+    "message": "Tipo Padrão"
+  },
+  "userPreference": {
+    "message": "Preferência do Usuário"
   }
 }

@@ -805,6 +805,9 @@
   "passwordGenerator": {
     "message": "密码生成器"
   },
+  "minComplexityScore": {
+    "message": "最小复杂度"
+  },
   "minNumbers": {
     "message": "最小位数"
   },
@@ -2047,6 +2050,12 @@
   "people": {
     "message": "人"
   },
+  "policies": {
+    "message": "策略："
+  },
+  "editPolicy": {
+    "message": "编辑策略"
+  },
   "groups": {
     "message": "分组"
   },
@@ -2356,6 +2365,15 @@
       }
     }
   },
+  "editedPolicyId": {
+    "message": "已编辑策略 $ID$。",
+    "placeholders": {
+      "id": {
+        "content": "$1",
+        "example": "Master Password"
+      }
+    }
+  },
   "createdGroupId": {
     "message": "已创建群组 $ID$。",
     "placeholders": {
@@ -2559,6 +2577,15 @@
   },
   "inviteAcceptFailed": {
     "message": "无法接受邀请，请向组织管理员要求重新发送邀请。"
+  },
+  "inviteAcceptFailedShort": {
+    "message": "无法接受邀请。 $DESCRIPTION$",
+    "placeholders": {
+      "description": {
+        "content": "$1",
+        "example": "You must enable 2FA on your user account before you can join this organization."
+      }
+    }
   },
   "rememberEmail": {
     "message": "记住电子邮件"
@@ -2938,5 +2965,80 @@
   },
   "manageSubscriptionFromStore": {
     "message": "您必须在进行应用内购买的商店中管理订阅。"
+  },
+  "minLength": {
+    "message": "最小长度"
+  },
+  "clone": {
+    "message": "克隆"
+  },
+  "masterPassPolicyDesc": {
+    "message": "设置主密码强度的最低要求。"
+  },
+  "twoStepLoginPolicyDesc": {
+    "message": "要求用户在个人帐户上设置两步登录。"
+  },
+  "twoStepLoginPolicyWarning": {
+    "message": "组织成员中个人账户未启用两步登录的将被从组织中删除，并将收到一封关于这一变化的电子邮件。"
+  },
+  "twoStepLoginPolicyUserWarning": {
+    "message": "您的组织要求您在您的个人账户上启用两步登录。 如果您禁用所有两步登录方式，您将自动被这些组织删除。"
+  },
+  "passwordGeneratorPolicyDesc": {
+    "message": "设置密码生成器配置的最低要求。"
+  },
+  "passwordGeneratorPolicyInEffect": {
+    "message": "一个或多个组织策略正在影响您的生成器设置。"
+  },
+  "masterPasswordPolicyInEffect": {
+    "message": "一个或多个组织策略要求您的主密码满足以下要求："
+  },
+  "policyInEffectMinComplexity": {
+    "message": "最小复杂度为 $SCORE$",
+    "placeholders": {
+      "score": {
+        "content": "$1",
+        "example": "4"
+      }
+    }
+  },
+  "policyInEffectMinLength": {
+    "message": "最小长度为 $LENGTH$",
+    "placeholders": {
+      "length": {
+        "content": "$1",
+        "example": "14"
+      }
+    }
+  },
+  "policyInEffectUppercase": {
+    "message": "至少包含一个大写字母"
+  },
+  "policyInEffectLowercase": {
+    "message": "至少包含一个小写字母"
+  },
+  "policyInEffectNumbers": {
+    "message": "至少包含一个数字"
+  },
+  "policyInEffectSpecial": {
+    "message": "至少包含一个下列特殊字符：$CHARS$",
+    "placeholders": {
+      "chars": {
+        "content": "$1",
+        "example": "!@#$%^&*"
+      }
+    }
+  },
+  "masterPasswordPolicyRequirementsNotMet": {
+    "message": "您的新主密码不符合策略要求。"
+  },
+  "minimumNumberOfWords": {
+    "message": "最少字数"
+  },
+  "defaultType": {
+    "message": "默认类型"
+  },
+  "userPreference": {
+    "message": "用户偏好设置"
   }
 }

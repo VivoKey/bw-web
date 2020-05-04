@@ -805,6 +805,9 @@
   "passwordGenerator": {
     "message": "Parooli genereerimine"
   },
+  "minComplexityScore": {
+    "message": "Minimaalne keerulisuse skoor"
+  },
   "minNumbers": {
     "message": "Vähim arv numbreid"
   },
@@ -1128,7 +1131,7 @@
     "message": "Organisatsiooni kuulumise tõttu on sul juba juurdepääs premium funktsioonidele."
   },
   "manage": {
-    "message": "Haldamine"
+    "message": "Haldus"
   },
   "disable": {
     "message": "Keela"
@@ -2045,7 +2048,13 @@
     "message": "Sündmuste logid"
   },
   "people": {
-    "message": "Inimesed"
+    "message": "Liikmed"
+  },
+  "policies": {
+    "message": "Poliitikad"
+  },
+  "editPolicy": {
+    "message": "Muuda poliitikat"
   },
   "groups": {
     "message": "Grupid"
@@ -2356,6 +2365,15 @@
       }
     }
   },
+  "editedPolicyId": {
+    "message": "Muutis poliitikat $ID$.",
+    "placeholders": {
+      "id": {
+        "content": "$1",
+        "example": "Master Password"
+      }
+    }
+  },
   "createdGroupId": {
     "message": "Lõi grupi $ID$.",
     "placeholders": {
@@ -2559,6 +2577,15 @@
   },
   "inviteAcceptFailed": {
     "message": "Kutse vastuvõtmine nurjus. Palu organisatsiooni administraatoril uus kutse saata."
+  },
+  "inviteAcceptFailedShort": {
+    "message": "Kutset ei õnnestu vastu võtta. $DESCRIPTION$",
+    "placeholders": {
+      "description": {
+        "content": "$1",
+        "example": "You must enable 2FA on your user account before you can join this organization."
+      }
+    }
   },
   "rememberEmail": {
     "message": "Mäleta e-posti aadressi"
@@ -2938,5 +2965,80 @@
   },
   "manageSubscriptionFromStore": {
     "message": "Saad oma tellimust hallata poest, kust äpi sisese ostu sooritasid."
+  },
+  "minLength": {
+    "message": "Minimaalne pikkus"
+  },
+  "clone": {
+    "message": "Klooni"
+  },
+  "masterPassPolicyDesc": {
+    "message": "Määra minimaalsed ülemparooli tugevuse tingimused."
+  },
+  "twoStepLoginPolicyDesc": {
+    "message": "Nõua, et kasutajad seadistaksid oma kontodes kaheastmelise kinnituse."
+  },
+  "twoStepLoginPolicyWarning": {
+    "message": "Organisatsiooni liikmed, kel pole kaheastmeline kinnitamine sisse lülitatud, eemaldatakse organisatsioonist ning neile saadetakse sellekohane e-kiri."
+  },
+  "twoStepLoginPolicyUserWarning": {
+    "message": "Kuulud organisatsiooni, mis nõuab kontol kaheastmelise kinnitamise sisselülitamist.\nKui lülitad välja kõik Kaheastmelise kinnitamise valikud, eemaldatakse sind organisatsioonist."
+  },
+  "passwordGeneratorPolicyDesc": {
+    "message": "Määra parooli genereerija konfiguratsiooni tingimused."
+  },
+  "passwordGeneratorPolicyInEffect": {
+    "message": "Organisatsiooni seaded mõjutavad parooli genereerija sätteid."
+  },
+  "masterPasswordPolicyInEffect": {
+    "message": "Üks või enam organisatsiooni eeskirja nõuavad, et ülemparool vastaks nendele nõudmistele:"
+  },
+  "policyInEffectMinComplexity": {
+    "message": "Minimaalne keerulisuse skoor peab olema $SCORE$",
+    "placeholders": {
+      "score": {
+        "content": "$1",
+        "example": "4"
+      }
+    }
+  },
+  "policyInEffectMinLength": {
+    "message": "Minimaalne pikkus peab olema $LENGTH$",
+    "placeholders": {
+      "length": {
+        "content": "$1",
+        "example": "14"
+      }
+    }
+  },
+  "policyInEffectUppercase": {
+    "message": "Sisaldab üht või enamat suurtähte"
+  },
+  "policyInEffectLowercase": {
+    "message": "Sisaldab üht või enamat väiketähte"
+  },
+  "policyInEffectNumbers": {
+    "message": "Sisaldab üht või rohkem numbreid"
+  },
+  "policyInEffectSpecial": {
+    "message": "Sisaldab üht või enamat järgnevatest märkidest: $CHARS$",
+    "placeholders": {
+      "chars": {
+        "content": "$1",
+        "example": "!@#$%^&*"
+      }
+    }
+  },
+  "masterPasswordPolicyRequirementsNotMet": {
+    "message": "Uus ülemparool ei vasta eeskirjades väljatoodud tingimustele."
+  },
+  "minimumNumberOfWords": {
+    "message": "Minimaalne sõnade arv"
+  },
+  "defaultType": {
+    "message": "Vaiketüüp"
+  },
+  "userPreference": {
+    "message": "Kasutaja eelistus"
   }
 }
