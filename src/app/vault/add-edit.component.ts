@@ -103,7 +103,7 @@ export class AddEditComponent extends BaseAddEditComponent {
     async generatePassword(): Promise<boolean> {
         const confirmed = await super.generatePassword();
         if (confirmed) {
-            const options = await this.passwordGenerationService.getOptions();
+            const options = (await this.passwordGenerationService.getOptions())[0];
             this.cipher.login.password = await this.passwordGenerationService.generatePassword(options);
         }
         return confirmed;
@@ -152,6 +152,10 @@ export class AddEditComponent extends BaseAddEditComponent {
                 window.clearInterval(this.totpInterval);
             }
         }
+    }
+
+    protected allowOwnershipAssignment() {
+        return (!this.editMode || this.cloneMode) && this.ownershipOptions != null && this.ownershipOptions.length > 1;
     }
 
     private async totpTick(intervalSeconds: number) {

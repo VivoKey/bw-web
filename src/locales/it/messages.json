@@ -68,10 +68,10 @@
     "message": "Azienda"
   },
   "ssn": {
-    "message": "Numero di previdenza sociale/Codice Fiscale"
+    "message": "Codice fiscale"
   },
   "passportNumber": {
-    "message": "Numero di passaporto"
+    "message": "Numero del passaporto"
   },
   "licenseNumber": {
     "message": "Numero patente"
@@ -170,14 +170,14 @@
     "message": "Non assegnato"
   },
   "noneFolder": {
-    "message": "Nessuna Cartella",
+    "message": "Nessuna cartella",
     "description": "This is the folder for uncategorized items"
   },
   "addFolder": {
-    "message": "Aggiungi Cartella"
+    "message": "Aggiungi cartella"
   },
   "editFolder": {
-    "message": "Modifica Cartella"
+    "message": "Modifica cartella"
   },
   "baseDomain": {
     "message": "Dominio di base"
@@ -208,14 +208,14 @@
     "message": "Mai"
   },
   "toggleVisibility": {
-    "message": "Mostra/Nascondi"
+    "message": "Mostra / nascondi"
   },
   "toggleCollapse": {
-    "message": "Attiva/disattiva Collasso",
+    "message": "Comprimi / espandi",
     "description": "Toggling an expand/collapse state."
   },
   "generatePassword": {
-    "message": "Genera Password"
+    "message": "Genera password"
   },
   "checkPassword": {
     "message": "Verifica se la password è stata esposta."
@@ -318,10 +318,10 @@
     "message": "Indirizzo 3"
   },
   "cityTown": {
-    "message": "Città / Comune"
+    "message": "Comune"
   },
   "stateProvince": {
-    "message": "Stato / Provincia"
+    "message": "Provincia"
   },
   "zipPostalCode": {
     "message": "CAP"
@@ -381,7 +381,7 @@
     "description": "Copy credit card number"
   },
   "copySecurityCode": {
-    "message": "Copia il codice di sicurezza",
+    "message": "Copia codice di sicurezza",
     "description": "Copy credit card security code (CVV)"
   },
   "copyUri": {
@@ -395,16 +395,16 @@
     "message": "Cassaforte"
   },
   "shareSelected": {
-    "message": "Condividi Selezionati"
+    "message": "Condividi selezionati"
   },
   "deleteSelected": {
-    "message": "Elimina Selezionati"
+    "message": "Elimina selezionati"
   },
   "moveSelected": {
     "message": "Sposta Selezionati"
   },
   "selectAll": {
-    "message": "Seleziona Tutto"
+    "message": "Seleziona tutto"
   },
   "unselectAll": {
     "message": "Deseleziona tutto"
@@ -413,7 +413,7 @@
     "message": "Avvia"
   },
   "newAttachment": {
-    "message": "Aggiungi Allegato"
+    "message": "Aggiungi allegato"
   },
   "deletedAttachment": {
     "message": "Elimina Allegato"
@@ -449,13 +449,13 @@
     "message": "Elementi condivisi"
   },
   "deleteItem": {
-    "message": "Elimina Elemento"
+    "message": "Elimina elemento"
   },
   "deleteFolder": {
-    "message": "Elimina Cartella"
+    "message": "Elimina cartella"
   },
   "deleteAttachment": {
-    "message": "Elimina Allegato"
+    "message": "Elimina allegato"
   },
   "deleteItemConfirmation": {
     "message": "Sei sicuro di voler eliminare questo elemento?"
@@ -548,7 +548,7 @@
     "message": "Impostazioni"
   },
   "passwordHint": {
-    "message": "Suggerimento Password"
+    "message": "Suggerimento password"
   },
   "enterEmailToGetHint": {
     "message": "Inserisci l'indirizzo email del tuo account per ricevere il suggerimento della password principale."
@@ -581,7 +581,7 @@
     "message": "Si è verificato un errore imprevisto."
   },
   "emailAddress": {
-    "message": "Indirizzo Email"
+    "message": "Indirizzo e-mail"
   },
   "yourVaultIsLocked": {
     "message": "La tua cassaforte è bloccata. Verifica la tua password principale per continuare."
@@ -606,7 +606,7 @@
     "message": "Password principale errata"
   },
   "lockNow": {
-    "message": "Blocca Ora"
+    "message": "Blocca"
   },
   "noItemsInList": {
     "message": "Non ci sono elementi da mostrare."
@@ -624,7 +624,7 @@
     "message": "Non ci sono eventi da visualizzare."
   },
   "newOrganization": {
-    "message": "Nuova Organizzazione"
+    "message": "Crea organizzazione"
   },
   "noOrganizationsList": {
     "message": "Tu non appartieni ad alcuna organizzazione. Le organizzazioni ti consentono di condividere oggetti in modo sicuro con altri utenti."
@@ -693,7 +693,7 @@
     "message": "Codice di Recupero"
   },
   "authenticatorAppTitle": {
-    "message": "Applicazione di Autenticazione"
+    "message": "App di autenticazione"
   },
   "authenticatorAppDesc": {
     "message": "Usa un'applicazione di autenticazione (come Authy o Google Authenticator) per generare codici di verifica a tempo.",
@@ -804,6 +804,9 @@
   },
   "passwordGenerator": {
     "message": "Generatore di password"
+  },
+  "minComplexityScore": {
+    "message": "Punteggio minimo di complessità"
   },
   "minNumbers": {
     "message": "Minimo di Numeri"
@@ -2047,6 +2050,12 @@
   "people": {
     "message": "Persone"
   },
+  "policies": {
+    "message": "Politiche"
+  },
+  "editPolicy": {
+    "message": "Modifica politica"
+  },
   "groups": {
     "message": "Gruppi"
   },
@@ -2356,6 +2365,15 @@
       }
     }
   },
+  "editedPolicyId": {
+    "message": "Politica $ID$ modificata.",
+    "placeholders": {
+      "id": {
+        "content": "$1",
+        "example": "Master Password"
+      }
+    }
+  },
   "createdGroupId": {
     "message": "Gruppo $ID$ creato.",
     "placeholders": {
@@ -2559,6 +2577,15 @@
   },
   "inviteAcceptFailed": {
     "message": "Non è possibile accettare l'invito. Chiedi ad un amministratore di organizzazione di inviare un nuovo invito."
+  },
+  "inviteAcceptFailedShort": {
+    "message": "Impossibile accettare l'invito. $DESCRIPTION$",
+    "placeholders": {
+      "description": {
+        "content": "$1",
+        "example": "You must enable 2FA on your user account before you can join this organization."
+      }
+    }
   },
   "rememberEmail": {
     "message": "Ricorda email"
@@ -2938,5 +2965,80 @@
   },
   "manageSubscriptionFromStore": {
     "message": "Devi gestire il tuo abbonamento dal negozio dove è stato effettuato l'acquisto in-app."
+  },
+  "minLength": {
+    "message": "Lunghezza minima"
+  },
+  "clone": {
+    "message": "Clona"
+  },
+  "masterPassPolicyDesc": {
+    "message": "Fissa i requisiti minimi di complessità della password principale."
+  },
+  "twoStepLoginPolicyDesc": {
+    "message": "Obbliga gli utenti ad impostare l'autenticazione a due fattori sul loro account personale."
+  },
+  "twoStepLoginPolicyWarning": {
+    "message": "I membri dell'organizzazione che non hanno attivato l'autenticazione a due fattori per il proprio account personale saranno espulsi dall'organizzazione e riceveranno a tale proposito una e-mail di notifica."
+  },
+  "twoStepLoginPolicyUserWarning": {
+    "message": "Sei membro di una organizzazione che richiede che sugli account personali sia attiva l'autenticazione a due fattori. Se disabiliti tutti i secondi fattori di autenticazione, sarai automaticamente espulso dall'organizzazione."
+  },
+  "passwordGeneratorPolicyDesc": {
+    "message": "Imposta i requisiti minimi per la configurazione del generatore di password."
+  },
+  "passwordGeneratorPolicyInEffect": {
+    "message": "Una o più politiche dell'organizzazione stanno influenzando le impostazioni del tuo generatore."
+  },
+  "masterPasswordPolicyInEffect": {
+    "message": "La password principale deve avere i seguenti requisiti, fissati da una o più regole dell'organizzazione:"
+  },
+  "policyInEffectMinComplexity": {
+    "message": "Punteggio minimo di complessità di $SCORE$",
+    "placeholders": {
+      "score": {
+        "content": "$1",
+        "example": "4"
+      }
+    }
+  },
+  "policyInEffectMinLength": {
+    "message": "Lunghezza minima di $LENGTH$",
+    "placeholders": {
+      "length": {
+        "content": "$1",
+        "example": "14"
+      }
+    }
+  },
+  "policyInEffectUppercase": {
+    "message": "Contiene almeno un carattere maiuscolo"
+  },
+  "policyInEffectLowercase": {
+    "message": "Contiene almeno un carattere minuscolo"
+  },
+  "policyInEffectNumbers": {
+    "message": "Contiene almeno una cifra"
+  },
+  "policyInEffectSpecial": {
+    "message": "Contiene almeno uno dei seguenti caratteri speciali $CHARS$",
+    "placeholders": {
+      "chars": {
+        "content": "$1",
+        "example": "!@#$%^&*"
+      }
+    }
+  },
+  "masterPasswordPolicyRequirementsNotMet": {
+    "message": "La tua nuova password principale non soddisfa i requisiti di sicurezza."
+  },
+  "minimumNumberOfWords": {
+    "message": "Numero minimo di parole"
+  },
+  "defaultType": {
+    "message": "Tipo predefinito"
+  },
+  "userPreference": {
+    "message": "Preferenze utente"
   }
 }

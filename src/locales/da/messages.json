@@ -805,6 +805,9 @@
   "passwordGenerator": {
     "message": "Adgangskodegenerator"
   },
+  "minComplexityScore": {
+    "message": "Minimum kompleksitetsscore"
+  },
   "minNumbers": {
     "message": "Mindste antal cifre"
   },
@@ -2047,6 +2050,12 @@
   "people": {
     "message": "Personer"
   },
+  "policies": {
+    "message": "Politikker"
+  },
+  "editPolicy": {
+    "message": "Redigér politik"
+  },
   "groups": {
     "message": "Grupper"
   },
@@ -2356,6 +2365,15 @@
       }
     }
   },
+  "editedPolicyId": {
+    "message": "Redigerede politik $ID$.",
+    "placeholders": {
+      "id": {
+        "content": "$1",
+        "example": "Master Password"
+      }
+    }
+  },
   "createdGroupId": {
     "message": "Oprettede gruppe $ID$.",
     "placeholders": {
@@ -2559,6 +2577,15 @@
   },
   "inviteAcceptFailed": {
     "message": "Kan ikke acceptere invitationen. Bed en organisations-administrator om at sende en ny invitation."
+  },
+  "inviteAcceptFailedShort": {
+    "message": "Kan ikke acceptere invitation. $DESCRIPTION$",
+    "placeholders": {
+      "description": {
+        "content": "$1",
+        "example": "You must enable 2FA on your user account before you can join this organization."
+      }
+    }
   },
   "rememberEmail": {
     "message": "Husk e-mail"
@@ -2938,5 +2965,80 @@
   },
   "manageSubscriptionFromStore": {
     "message": "Du skal administrere dit abonnement fra den butik, hvor dit køb i appen blev foretaget."
+  },
+  "minLength": {
+    "message": "Minimumslængde"
+  },
+  "clone": {
+    "message": "Klon"
+  },
+  "masterPassPolicyDesc": {
+    "message": "Angiv minimumskrav til styrken af hovedadgangskoden."
+  },
+  "twoStepLoginPolicyDesc": {
+    "message": "Kræv at brugerne konfigurerer to-trins-login på deres personlige konti."
+  },
+  "twoStepLoginPolicyWarning": {
+    "message": "Organisationsmedlemmer, der ikke har to-trins login aktiveret på deres personlige konto, fjernes fra organisationen og vil modtage en e-mail, der giver dem besked om ændringen."
+  },
+  "twoStepLoginPolicyUserWarning": {
+    "message": "Du er medlem af en organisation, der kræver at to-trins login er aktiveret på din brugerkonto. Hvis du deaktiverer alle to-trins login-udbydere, fjernes du automatisk fra disse organisationer."
+  },
+  "passwordGeneratorPolicyDesc": {
+    "message": "Angiv minimumskrav til konfiguration af adgangskodegenerator."
+  },
+  "passwordGeneratorPolicyInEffect": {
+    "message": "Én eller flere organisationspolitikker påvirker dine generatorindstillinger."
+  },
+  "masterPasswordPolicyInEffect": {
+    "message": "Én eller flere organisationspolitikker kræver din hovedadgangskode opfylder følgende krav:"
+  },
+  "policyInEffectMinComplexity": {
+    "message": "Minimum kompleksitetsscore på $SCORE$",
+    "placeholders": {
+      "score": {
+        "content": "$1",
+        "example": "4"
+      }
+    }
+  },
+  "policyInEffectMinLength": {
+    "message": "Minimumslængde på $LENGTH$",
+    "placeholders": {
+      "length": {
+        "content": "$1",
+        "example": "14"
+      }
+    }
+  },
+  "policyInEffectUppercase": {
+    "message": "Indeholder ét eller flere store bogstaver"
+  },
+  "policyInEffectLowercase": {
+    "message": "Indeholder ét eller flere små bogstaver"
+  },
+  "policyInEffectNumbers": {
+    "message": "Indeholder ét eller flere tal"
+  },
+  "policyInEffectSpecial": {
+    "message": "Indeholder ét eller flere af følgende specialtegn $CHARS$",
+    "placeholders": {
+      "chars": {
+        "content": "$1",
+        "example": "!@#$%^&*"
+      }
+    }
+  },
+  "masterPasswordPolicyRequirementsNotMet": {
+    "message": "Din nye hovedadgangskode opfylder ikke politikkravene."
+  },
+  "minimumNumberOfWords": {
+    "message": "Minimum antal ord"
+  },
+  "defaultType": {
+    "message": "Standard type"
+  },
+  "userPreference": {
+    "message": "Brugerindstilling"
   }
 }

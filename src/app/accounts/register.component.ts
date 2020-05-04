@@ -10,11 +10,16 @@ import { CryptoService } from 'jslib/abstractions/crypto.service';
 import { I18nService } from 'jslib/abstractions/i18n.service';
 import { PasswordGenerationService } from 'jslib/abstractions/passwordGeneration.service';
 import { PlatformUtilsService } from 'jslib/abstractions/platformUtils.service';
+import { PolicyService } from 'jslib/abstractions/policy.service';
 import { StateService } from 'jslib/abstractions/state.service';
 import { ConsumeOIDCService } from '../services/consumeoidc.service';
 import { RegisterComponent as BaseRegisterComponent } from 'jslib/angular/components/register.component';
-
 import { UrlHelperService } from '../services/url-helper.service';
+import { MasterPasswordPolicyOptions } from 'jslib/models/domain/masterPasswordPolicyOptions';
+import { Policy } from 'jslib/models/domain/policy';
+
+import { PolicyData } from 'jslib/models/data/policyData';
+
 @Component({
     selector: 'app-register',
     templateUrl: 'register.component.html',
@@ -30,12 +35,15 @@ export class RegisterComponent extends BaseRegisterComponent {
     new: string;
 
     oidcservice: ConsumeOIDCService;
+    enforcedPolicyOptions: MasterPasswordPolicyOptions;
+
+    private policies: Policy[];
 
     constructor(authService: AuthService, router: Router,
         i18nService: I18nService, cryptoService: CryptoService,
         apiService: ApiService, private route: ActivatedRoute, private urlHelper: UrlHelperService,
         stateService: StateService, platformUtilsService: PlatformUtilsService,
-        passwordGenerationService: PasswordGenerationService, private consumeOIDCService: ConsumeOIDCService) {
+        passwordGenerationService: PasswordGenerationService, private policyService: PolicyService, private consumeOIDCService: ConsumeOIDCService) {
         super(authService, router, i18nService, cryptoService, apiService, stateService, platformUtilsService,
             passwordGenerationService);
         this.oidcservice = consumeOIDCService;
@@ -72,9 +80,34 @@ export class RegisterComponent extends BaseRegisterComponent {
                 this.router.navigate(['login'], { state: { email: this.oidcinfo.email, passwd: this.oidcinfo.passwd }, queryParams: { state: "login_redir" } });
                 
             }
-            
+        });
+        const invite = await this.stateService.get<any>('orgInvitation');
+        if (invite != null) {
+            try {
+                const policies = await this.apiService.getPoliciesByToken(invite.organizationId, invite.token,
+                    invite.email, invite.organizationUserId);
+                if (policies.data != null) {
+                    const policiesData = policies.data.map((p) => new PolicyData(p));
+                    this.policies = policiesData.map((p) => new Policy(p));
+                }
+            } catch { }
         }
 
+        if (this.policies != null) {
+            this.enforcedPolicyOptions = await this.policyService.getMasterPasswordPolicyOptions(this.policies);
+        }
+    }
+
+    async submit() {
+        if (this.enforcedPolicyOptions != null &&
+            !this.policyService.evaluateMasterPassword(this.masterPasswordScore, this.masterPassword,
+                this.enforcedPolicyOptions)) {
+            this.platformUtilsService.showToast('error', this.i18nService.t('errorOccurred'),
+                this.i18nService.t('masterPasswordPolicyRequirementsNotMet'));
+            return;
+        }
+
+        await super.submit();
     }
 
     async ngAfterViewInit() {
