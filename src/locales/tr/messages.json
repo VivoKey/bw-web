@@ -5,7 +5,7 @@
     "placeholders": {
       "app_name": {
         "content": "$1",
-        "example": "Bitwarden"
+        "example": "VivoKey Vault"
       }
     }
   },
@@ -878,7 +878,7 @@
     "message": "Lütfen giriş yapın."
   },
   "logBackInOthersToo": {
-    "message": "Lütfen tekrar giriş yapın. Diğer Bitwarden uygulamalarını kullanıyorsanız oturumu kapatın ve tekrar giriş yapın."
+    "message": "Lütfen tekrar giriş yapın. Diğer VivoKey Vault uygulamalarını kullanıyorsanız oturumu kapatın ve tekrar giriş yapın."
   },
   "changeMasterPassword": {
     "message": "Ana Parolayı Değiştir"
@@ -914,7 +914,7 @@
     }
   },
   "kdfIterationsWarning": {
-    "message": "KDF yinelemelerinizi çok yüksek ayarlamak, daha yavaş CPU'ya sahip cihazlarda Bitwarden'e giriş yaparken (ve kilidi açarken) düşük performansa neden olabilir. Değeri $INCREMENT$ artışlarla artırmanızı ve ardından tüm cihazlarınızı test etmenizi tavsiye ediyoruz.",
+    "message": "KDF yinelemelerinizi çok yüksek ayarlamak, daha yavaş CPU'ya sahip cihazlarda VivoKey Vault'e giriş yaparken (ve kilidi açarken) düşük performansa neden olabilir. Değeri $INCREMENT$ artışlarla artırmanızı ve ardından tüm cihazlarınızı test etmenizi tavsiye ediyoruz.",
     "placeholders": {
       "increment": {
         "content": "$1",
@@ -1051,7 +1051,7 @@
     "message": "Alan Adı Kuralları"
   },
   "domainRulesDesc": {
-    "message": "Birden fazla farklı web sitesi alan adında aynı giriş bilgisine sahipseniz, web sitesini \"eşdeğer\" olarak işaretleyebilirsiniz. \"Global\" alan adları, sizin için Bitwarden tarafından oluşturulmuş olanlardır."
+    "message": "Birden fazla farklı web sitesi alan adında aynı giriş bilgisine sahipseniz, web sitesini \"eşdeğer\" olarak işaretleyebilirsiniz. \"Global\" alan adları, sizin için VivoKey Vault tarafından oluşturulmuş olanlardır."
   },
   "globalEqDomains": {
     "message": "Global Eşdeğer Alan Adları"
@@ -1096,7 +1096,7 @@
     "message": "Require two-step login for your organization's users by configuring providers at the organization level."
   },
   "twoStepLoginRecoveryWarning": {
-    "message": "İki aşamalı girişi etkinleştirmek, Bitwarden hesabınızı kalıcı olarak kilitleyebilir. Kurtarma kodunuz, iki aşamalı giriş sağlayıcınızı kullanamamanız durumunda hesabınıza erişmenize olanak sağlar (ör. cihazınızı kaybedersiniz). Hesabınıza erişiminizi kaybederseniz Bitwarden desteği size yardımcı olamaz. Kurtarma kodunu yazmanızı veya yazdırmanızı ve güvenli bir yerde saklamanızı öneririz."
+    "message": "İki aşamalı girişi etkinleştirmek, VivoKey Vault hesabınızı kalıcı olarak kilitleyebilir. Kurtarma kodunuz, iki aşamalı giriş sağlayıcınızı kullanamamanız durumunda hesabınıza erişmenize olanak sağlar (ör. cihazınızı kaybedersiniz). Hesabınıza erişiminizi kaybederseniz VivoKey Vault desteği size yardımcı olamaz. Kurtarma kodunu yazmanızı veya yazdırmanızı ve güvenli bir yerde saklamanızı öneririz."
   },
   "viewRecoveryCode": {
     "message": "Kurtarma Kodunu İncele"
@@ -1197,7 +1197,7 @@
     "message": "Formu kaydedin."
   },
   "twoFactorYubikeyWarning": {
-    "message": "Platform sınırlamaları nedeniyle, YubiKeyler tüm Bitwarden uygulamalarında kullanılamaz. Başka bir iki adımlı giriş sağlayıcısını etkinleştirmeniz gerekir, böylece YubiKeyler kullanılamadığında hesabınıza erişebilirsiniz. Desteklenen platformlar:"
+    "message": "Platform sınırlamaları nedeniyle, YubiKeyler tüm VivoKey Vault uygulamalarında kullanılamaz. Başka bir iki adımlı giriş sağlayıcısını etkinleştirmeniz gerekir, böylece YubiKeyler kullanılamadığında hesabınıza erişebilirsiniz. Desteklenen platformlar:"
   },
   "twoFactorYubikeySupportUsb": {
     "message": "Web kasası, masaüstü uygulaması, CLI ve YubiKey'inizi kabul edebilecek bir USB bağlantı noktasına sahip bir cihazdaki tüm tarayıcı uzantıları."
@@ -1239,7 +1239,7 @@
     "message": "Bütün Anahtarları Devre Dışı Bırak"
   },
   "twoFactorDuoDesc": {
-    "message": "Duo Yönetici panelinizden Bitwarden uygulama bilgilerini girin."
+    "message": "Duo Yönetici panelinizden VivoKey Vault uygulama bilgilerini girin."
   },
   "twoFactorDuoIntegrationKey": {
     "message": "Entegrasyon Anahtarı"
@@ -1287,7 +1287,7 @@
     "message": "Formu kaydedin."
   },
   "twoFactorU2fWarning": {
-    "message": "Platform sınırlamaları nedeniyle, FIDO U2F tüm Bitwarden uygulamalarında kullanılamaz. Başka bir iki adımlı giriş sağlayıcısını etkinleştirmeniz gerekir, böylece FIDO U2F kullanılamadığında hesabınıza erişebilirsiniz. Desteklenen platformlar:"
+    "message": "Platform sınırlamaları nedeniyle, FIDO U2F tüm VivoKey Vault uygulamalarında kullanılamaz. Başka bir iki adımlı giriş sağlayıcısını etkinleştirmeniz gerekir, böylece FIDO U2F kullanılamadığında hesabınıza erişebilirsiniz. Desteklenen platformlar:"
   },
   "twoFactorU2fSupportWeb": {
     "message": "Web kasası ve U2F etkinleştirilmiş bir tarayıcıya (FIDO U2F etkinleştirilmiş Chrome, Opera, Vivaldi veya Firefox) sahip bir masaüstü/dizüstü bilgisayarda tarayıcı uzantıları."
@@ -1302,7 +1302,7 @@
     "message": "Güvenlik anahtarını okurken bir sorun oluştu. Tekrar deneyin."
   },
   "twoFactorRecoveryYourCode": {
-    "message": "Bitwarden iki adım giriş kurtarma kodunuz"
+    "message": "VivoKey Vault iki adım giriş kurtarma kodunuz"
   },
   "twoFactorRecoveryNoCode": {
     "message": "Henüz herhangi bir iki adımlı giriş sağlayıcısını etkinleştirmediniz. İki adımlı bir giriş sağlayıcısını etkinleştirdikten sonra, kurtarma kodunuz için burayı tekrar kontrol edebilirsiniz."
@@ -1396,7 +1396,7 @@
     "message": "Zayıf Şifreler Raporu"
   },
   "weakPasswordsReportDesc": {
-    "message": "Zayıf parolalar bilgisayar korsanları ve onları kırmak için kullanılan otomatik araçlar tarafından kolayca tahmin edilebilir. Bitwarden şifre üreticisi, güçlü şifreler oluşturmanıza yardımcı olabilir."
+    "message": "Zayıf parolalar bilgisayar korsanları ve onları kırmak için kullanılan otomatik araçlar tarafından kolayca tahmin edilebilir. VivoKey Vault şifre üreticisi, güçlü şifreler oluşturmanıza yardımcı olabilir."
   },
   "weakPasswordsFound": {
     "message": "Zayıf Parolalar Bulundu"
@@ -1507,11 +1507,11 @@
   },
   "accountCredit": {
     "message": "Hesap Kredisi",
-    "description": "Financial term. In the case of Bitwarden, a positive balance means that you owe money, while a negative balance means that you have a credit (Bitwarden owes you money)."
+    "description": "Financial term. In the case of VivoKey Vault, a positive balance means that you owe money, while a negative balance means that you have a credit (VivoKey Vault owes you money)."
   },
   "accountBalance": {
     "message": "Hesap Bakiyesi",
-    "description": "Financial term. In the case of Bitwarden, a positive balance means that you owe money, while a negative balance means that you have a credit (Bitwarden owes you money)."
+    "description": "Financial term. In the case of VivoKey Vault, a positive balance means that you owe money, while a negative balance means that you have a credit (VivoKey Vault owes you money)."
   },
   "addCredit": {
     "message": "Kredi Ekle",
@@ -2111,7 +2111,7 @@
     "message": "Kullanıcı Davet Et"
   },
   "inviteUserDesc": {
-    "message": "Invite a new user to your organization by entering their Bitwarden account email address below. If they do not have a Bitwarden account already, they will be prompted to create a new account."
+    "message": "Invite a new user to your organization by entering their VivoKey Vault account email address below. If they do not have a VivoKey Vault account already, they will be prompted to create a new account."
   },
   "inviteMultipleEmailDesc": {
     "message": "E-posta listesini virgül ile ayırarak bir seferde $COUNT$ kullanıcıyı davet edebilirsiniz.",
@@ -2567,7 +2567,7 @@
     "message": "Organizasyona Katıl"
   },
   "joinOrganizationDesc": {
-    "message": "Yukarıda listelenen organizasyona katılman için davet edildin. Daveti kabul etmek için, giriş yapmanız ya da yeni bir Bitwarden hesabı oluşturmalısınız."
+    "message": "Yukarıda listelenen organizasyona katılman için davet edildin. Daveti kabul etmek için, giriş yapmanız ya da yeni bir VivoKey Vault hesabı oluşturmalısınız."
   },
   "inviteAccepted": {
     "message": "Davet Kabul Edildi"
@@ -2609,7 +2609,7 @@
     "message": "Bir hesabınız var ise daha fazla talimat içeren bir e-posta göndereceğiz."
   },
   "deleteRecoverConfirmDesc": {
-    "message": "Bitwarden hesabınızı silmek istiyorsunuz. Onaylamak için aşağıdaki butona basın."
+    "message": "VivoKey Vault hesabınızı silmek istiyorsunuz. Onaylamak için aşağıdaki butona basın."
   },
   "myOrganization": {
     "message": "Organizasyonum"
@@ -2774,7 +2774,7 @@
     "message": "Daha iyi güvenlik ve daha yeni özelliklere erişim sağlayan daha büyük şifreleme anahtarlarına geçtik. Şifreleme anahtarınızı güncellemek hızlı ve kolaydır. Sadece ana şifrenizi aşağıya yazın. Bu güncelleme sonunda zorunlu hale gelecektir."
   },
   "updateEncryptionKeyWarning": {
-    "message": "After updating your encryption key, you are required to log out and back in to all Bitwarden applications that you are currently using (such as the mobile app or browser extensions). Failure to log out and back in (which downloads your new encryption key) may result in data corruption. We will attempt to log you out automatically, however, it may be delayed."
+    "message": "After updating your encryption key, you are required to log out and back in to all VivoKey Vault applications that you are currently using (such as the mobile app or browser extensions). Failure to log out and back in (which downloads your new encryption key) may result in data corruption. We will attempt to log you out automatically, however, it may be delayed."
   },
   "subscription": {
     "message": "Abonelik"
@@ -2889,7 +2889,7 @@
     "message": "Zayıf Ana Parola"
   },
   "weakMasterPasswordDesc": {
-    "message": "Seçtiğiniz ana parola kolayca tahmin edilebilir. Bitwarden hesabınızı korumak istiyorsanız daha güçlü bir ana parola (veya şifre) seçmelisiniz. Bu ana parolayı kullanmak istediğinizden emin misiniz?"
+    "message": "Seçtiğiniz ana parola kolayca tahmin edilebilir. VivoKey Vault hesabınızı korumak istiyorsanız daha güçlü bir ana parola (veya şifre) seçmelisiniz. Bu ana parolayı kullanmak istediğinizden emin misiniz?"
   },
   "rotateAccountEncKey": {
     "message": "Ayrıca hesabımın şifreleme anahtarını da döndür"
@@ -2933,7 +2933,7 @@
     "message": "API Anahtarı"
   },
   "apiKeyDesc": {
-    "message": "API anahtarınız Bitwarden genel API'i doğrulamak için kullanılabilir."
+    "message": "API anahtarınız VivoKey Vault genel API'i doğrulamak için kullanılabilir."
   },
   "apiKeyRotateDesc": {
     "message": "API anahtarını döndürmek önceki anahtarı geçersiz kılacaktır. Geçerli anahtarın artık güvenli olmadığına inanıyorsanız API anahtarınızı döndürebilirsiniz."

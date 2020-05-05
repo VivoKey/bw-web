@@ -5,7 +5,7 @@
     "placeholders": {
       "app_name": {
         "content": "$1",
-        "example": "Bitwarden"
+        "example": "VivoKey Vault"
       }
     }
   },
@@ -878,7 +878,7 @@
     "message": "Log opnieuw in."
   },
   "logBackInOthersToo": {
-    "message": "Svp opnieuw inloggen. Als je andere Bitwarden-applicaties gebruikt, dan moet je daar ook uit- en inloggen."
+    "message": "Svp opnieuw inloggen. Als je andere VivoKey Vault-applicaties gebruikt, dan moet je daar ook uit- en inloggen."
   },
   "changeMasterPassword": {
     "message": "Hoofdwachtwoord wijzigen"
@@ -914,7 +914,7 @@
     }
   },
   "kdfIterationsWarning": {
-    "message": "Je KDF-iteraties te hoog instellen leidt tot een vertraging bij het inloggen (en ontgrendelen) van Bitwarden op apparaten met langzamere processoren. We raden aan de waarde in stappen van $INCREMENT$ te verhogen en steeds al je apparaten te testen.",
+    "message": "Je KDF-iteraties te hoog instellen leidt tot een vertraging bij het inloggen (en ontgrendelen) van VivoKey Vault op apparaten met langzamere processoren. We raden aan de waarde in stappen van $INCREMENT$ te verhogen en steeds al je apparaten te testen.",
     "placeholders": {
       "increment": {
         "content": "$1",
@@ -1051,7 +1051,7 @@
     "message": "Domeinregels"
   },
   "domainRulesDesc": {
-    "message": "Als je dezelfde inloggegevens over verschillende websitedomeinen gebruikt, kun je de website als \"equivalent\" kenmerken. \"Globale\" domeinen zijn al voor je aangemaakt door Bitwarden."
+    "message": "Als je dezelfde inloggegevens over verschillende websitedomeinen gebruikt, kun je de website als \"equivalent\" kenmerken. \"Globale\" domeinen zijn al voor je aangemaakt door VivoKey Vault."
   },
   "globalEqDomains": {
     "message": "Globale equivalente domeinen"
@@ -1096,7 +1096,7 @@
     "message": "Vereis tweestapsaanmelding voor de gebruikers van je organisatie door aanbieders op organisatieniveau in te stellen."
   },
   "twoStepLoginRecoveryWarning": {
-    "message": "Door aanmelden in twee stappen in te schakelen, kun je jezelf definitief buitensluiten van je Bitwarden-account. Een herstelcode geeft je toegang tot je account in het geval dat je je normale tweestapsaanmelding niet meer kunt gebruiken (bijv. als je je apparaat verliest). De Bitwarden-klantondersteuning kan je niet helpen als je de toegang tot je account verliest. We raden je met klem aan de herstelcode op te schrijven of af te drukken en op een veilige plaats te bewaren."
+    "message": "Door aanmelden in twee stappen in te schakelen, kun je jezelf definitief buitensluiten van je VivoKey Vault-account. Een herstelcode geeft je toegang tot je account in het geval dat je je normale tweestapsaanmelding niet meer kunt gebruiken (bijv. als je je apparaat verliest). De VivoKey Vault-klantondersteuning kan je niet helpen als je de toegang tot je account verliest. We raden je met klem aan de herstelcode op te schrijven of af te drukken en op een veilige plaats te bewaren."
   },
   "viewRecoveryCode": {
     "message": "Herstelcode weergeven"
@@ -1197,7 +1197,7 @@
     "message": "Formulier opslaan."
   },
   "twoFactorYubikeyWarning": {
-    "message": "Vanwege platformbeperkingen kun je YubiKeys niet in alle Bitwarden-applicaties gebruiken. Stel een andere tweestapsaanmeldingsaanbieder in voor situaties waar YubiKeys niet gebruikt kunnen worden. De volgende platformen worden ondersteund:"
+    "message": "Vanwege platformbeperkingen kun je YubiKeys niet in alle VivoKey Vault-applicaties gebruiken. Stel een andere tweestapsaanmeldingsaanbieder in voor situaties waar YubiKeys niet gebruikt kunnen worden. De volgende platformen worden ondersteund:"
   },
   "twoFactorYubikeySupportUsb": {
     "message": "Webkluis, desktop-applicatie, CLI en alle browser-extensies op een apparaat met een USB-poort welke YubiKey accepteert."
@@ -1239,7 +1239,7 @@
     "message": "Alle sleutels uitschakelen"
   },
   "twoFactorDuoDesc": {
-    "message": "Vul de informatie van de Bitwarden-applicatie van uw Duo Admin-scherm in."
+    "message": "Vul de informatie van de VivoKey Vault-applicatie van uw Duo Admin-scherm in."
   },
   "twoFactorDuoIntegrationKey": {
     "message": "Integratiesleutel"
@@ -1287,7 +1287,7 @@
     "message": "Formulier opslaan."
   },
   "twoFactorU2fWarning": {
-    "message": "Vanwege platformbeperkingen kun je FIDO U2F niet in alle Bitwarden-applicaties gebruiken. Stel een andere tweestapsaanmeldingsaanbieder in voor situaties waar FIDO U2F niet gebruikt kan worden. De volgende platformen worden ondersteund:"
+    "message": "Vanwege platformbeperkingen kun je FIDO U2F niet in alle VivoKey Vault-applicaties gebruiken. Stel een andere tweestapsaanmeldingsaanbieder in voor situaties waar FIDO U2F niet gebruikt kan worden. De volgende platformen worden ondersteund:"
   },
   "twoFactorU2fSupportWeb": {
     "message": "Webkluis en browser-extensies op een desktop/laptop met browserondersteuning voor U2F (Chrome, Opera, Vivaldi of Firefox met FIDO U2F ingeschakeld)."
@@ -1302,7 +1302,7 @@
     "message": "Er was een probleem met het lezen van de beveiligingssleutel. Probeer het nogmaals."
   },
   "twoFactorRecoveryYourCode": {
-    "message": "Je herstelcode voor Bitwarden-tweestapsaanmelding"
+    "message": "Je herstelcode voor VivoKey Vault-tweestapsaanmelding"
   },
   "twoFactorRecoveryNoCode": {
     "message": "Je hebt nog geen tweestapsaanmeldingsaanbieders ingeschakeld. Nadat je een tweestapsaanmeldingsaanbieder hebt ingeschakeld kun je hier je herstelcode vinden."
@@ -1396,7 +1396,7 @@
     "message": "Zwakke wachtwoorden"
   },
   "weakPasswordsReportDesc": {
-    "message": "Hackers en geautomatiseerde gereedschappen die wachtwoorden kraken kunnen zwakke wachtwoorden eenvoudig raden. De wachtwoordgenerator van Bitwarden helpt je bij het maken van sterke wachtwoorden."
+    "message": "Hackers en geautomatiseerde gereedschappen die wachtwoorden kraken kunnen zwakke wachtwoorden eenvoudig raden. De wachtwoordgenerator van VivoKey Vault helpt je bij het maken van sterke wachtwoorden."
   },
   "weakPasswordsFound": {
     "message": "Zwakke wachtwoorden gevonden"
@@ -1507,11 +1507,11 @@
   },
   "accountCredit": {
     "message": "Rekeningtegoed",
-    "description": "Financial term. In the case of Bitwarden, a positive balance means that you owe money, while a negative balance means that you have a credit (Bitwarden owes you money)."
+    "description": "Financial term. In the case of VivoKey Vault, a positive balance means that you owe money, while a negative balance means that you have a credit (VivoKey Vault owes you money)."
   },
   "accountBalance": {
     "message": "Rekeningbalans",
-    "description": "Financial term. In the case of Bitwarden, a positive balance means that you owe money, while a negative balance means that you have a credit (Bitwarden owes you money)."
+    "description": "Financial term. In the case of VivoKey Vault, a positive balance means that you owe money, while a negative balance means that you have a credit (VivoKey Vault owes you money)."
   },
   "addCredit": {
     "message": "Krediet toevoegen",
@@ -2111,7 +2111,7 @@
     "message": "Gebruiker uitnodigen"
   },
   "inviteUserDesc": {
-    "message": "Nodig een nieuwe gebruiker uit voor je organisatie door het e-mailadres van hun Bitwarden-account hieronder in te vullen. Als ze nog geen Bitwarden-account hebben, kunnen ze een nieuw account aanmaken."
+    "message": "Nodig een nieuwe gebruiker uit voor je organisatie door het e-mailadres van hun VivoKey Vault-account hieronder in te vullen. Als ze nog geen VivoKey Vault-account hebben, kunnen ze een nieuw account aanmaken."
   },
   "inviteMultipleEmailDesc": {
     "message": "Je kunt tot $COUNT$ gebruikers per keer uitnodigen door middel van een lijst met komma's gescheiden e-mailadressen.",
@@ -2567,7 +2567,7 @@
     "message": "Lid worden van organisatie"
   },
   "joinOrganizationDesc": {
-    "message": "Je bent uitgenodigd om lid te worden van bovenstaande organisatie. Om de uitnodiging te accepteren, moet je inloggen of een nieuw Bitwarden-account aanmaken."
+    "message": "Je bent uitgenodigd om lid te worden van bovenstaande organisatie. Om de uitnodiging te accepteren, moet je inloggen of een nieuw VivoKey Vault-account aanmaken."
   },
   "inviteAccepted": {
     "message": "Uitnodiging geaccepteerd"
@@ -2609,7 +2609,7 @@
     "message": "Als je account bestaat, hebben we je een e-mailbericht met nadere instructies gestuurd."
   },
   "deleteRecoverConfirmDesc": {
-    "message": "Je hebt een aanvraag gedaan om je Bitwarden-account te verwijderen. Klik op onderstaande knop om dit te bevestigen."
+    "message": "Je hebt een aanvraag gedaan om je VivoKey Vault-account te verwijderen. Klik op onderstaande knop om dit te bevestigen."
   },
   "myOrganization": {
     "message": "Mijn organisatie"
@@ -2774,7 +2774,7 @@
     "message": "We zijn overgeschakeld naar langere encryptiesleutels die beter beveiligen en nieuwe functionaliteiten mogelijk maken. Het bijwerken van je encryptiesleutel gaat snel en eenvoudig. Typ gewoon je hoofdwachtwoord hieronder in. Deze wijziging zal uiteindelijk verplicht worden."
   },
   "updateEncryptionKeyWarning": {
-    "message": "Na het bijwerken van je encryptiesleutel moet je je afmelden en weer aanmelden bij alle Bitwarden-applicaties die je gebruikt (zoals de mobiele app of browserextensies). Als je niet opnieuw inlogt (wat je nieuwe encryptiesleutel downloadt), kan dit gegevensbeschadiging tot gevolg hebben. We proberen je automatisch uit te loggen, maar het kan zijn dat dit met enige vertraging gebeurt."
+    "message": "Na het bijwerken van je encryptiesleutel moet je je afmelden en weer aanmelden bij alle VivoKey Vault-applicaties die je gebruikt (zoals de mobiele app of browserextensies). Als je niet opnieuw inlogt (wat je nieuwe encryptiesleutel downloadt), kan dit gegevensbeschadiging tot gevolg hebben. We proberen je automatisch uit te loggen, maar het kan zijn dat dit met enige vertraging gebeurt."
   },
   "subscription": {
     "message": "Abonnement"
@@ -2889,7 +2889,7 @@
     "message": "Zwak hoofdwachtwoord"
   },
   "weakMasterPasswordDesc": {
-    "message": "Je hebt een zwak hoofdwachtwoord gekozen. Gebruik een sterk hoofdwachtwoord (of wachtwoordzin) om jouw Bitwarden-account goed te beschermen. Weet je zeker dat je dit hoofdwachtwoord wilt gebruiken?"
+    "message": "Je hebt een zwak hoofdwachtwoord gekozen. Gebruik een sterk hoofdwachtwoord (of wachtwoordzin) om jouw VivoKey Vault-account goed te beschermen. Weet je zeker dat je dit hoofdwachtwoord wilt gebruiken?"
   },
   "rotateAccountEncKey": {
     "message": "De encryptiesleutel van mijn account ook roteren"
@@ -2933,7 +2933,7 @@
     "message": "API-sleutel"
   },
   "apiKeyDesc": {
-    "message": "Je kunt je API-sleutel gebruiken om in te loggen op de openbare API van Bitwarden."
+    "message": "Je kunt je API-sleutel gebruiken om in te loggen op de openbare API van VivoKey Vault."
   },
   "apiKeyRotateDesc": {
     "message": "Het roteren van de API-sleutel maakt de vorige sleutel ongeldig. Je kunt je API-sleutel roteren als je denkt dat de huidige sleutel niet langer veilig is om te gebruiken."

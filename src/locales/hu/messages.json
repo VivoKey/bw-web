@@ -5,7 +5,7 @@
     "placeholders": {
       "app_name": {
         "content": "$1",
-        "example": "Bitwarden"
+        "example": "VivoKey Vault"
       }
     }
   },
@@ -878,7 +878,7 @@
     "message": "Ismételten be kell jelentkezni."
   },
   "logBackInOthersToo": {
-    "message": "Ismételten be kell jelentkezni. Ha másik Bitwarden alkalmazásokat használunk, ott is jelentkezzünk ki és ismételten be."
+    "message": "Ismételten be kell jelentkezni. Ha másik VivoKey Vault alkalmazásokat használunk, ott is jelentkezzünk ki és ismételten be."
   },
   "changeMasterPassword": {
     "message": "Mesterjelszó módosítása"
@@ -1051,7 +1051,7 @@
     "message": "Domain szabályok"
   },
   "domainRulesDesc": {
-    "message": "Ha ugyanazokat a bejelentkezési adatokat használjuk több különböző webhely domainen, ezeket \"azonos\"-ként jelölhetjük meg.  A \"Globális\" domainek a Bitwarden által már létrehozottak."
+    "message": "Ha ugyanazokat a bejelentkezési adatokat használjuk több különböző webhely domainen, ezeket \"azonos\"-ként jelölhetjük meg.  A \"Globális\" domainek a VivoKey Vault által már létrehozottak."
   },
   "globalEqDomains": {
     "message": "Globális azonos domainek"
@@ -1096,7 +1096,7 @@
     "message": "Kétlépéses bejelentkezés szükséges a szervezet felhasználói számára a szolgáltatók szervezeti szintű konfigurálásával."
   },
   "twoStepLoginRecoveryWarning": {
-    "message": "A kétlépcsős bejelentkezés engedélyezése véglegesen kizárhatja a felhasználót a Bitwarden fiókból. A helyreállítási kód lehetővé teszi a fiókjához való hozzáférést abban az esetben, ha már nem tudjuk használni a szokásos kétlépcsős bejelentkezési szolgáltatást (pl. készülék elvesztése). A Bitwarden támogatás nem tud segíteni abban az esetben, ha elveszítjük a hozzáférést a fiókhoz. Célszerű leírni vagy kinyomtatni a helyreállítási kódot és azt biztonságos helyen tartani."
+    "message": "A kétlépcsős bejelentkezés engedélyezése véglegesen kizárhatja a felhasználót a VivoKey Vault fiókból. A helyreállítási kód lehetővé teszi a fiókjához való hozzáférést abban az esetben, ha már nem tudjuk használni a szokásos kétlépcsős bejelentkezési szolgáltatást (pl. készülék elvesztése). A VivoKey Vault támogatás nem tud segíteni abban az esetben, ha elveszítjük a hozzáférést a fiókhoz. Célszerű leírni vagy kinyomtatni a helyreállítási kódot és azt biztonságos helyen tartani."
   },
   "viewRecoveryCode": {
     "message": "Helyreállító kód megtekintése"
@@ -1197,7 +1197,7 @@
     "message": "Az űrlap mentése."
   },
   "twoFactorYubikeyWarning": {
-    "message": "Platform korlátozások miatt nem lehetséges minden Bitwarden alkalmazásban YubiKey eszközt használni. Engedélyezzünk egy másik kétlépcsős bejelentkezés szolgáltatót, hogy hozzáférhessünk a fiókhoz akkor is, ha a YubiKey nem használható. Támogatott platformok:"
+    "message": "Platform korlátozások miatt nem lehetséges minden VivoKey Vault alkalmazásban YubiKey eszközt használni. Engedélyezzünk egy másik kétlépcsős bejelentkezés szolgáltatót, hogy hozzáférhessünk a fiókhoz akkor is, ha a YubiKey nem használható. Támogatott platformok:"
   },
   "twoFactorYubikeySupportUsb": {
     "message": "Webes széf, asztali alkalmazás, CLI, és minden egyéb böngésző bővítmény olyan USB porttal rendelkező eszközön, amely elfogadja a YubiKey eszközt."
@@ -1239,7 +1239,7 @@
     "message": "Összes kulcs letiltása"
   },
   "twoFactorDuoDesc": {
-    "message": "A Bitwarden alkalmazás információjának megadása a Duo Admin panelről."
+    "message": "A VivoKey Vault alkalmazás információjának megadása a Duo Admin panelről."
   },
   "twoFactorDuoIntegrationKey": {
     "message": "Integrációs kulcs"
@@ -1287,7 +1287,7 @@
     "message": "Az űrlap mentése."
   },
   "twoFactorU2fWarning": {
-    "message": "A platform korlátozások miatt nem lehet minden Bitwarden alkalmazásban FIDO U2F-t használni. Célszerű engedélyezni egy másik kétlépcsős bejelentkezés szolgáltatót a fiók eléréséhez akkor, ha a FIDO U2F nem használható. Támogatott platformok:"
+    "message": "A platform korlátozások miatt nem lehet minden VivoKey Vault alkalmazásban FIDO U2F-t használni. Célszerű engedélyezni egy másik kétlépcsős bejelentkezés szolgáltatót a fiók eléréséhez akkor, ha a FIDO U2F nem használható. Támogatott platformok:"
   },
   "twoFactorU2fSupportWeb": {
     "message": "Web széf és böngésző kiegészítők asztali gépen / laptopon engedélyezett U2F böngészővel (Chrome, Opera, Vivaldi, vagy Firefox bekapcsolt FIDO U2F-fel)."
@@ -1302,7 +1302,7 @@
     "message": "Probléma lépett fel a biztonsági kulcs olvasásakor. Próbáljuk újra."
   },
   "twoFactorRecoveryYourCode": {
-    "message": "Bitwarden kétlépcsős bejelentkezés helyreállító kód"
+    "message": "VivoKey Vault kétlépcsős bejelentkezés helyreállító kód"
   },
   "twoFactorRecoveryNoCode": {
     "message": "Még nem lett engedélyezve kétlépcsős bejelentkezés szolgáltató. A kétlépcsős bejelentkezés szolgáltató engedélyezése után visszatérhetünk ide a helyreállító kódért."
@@ -1396,7 +1396,7 @@
     "message": "Gyenge jelszavak jelentés"
   },
   "weakPasswordsReportDesc": {
-    "message": "A gyenge jelszavakat könnyen megfejthetik hackerek és jelszótöréshez használt eszközök. A Bitwarden jelszógenerátor segít erős jelszót készíteni."
+    "message": "A gyenge jelszavakat könnyen megfejthetik hackerek és jelszótöréshez használt eszközök. A VivoKey Vault jelszógenerátor segít erős jelszót készíteni."
   },
   "weakPasswordsFound": {
     "message": "Gyenge jelszavak találhatók."
@@ -1507,11 +1507,11 @@
   },
   "accountCredit": {
     "message": "Fiók  hitelkeret",
-    "description": "Financial term. In the case of Bitwarden, a positive balance means that you owe money, while a negative balance means that you have a credit (Bitwarden owes you money)."
+    "description": "Financial term. In the case of VivoKey Vault, a positive balance means that you owe money, while a negative balance means that you have a credit (VivoKey Vault owes you money)."
   },
   "accountBalance": {
     "message": "Számla egyenleg",
-    "description": "Financial term. In the case of Bitwarden, a positive balance means that you owe money, while a negative balance means that you have a credit (Bitwarden owes you money)."
+    "description": "Financial term. In the case of VivoKey Vault, a positive balance means that you owe money, while a negative balance means that you have a credit (VivoKey Vault owes you money)."
   },
   "addCredit": {
     "message": "Hitelkeret hozzáadása",
@@ -2111,7 +2111,7 @@
     "message": "Felhasználó meghívása"
   },
   "inviteUserDesc": {
-    "message": "Új felhasználó meghívása a szervezetéhez a Bitwarden fiók e-mail címének megadásával. Ha még nem rendelkezik Bitwarden-fiókkal, felkérjük új fiók létrehozására.\n"
+    "message": "Új felhasználó meghívása a szervezetéhez a VivoKey Vault fiók e-mail címének megadásával. Ha még nem rendelkezik VivoKey Vault-fiókkal, felkérjük új fiók létrehozására.\n"
   },
   "inviteMultipleEmailDesc": {
     "message": "Egymástól vesszővel elválasztott email címek megadásával egyszerre akár $COUNT$ felhasználó meghívható.",
@@ -2567,7 +2567,7 @@
     "message": "Csatlakozás szervezethez"
   },
   "joinOrganizationDesc": {
-    "message": "Meghívást érkezett a fenti szervezethez csatlakozáshoz.  A meghívás elfogadásához be kell jelentkezni vagy új Bitwarden fiókot kell létrehozni."
+    "message": "Meghívást érkezett a fenti szervezethez csatlakozáshoz.  A meghívás elfogadásához be kell jelentkezni vagy új VivoKey Vault fiókot kell létrehozni."
   },
   "inviteAccepted": {
     "message": "A meghívás elfogadásra került."
@@ -2609,7 +2609,7 @@
     "message": "Ha létezik a fiók, egy email kerül kiküldésre további utasításokkal."
   },
   "deleteRecoverConfirmDesc": {
-    "message": "A Bitwarden fiók törlését kértük. Kattintás a lenti gombra a megerősítéshez."
+    "message": "A VivoKey Vault fiók törlését kértük. Kattintás a lenti gombra a megerősítéshez."
   },
   "myOrganization": {
     "message": "Saját szervezet"
@@ -2774,7 +2774,7 @@
     "message": "Hosszabb titkosítókulcsok kerültek használatba, amelyek jobb biztonságot és hozzáférést biztosítanak új funkciókhoz. A titkosító kulcs frissítése könnyű és gyors. Csak meg kell adni a mesterjelszót. Ez a frissítés kötelezővé válik."
   },
   "updateEncryptionKeyWarning": {
-    "message": "A titkosítási kulcs frissítése után ki kell jelentkezni és vissza kell jelentkezni az összes jelenleg használt Bitwarden alkalmazásba (például a mobilalkalmazás vagy a böngésző bővítmények). A kijelentkezés és a bejelentkezés elmulasztása (amely letölti az új titkosítási kulcsot) adatvesztést okozhat. Megkíséreljük az automatikusan kijelentkeztetést, azonban ez késhet."
+    "message": "A titkosítási kulcs frissítése után ki kell jelentkezni és vissza kell jelentkezni az összes jelenleg használt VivoKey Vault alkalmazásba (például a mobilalkalmazás vagy a böngésző bővítmények). A kijelentkezés és a bejelentkezés elmulasztása (amely letölti az új titkosítási kulcsot) adatvesztést okozhat. Megkíséreljük az automatikusan kijelentkeztetést, azonban ez késhet."
   },
   "subscription": {
     "message": "Előfizetés"
@@ -2889,7 +2889,7 @@
     "message": "Gyenge mesterjelszó"
   },
   "weakMasterPasswordDesc": {
-    "message": "A választott mesterjelszó gyenge. Erős jelszót kell használni a Bitwarden fiók megfelelő védelme érdekében. Biztosan ezt a mesterjelszót szeretnénk használni?"
+    "message": "A választott mesterjelszó gyenge. Erős jelszót kell használni a VivoKey Vault fiók megfelelő védelme érdekében. Biztosan ezt a mesterjelszót szeretnénk használni?"
   },
   "rotateAccountEncKey": {
     "message": "A fiók titkosító kulcs forgatása is"
@@ -2933,7 +2933,7 @@
     "message": "API kulcs"
   },
   "apiKeyDesc": {
-    "message": "Az API kulcs használható a Bitwarden nyilvános API hitelesítéséhez."
+    "message": "Az API kulcs használható a VivoKey Vault nyilvános API hitelesítéséhez."
   },
   "apiKeyRotateDesc": {
     "message": "Az API kulcs forgatása érvényteleníti a korábbi kulcsot. Az API kulcs forgatható, ha a jelenlegi kulcs már nem tűnik biztonságosnak."

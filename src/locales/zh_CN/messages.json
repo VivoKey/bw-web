@@ -5,7 +5,7 @@
     "placeholders": {
       "app_name": {
         "content": "$1",
-        "example": "Bitwarden"
+        "example": "VivoKey Vault"
       }
     }
   },
@@ -878,7 +878,7 @@
     "message": "请重新登录。"
   },
   "logBackInOthersToo": {
-    "message": "请重新登录。如果您还在使用其他 Bitwarden 应用，也请注销并重新登陆。"
+    "message": "请重新登录。如果您还在使用其他 VivoKey Vault 应用，也请注销并重新登陆。"
   },
   "changeMasterPassword": {
     "message": "修改主密码"
@@ -914,7 +914,7 @@
     }
   },
   "kdfIterationsWarning": {
-    "message": "如果将 KDF 迭代设置得太高, 可能会在 CPU 速度较慢的设备上登录（以及解锁）Bitwarden 时性能较差。建议您增加 $INCREMENT$ 的增量值, 然后测试所有设备。",
+    "message": "如果将 KDF 迭代设置得太高, 可能会在 CPU 速度较慢的设备上登录（以及解锁）VivoKey Vault 时性能较差。建议您增加 $INCREMENT$ 的增量值, 然后测试所有设备。",
     "placeholders": {
       "increment": {
         "content": "$1",
@@ -1051,7 +1051,7 @@
     "message": "域名规则"
   },
   "domainRulesDesc": {
-    "message": "如果您在多个不同网站使用同样的登陆信息，您可以把这些网站标记为 “通用”。Bitwarden 会为您设置 “全局” 域名。"
+    "message": "如果您在多个不同网站使用同样的登陆信息，您可以把这些网站标记为 “通用”。VivoKey Vault 会为您设置 “全局” 域名。"
   },
   "globalEqDomains": {
     "message": "全局通用域名"
@@ -1096,7 +1096,7 @@
     "message": "在组织机构层面配置提供程序，使您组织的用户采用两步登录。"
   },
   "twoStepLoginRecoveryWarning": {
-    "message": "启用两步登录可以永久锁定您的 Bitwarden 帐户。如果您无法正常使用两步登录验证应用（例如，您丢失了设备），则可以使用恢复代码访问您的帐户。 如果您无法访问您的帐户，Bitwarden 无法帮助您。我们建议您记下或打印恢复代码，并将其妥善保管。"
+    "message": "启用两步登录可以永久锁定您的 VivoKey Vault 帐户。如果您无法正常使用两步登录验证应用（例如，您丢失了设备），则可以使用恢复代码访问您的帐户。 如果您无法访问您的帐户，VivoKey Vault 无法帮助您。我们建议您记下或打印恢复代码，并将其妥善保管。"
   },
   "viewRecoveryCode": {
     "message": "查看恢复码"
@@ -1197,7 +1197,7 @@
     "message": "保存表单"
   },
   "twoFactorYubikeyWarning": {
-    "message": "由于平台限制，YubiKey 无法用于所有的 Bitwarden 应用。您应启用另一个两步登录验证应用，以便在 YubiKey 不可用时，也能访问您的账户。支持的平台："
+    "message": "由于平台限制，YubiKey 无法用于所有的 VivoKey Vault 应用。您应启用另一个两步登录验证应用，以便在 YubiKey 不可用时，也能访问您的账户。支持的平台："
   },
   "twoFactorYubikeySupportUsb": {
     "message": "具有 USB 端口的设备上的网页密码库，桌面应用程序，CLI 以及浏览器扩展都可以访问您的 YubiKey。"
@@ -1239,7 +1239,7 @@
     "message": "禁用全部密钥"
   },
   "twoFactorDuoDesc": {
-    "message": "从 \"Duo Admin\" 面板输入 Bitwarden 应用信息。"
+    "message": "从 \"Duo Admin\" 面板输入 VivoKey Vault 应用信息。"
   },
   "twoFactorDuoIntegrationKey": {
     "message": "集成密钥"
@@ -1287,7 +1287,7 @@
     "message": "保存表单。"
   },
   "twoFactorU2fWarning": {
-    "message": "由于平台限制，FIDO U2F 无法用于所有的 Bitwarden 应用。 您应启用另一个两步登录验证应用，以便在 FIDO U2F 不可用时，也能访问您的帐户。 支持的平台："
+    "message": "由于平台限制，FIDO U2F 无法用于所有的 VivoKey Vault 应用。 您应启用另一个两步登录验证应用，以便在 FIDO U2F 不可用时，也能访问您的帐户。 支持的平台："
   },
   "twoFactorU2fSupportWeb": {
     "message": "支持 U2F 的桌面 / 笔记本电脑上的网页密码库和浏览器扩展（Chrome，Opera，Vivaldi 或启用了FIDO U2F 的 Firefox）。"
@@ -1302,7 +1302,7 @@
     "message": "读取安全密钥时出现问题，请再试一次。"
   },
   "twoFactorRecoveryYourCode": {
-    "message": "您的 Bitwarden 两步登录恢复代码"
+    "message": "您的 VivoKey Vault 两步登录恢复代码"
   },
   "twoFactorRecoveryNoCode": {
     "message": "您尚未启用任何两步登录验证应用。在启用了两步登录验证应用后, 您可以在这里检查恢复代码。"
@@ -1396,7 +1396,7 @@
     "message": "弱密码报告"
   },
   "weakPasswordsReportDesc": {
-    "message": "弱密码很容易被黑客和用于破解密码的自动化工具猜中。Bitwarden 密码生成器可以帮助您创建强密码。"
+    "message": "弱密码很容易被黑客和用于破解密码的自动化工具猜中。VivoKey Vault 密码生成器可以帮助您创建强密码。"
   },
   "weakPasswordsFound": {
     "message": "找到弱密码"
@@ -1507,11 +1507,11 @@
   },
   "accountCredit": {
     "message": "账户信用",
-    "description": "Financial term. In the case of Bitwarden, a positive balance means that you owe money, while a negative balance means that you have a credit (Bitwarden owes you money)."
+    "description": "Financial term. In the case of VivoKey Vault, a positive balance means that you owe money, while a negative balance means that you have a credit (VivoKey Vault owes you money)."
   },
   "accountBalance": {
     "message": "账户余额",
-    "description": "Financial term. In the case of Bitwarden, a positive balance means that you owe money, while a negative balance means that you have a credit (Bitwarden owes you money)."
+    "description": "Financial term. In the case of VivoKey Vault, a positive balance means that you owe money, while a negative balance means that you have a credit (VivoKey Vault owes you money)."
   },
   "addCredit": {
     "message": "添加信用额",
@@ -2111,7 +2111,7 @@
     "message": "邀请用户"
   },
   "inviteUserDesc": {
-    "message": "邀请新用户加入您的组织，只需要输入他们的 Bitwarden 帐户的电子邮件地址。如果他们没有 Bitwarden 帐户，将会提示他们创建一个。"
+    "message": "邀请新用户加入您的组织，只需要输入他们的 VivoKey Vault 帐户的电子邮件地址。如果他们没有 VivoKey Vault 帐户，将会提示他们创建一个。"
   },
   "inviteMultipleEmailDesc": {
     "message": "您可以一次邀请 $COUNT$ 位用户，使用逗号分隔电子邮件地址列表。",
@@ -2567,7 +2567,7 @@
     "message": "加入组织"
   },
   "joinOrganizationDesc": {
-    "message": "邀请您加入下面的组织。要接受邀请，您需要登录或者创建一个 Bitwarden 账户。"
+    "message": "邀请您加入下面的组织。要接受邀请，您需要登录或者创建一个 VivoKey Vault 账户。"
   },
   "inviteAccepted": {
     "message": "邀请已接受"
@@ -2609,7 +2609,7 @@
     "message": "如果您的帐户存在，我们已经向您发送了电子邮件，其中包含了进一步说明。"
   },
   "deleteRecoverConfirmDesc": {
-    "message": "您已请求删除您的 Bitwarden 帐户。单击下面的按钮确认。"
+    "message": "您已请求删除您的 VivoKey Vault 帐户。单击下面的按钮确认。"
   },
   "myOrganization": {
     "message": "我的组织"
@@ -2774,7 +2774,7 @@
     "message": "我们已经采用更大的加密密钥，提供了更强的安全性和新的功能。更新您的加密密钥非常简单快捷。只需要输入主密码。此次更新最终将强制执行。"
   },
   "updateEncryptionKeyWarning": {
-    "message": "更新加密密钥后，您需要登出所有正在使用的的 Bitwarden 应用后重新登录（比如手机版应用或者浏览器扩展）。登出或者重新登录失败（下载新的加密密钥）可能会导致数据损坏。我们会尝试自动为您登录，但是，可能会有所延迟。"
+    "message": "更新加密密钥后，您需要登出所有正在使用的的 VivoKey Vault 应用后重新登录（比如手机版应用或者浏览器扩展）。登出或者重新登录失败（下载新的加密密钥）可能会导致数据损坏。我们会尝试自动为您登录，但是，可能会有所延迟。"
   },
   "subscription": {
     "message": "订阅"
@@ -2889,7 +2889,7 @@
     "message": "脆弱的主密码"
   },
   "weakMasterPasswordDesc": {
-    "message": "您选择的主密码较弱。您应该使用强密码（或密码短语）来正确保护您的 Bitwarden 账户。仍要使用此主密码吗？"
+    "message": "您选择的主密码较弱。您应该使用强密码（或密码短语）来正确保护您的 VivoKey Vault 账户。仍要使用此主密码吗？"
   },
   "rotateAccountEncKey": {
     "message": "更新我的帐户的加密密钥"
@@ -2933,7 +2933,7 @@
     "message": "API密钥"
   },
   "apiKeyDesc": {
-    "message": "您的 API 密钥可以用来验证 Bitwarden 公共API。"
+    "message": "您的 API 密钥可以用来验证 VivoKey Vault 公共API。"
   },
   "apiKeyRotateDesc": {
     "message": "旋转 API 密钥将使前一个密钥无效。如果你认为当前密钥不再安全使用，你可以旋转您的 API 密钥。"

@@ -5,7 +5,7 @@
     "placeholders": {
       "app_name": {
         "content": "$1",
-        "example": "Bitwarden"
+        "example": "VivoKey Vault"
       }
     }
   },
@@ -1051,7 +1051,7 @@
     "message": "Domeeni reeglid"
   },
   "domainRulesDesc": {
-    "message": "Kui sul on erinevatel domeenidel samade andmetega kontod, võid need domeenid märkida \"võrdväärseteks\". \"Globaalsed\" domeenid on need, mille Bitwarden juba eelseadistanud on."
+    "message": "Kui sul on erinevatel domeenidel samade andmetega kontod, võid need domeenid märkida \"võrdväärseteks\". \"Globaalsed\" domeenid on need, mille VivoKey Vault juba eelseadistanud on."
   },
   "globalEqDomains": {
     "message": "Globaalsed võrdväärsed domeenid"
@@ -1507,11 +1507,11 @@
   },
   "accountCredit": {
     "message": "Konto krediit",
-    "description": "Financial term. In the case of Bitwarden, a positive balance means that you owe money, while a negative balance means that you have a credit (Bitwarden owes you money)."
+    "description": "Financial term. In the case of VivoKey Vault, a positive balance means that you owe money, while a negative balance means that you have a credit (VivoKey Vault owes you money)."
   },
   "accountBalance": {
     "message": "Kontojääk",
-    "description": "Financial term. In the case of Bitwarden, a positive balance means that you owe money, while a negative balance means that you have a credit (Bitwarden owes you money)."
+    "description": "Financial term. In the case of VivoKey Vault, a positive balance means that you owe money, while a negative balance means that you have a credit (VivoKey Vault owes you money)."
   },
   "addCredit": {
     "message": "Krediidi lisamine",

@@ -5,7 +5,7 @@
     "placeholders": {
       "app_name": {
         "content": "$1",
-        "example": "Bitwarden"
+        "example": "VivoKey Vault"
       }
     }
   },
@@ -878,7 +878,7 @@
     "message": "Bitte melden Sie sich erneut an."
   },
   "logBackInOthersToo": {
-    "message": "Bitte melden Sie sich wieder an. Wenn Sie andere Bitwarden-Anwendungen verwenden, melden Sie sich auch dort ab und wieder neu an."
+    "message": "Bitte melden Sie sich wieder an. Wenn Sie andere VivoKey Vault-Anwendungen verwenden, melden Sie sich auch dort ab und wieder neu an."
   },
   "changeMasterPassword": {
     "message": "Master-Passwort ändern"
@@ -914,7 +914,7 @@
     }
   },
   "kdfIterationsWarning": {
-    "message": "Wenn du die Anzahl der KDF-Iterationen zu hoch setzt, kann es sein, dass das Einloggen in Bitwarden (und Entsperren) auf langsameren Geräten länger dauert. Wir empfehlen, dass du den Wert um $INCREMENT$ Schrittweise anhebest und es auf allen Geräten testest.",
+    "message": "Wenn du die Anzahl der KDF-Iterationen zu hoch setzt, kann es sein, dass das Einloggen in VivoKey Vault (und Entsperren) auf langsameren Geräten länger dauert. Wir empfehlen, dass du den Wert um $INCREMENT$ Schrittweise anhebest und es auf allen Geräten testest.",
     "placeholders": {
       "increment": {
         "content": "$1",
@@ -1051,7 +1051,7 @@
     "message": "Domänenregeln"
   },
   "domainRulesDesc": {
-    "message": "Wenn Sie die gleiche Anmeldung über mehrere verschiedene Webseitendomänen hinweg haben, können Sie die Webseite als \"gleichwertig\" markieren. \"Globale\" Domänen wurden bereits von Bitwarden für Sie angelegt."
+    "message": "Wenn Sie die gleiche Anmeldung über mehrere verschiedene Webseitendomänen hinweg haben, können Sie die Webseite als \"gleichwertig\" markieren. \"Globale\" Domänen wurden bereits von VivoKey Vault für Sie angelegt."
   },
   "globalEqDomains": {
     "message": "Globale gleichwertige Domänen"
@@ -1096,7 +1096,7 @@
     "message": "Zwei-Faktor-Authentifizierung für die Benutzer Ihrer Organisation verlangen, indem Sie Anbieter auf Organisationsebene konfigurieren."
   },
   "twoStepLoginRecoveryWarning": {
-    "message": "Durch die Aktivierung der Zwei-Faktor-Authentifizierung könnten Sie sich dauerhaft aus Ihrem Bitwarden-Konto aussperren. Ein Wiederherstellungscode ermöglicht es Ihnen, auf Ihr Konto zuzugreifen, falls Sie Ihren normalen Zwei-Faktor-Anbieter nicht mehr verwenden können (z.B. wenn Sie Ihr Gerät verlieren). Der Bitwarden-Support kann Ihnen nicht helfen, wenn Sie den Zugang zu Ihrem Konto verlieren. Wir empfehlen Ihnen, den Wiederherstellungscode aufzuschreiben oder auszudrucken und an einem sicheren Ort aufzubewahren."
+    "message": "Durch die Aktivierung der Zwei-Faktor-Authentifizierung könnten Sie sich dauerhaft aus Ihrem VivoKey Vault-Konto aussperren. Ein Wiederherstellungscode ermöglicht es Ihnen, auf Ihr Konto zuzugreifen, falls Sie Ihren normalen Zwei-Faktor-Anbieter nicht mehr verwenden können (z.B. wenn Sie Ihr Gerät verlieren). Der VivoKey Vault-Support kann Ihnen nicht helfen, wenn Sie den Zugang zu Ihrem Konto verlieren. Wir empfehlen Ihnen, den Wiederherstellungscode aufzuschreiben oder auszudrucken und an einem sicheren Ort aufzubewahren."
   },
   "viewRecoveryCode": {
     "message": "Wiederherstellungscode anzeigen"
@@ -1197,7 +1197,7 @@
     "message": "Speichern des Formulars"
   },
   "twoFactorYubikeyWarning": {
-    "message": "Aufgrund von Plattformbeschränkungen können YubiKeys nicht in allen Bitwarden-Anwendungen verwendet werden. Sie sollten einen anderen Zwei-Faktor-Authentifizierungsanbieter aktivieren, damit Sie auf Ihr Konto zugreifen können, wenn YubiKeys nicht verwendet werden können. Unterstützte Plattformen:"
+    "message": "Aufgrund von Plattformbeschränkungen können YubiKeys nicht in allen VivoKey Vault-Anwendungen verwendet werden. Sie sollten einen anderen Zwei-Faktor-Authentifizierungsanbieter aktivieren, damit Sie auf Ihr Konto zugreifen können, wenn YubiKeys nicht verwendet werden können. Unterstützte Plattformen:"
   },
   "twoFactorYubikeySupportUsb": {
     "message": "Web-Tresor, Desktop-Anwendung, CLI und alle Browser-Erweiterungen auf einem Gerät mit USB-Anschluss, das Ihren YubiKey erkennen kann."
@@ -1239,7 +1239,7 @@
     "message": "Alle Schlüssel deaktivieren"
   },
   "twoFactorDuoDesc": {
-    "message": "Geben Sie die Bitwarden-Anwendungsinformationen aus Ihrem Duo Admin-Panel ein."
+    "message": "Geben Sie die VivoKey Vault-Anwendungsinformationen aus Ihrem Duo Admin-Panel ein."
   },
   "twoFactorDuoIntegrationKey": {
     "message": "Integrationsschlüssel"
@@ -1287,7 +1287,7 @@
     "message": "Formular speichern."
   },
   "twoFactorU2fWarning": {
-    "message": "Aufgrund von Plattformbeschränkungen kann FIDO U2F nicht mit allen Bitwarden-Anwendungen verwendet werden. Sie sollten einen anderen Zwei-Faktor-Authentifizierungsanbieter aktivieren, damit Sie auf Ihr Konto zugreifen können, wenn FIDO U2F nicht verwendet werden kann. Unterstützte Plattformen sind:"
+    "message": "Aufgrund von Plattformbeschränkungen kann FIDO U2F nicht mit allen VivoKey Vault-Anwendungen verwendet werden. Sie sollten einen anderen Zwei-Faktor-Authentifizierungsanbieter aktivieren, damit Sie auf Ihr Konto zugreifen können, wenn FIDO U2F nicht verwendet werden kann. Unterstützte Plattformen sind:"
   },
   "twoFactorU2fSupportWeb": {
     "message": "Web-Tresor und Browser-Erweiterungen auf einem Desktop/Laptop mit einem U2F fähigen Browser (Chrome, Opera, Vivaldi oder Firefox mit FIDO U2F aktiviert)."
@@ -1302,7 +1302,7 @@
     "message": "Es gab ein Problem beim lesen des Sicherheitsschlüssels, bitte erneut versuchen."
   },
   "twoFactorRecoveryYourCode": {
-    "message": "Ihr Wiederherstellungsschlüssel für die Zwei-Faktor-Anmeldung in Bitwarden"
+    "message": "Ihr Wiederherstellungsschlüssel für die Zwei-Faktor-Anmeldung in VivoKey Vault"
   },
   "twoFactorRecoveryNoCode": {
     "message": "Sie haben noch keine Variante der Zwei-Faktor-Anmeldung aktiviert. Nachdem Sie eine Zwei-Faktor-Anmeldung aktiviert haben, finden Sie hier Ihren Wiederherstellungs-Code."
@@ -1396,7 +1396,7 @@
     "message": "Bericht über schwache Passwörter"
   },
   "weakPasswordsReportDesc": {
-    "message": "Schwache Passwörter können von Angreifern und automatisierten Prozessen, die Passwörter knacken, leicht erraten werden. Der Passwortgenerator von Bitwarden kann Ihnen helfen, starke und sichere Passwörter zu generieren."
+    "message": "Schwache Passwörter können von Angreifern und automatisierten Prozessen, die Passwörter knacken, leicht erraten werden. Der Passwortgenerator von VivoKey Vault kann Ihnen helfen, starke und sichere Passwörter zu generieren."
   },
   "weakPasswordsFound": {
     "message": "Schwache Passwörter gefunden"
@@ -1507,11 +1507,11 @@
   },
   "accountCredit": {
     "message": "Kontoguthaben",
-    "description": "Financial term. In the case of Bitwarden, a positive balance means that you owe money, while a negative balance means that you have a credit (Bitwarden owes you money)."
+    "description": "Financial term. In the case of VivoKey Vault, a positive balance means that you owe money, while a negative balance means that you have a credit (VivoKey Vault owes you money)."
   },
   "accountBalance": {
     "message": "Kontostand",
-    "description": "Financial term. In the case of Bitwarden, a positive balance means that you owe money, while a negative balance means that you have a credit (Bitwarden owes you money)."
+    "description": "Financial term. In the case of VivoKey Vault, a positive balance means that you owe money, while a negative balance means that you have a credit (VivoKey Vault owes you money)."
   },
   "addCredit": {
     "message": "Guthaben hinzufügen",
@@ -2111,7 +2111,7 @@
     "message": "Benutzer einladen"
   },
   "inviteUserDesc": {
-    "message": "Laden Sie einen neuen Benutzer zu Ihrer Organisation ein, indem Sie deren Bitwarden-Konto-Email eintragen. Falls dieser noch kein Bitwarden-Konto besitzt, wird er/sie zur Erstellung eines neuen Kontos aufgefordert."
+    "message": "Laden Sie einen neuen Benutzer zu Ihrer Organisation ein, indem Sie deren VivoKey Vault-Konto-Email eintragen. Falls dieser noch kein VivoKey Vault-Konto besitzt, wird er/sie zur Erstellung eines neuen Kontos aufgefordert."
   },
   "inviteMultipleEmailDesc": {
     "message": "Sie können bis zu $COUNT$ Benutzer auf einmal einladen, indem Sie eine Liste von E-Mail-Adressen mit je einem Komma trennen.",
@@ -2567,7 +2567,7 @@
     "message": "Organisation beitreten"
   },
   "joinOrganizationDesc": {
-    "message": "Sie wurden eingeladen, oben genannter Organisation beizutreten. Um die Einladung anzunehmen, müssen Sie ein Bitwarden-Konto erstellen, oder sich mit Ihrem bestehenden Konto anmelden."
+    "message": "Sie wurden eingeladen, oben genannter Organisation beizutreten. Um die Einladung anzunehmen, müssen Sie ein VivoKey Vault-Konto erstellen, oder sich mit Ihrem bestehenden Konto anmelden."
   },
   "inviteAccepted": {
     "message": "Einladung angenommen"
@@ -2609,7 +2609,7 @@
     "message": "Wir haben Ihnen eine E-Mail mit weiteren Anweisungen gesendet, sofern Ihr Konto existiert."
   },
   "deleteRecoverConfirmDesc": {
-    "message": "Sie haben die Löschung Ihres Bitwarden-Kontos angefragt. Klicken Sie diesen Button, um die Löschung zu bestätigen."
+    "message": "Sie haben die Löschung Ihres VivoKey Vault-Kontos angefragt. Klicken Sie diesen Button, um die Löschung zu bestätigen."
   },
   "myOrganization": {
     "message": "Meine Organisation"
@@ -2774,7 +2774,7 @@
     "message": "Wir sind auf größere Verschlüsselungscodes umgestiegen, welche bessere Sicherheit und Zugang zu neuen Features bieten. Das Update Ihres Verschlüsselungscodes ist schnell und einfach. Geben Sie einfach hier Ihr Master-Passwort ein. Das Update wird irgendwann verpflichtend."
   },
   "updateEncryptionKeyWarning": {
-    "message": "Nach der Aktualisierung Ihres Verschlüsselungscodes, müssen Sie sich bei allen Bitwarden-Anwendungen, welche Sie momentan benutzen (wie z. B. Smartphone-App, Browser-Erweiterungen), erneut anmelden. Ein Versäumnis der Ab- und Anmeldung (welche Ihren neuen Verschlüsselungscode bezieht) könnte zu einer Beschädigung der Daten führen. Wir werden versuchen Sie automatisch auszuloggen, was jedoch verzögert geschehen kann."
+    "message": "Nach der Aktualisierung Ihres Verschlüsselungscodes, müssen Sie sich bei allen VivoKey Vault-Anwendungen, welche Sie momentan benutzen (wie z. B. Smartphone-App, Browser-Erweiterungen), erneut anmelden. Ein Versäumnis der Ab- und Anmeldung (welche Ihren neuen Verschlüsselungscode bezieht) könnte zu einer Beschädigung der Daten führen. Wir werden versuchen Sie automatisch auszuloggen, was jedoch verzögert geschehen kann."
   },
   "subscription": {
     "message": "Abo"
@@ -2889,7 +2889,7 @@
     "message": "Schwaches Master-Passwort"
   },
   "weakMasterPasswordDesc": {
-    "message": "Das Master-Passwort, welches Sie gewählt haben, ist schwach. Sie sollten ein starkes Master-Passwort auswählen, um Ihr Bitwarden-Konto ausreichend zu schützen. Sind Sie sicher, dass Sie dieses Master-Passwort verwenden wollen?"
+    "message": "Das Master-Passwort, welches Sie gewählt haben, ist schwach. Sie sollten ein starkes Master-Passwort auswählen, um Ihr VivoKey Vault-Konto ausreichend zu schützen. Sind Sie sicher, dass Sie dieses Master-Passwort verwenden wollen?"
   },
   "rotateAccountEncKey": {
     "message": "Auch den Verschlüsselungscode meines Kontos aktualisieren"
@@ -2933,7 +2933,7 @@
     "message": "API-Schlüssel"
   },
   "apiKeyDesc": {
-    "message": "Ihr API-Schlüssel kann zur Authentifizierung für die öffentlichen Bitwarden-API benutzt werden."
+    "message": "Ihr API-Schlüssel kann zur Authentifizierung für die öffentlichen VivoKey Vault-API benutzt werden."
   },
   "apiKeyRotateDesc": {
     "message": "Mit der Erneuerung des API-Schlüssels wird der bisherige Schlüssel ungültig. Sie können Ihren API-Schlüssel erneuern, wenn die sichere Verwendung Ihres aktuellen Schlüssel nicht mehr gewährleistet ist."

@@ -5,7 +5,7 @@
     "placeholders": {
       "app_name": {
         "content": "$1",
-        "example": "Bitwarden"
+        "example": "VivoKey Vault"
       }
     }
   },
@@ -878,7 +878,7 @@
     "message": "אנא התחבר שוב."
   },
   "logBackInOthersToo": {
-    "message": "אנא התחבר שוב. אם אתה משתמש באפליקציות נוספות של Bitwarden, סגור את החיבור והתחבר שוב גם באפליקציות הללו."
+    "message": "אנא התחבר שוב. אם אתה משתמש באפליקציות נוספות של VivoKey Vault, סגור את החיבור והתחבר שוב גם באפליקציות הללו."
   },
   "changeMasterPassword": {
     "message": "החלף סיסמה ראשית"
@@ -914,7 +914,7 @@
     }
   },
   "kdfIterationsWarning": {
-    "message": "קביעת ערך גבוה מדי עבור מספר האיטרציות KDF עלול לגרום לבעיות ביצועים בזמן הכניסה (ובזמן ביטול הנעילה) לחשבון Bitwarden במכשירים בעלי מעבד חלש. אנו ממליצים שתעלה את הערך בקפיצות של $INCREMENT$ ובדוק את ההשפעה של הביצועים בכל המכשירים שלך.",
+    "message": "קביעת ערך גבוה מדי עבור מספר האיטרציות KDF עלול לגרום לבעיות ביצועים בזמן הכניסה (ובזמן ביטול הנעילה) לחשבון VivoKey Vault במכשירים בעלי מעבד חלש. אנו ממליצים שתעלה את הערך בקפיצות של $INCREMENT$ ובדוק את ההשפעה של הביצועים בכל המכשירים שלך.",
     "placeholders": {
       "increment": {
         "content": "$1",
@@ -1051,7 +1051,7 @@
     "message": "כללי דומיין"
   },
   "domainRulesDesc": {
-    "message": "אם אתה משתמש באותם פרטי כניסה עבור אתרים שונים באותו דומיין, באפשרות לסמן את האתר כ\"שווה\". הערכים הרגילים שנוצרים על ידי Bitwarden מסומנים כדומיין \"גלובלי\"."
+    "message": "אם אתה משתמש באותם פרטי כניסה עבור אתרים שונים באותו דומיין, באפשרות לסמן את האתר כ\"שווה\". הערכים הרגילים שנוצרים על ידי VivoKey Vault מסומנים כדומיין \"גלובלי\"."
   },
   "globalEqDomains": {
     "message": "דומיינים גלובליים שווים"
@@ -1096,7 +1096,7 @@
     "message": "דרוש כניסה בשני-שלבים עבור משתמשי הארגון שלך בעזרת הגדרת ספקים הנתמכים ברמת הארגון."
   },
   "twoStepLoginRecoveryWarning": {
-    "message": "שים לב: שימוש לא נכון בכניסה דו-שלבית עשוי לגרום לך להנעל ללא גישה לחשבון Bitwarden שלך. מומלץ לשמור קוד שחזור לגישה לחשבון שלך למקרה שלא תוכל להשתמש בספק הכניסה הדו-שלבית (לדוגמא: איבדת את הפלאפון או את מפתח החומרה שלך). גם צוות התמיכה של Bitwarden לא יוכל לעזור לך במקרה שתאבד גישה לחשבון שלך. אנו ממליצים שתכתוב או תדפיס את קודי השחזור ותשמור אותם במקום בטוח."
+    "message": "שים לב: שימוש לא נכון בכניסה דו-שלבית עשוי לגרום לך להנעל ללא גישה לחשבון VivoKey Vault שלך. מומלץ לשמור קוד שחזור לגישה לחשבון שלך למקרה שלא תוכל להשתמש בספק הכניסה הדו-שלבית (לדוגמא: איבדת את הפלאפון או את מפתח החומרה שלך). גם צוות התמיכה של VivoKey Vault לא יוכל לעזור לך במקרה שתאבד גישה לחשבון שלך. אנו ממליצים שתכתוב או תדפיס את קודי השחזור ותשמור אותם במקום בטוח."
   },
   "viewRecoveryCode": {
     "message": "צפה בקוד שחזור"
@@ -1197,7 +1197,7 @@
     "message": "שמור את הטופס."
   },
   "twoFactorYubikeyWarning": {
-    "message": "עקב מגבלות פלטפורמה, לא ניתן להשתמש בYubiKey בכל האפליקציות של Bitwarden. עליך לאפשר ספק כניסה דו-שלבית נוסף למקרה שבו הYubiKey שלך לא זמין. פלטפורמות נתמכות:"
+    "message": "עקב מגבלות פלטפורמה, לא ניתן להשתמש בYubiKey בכל האפליקציות של VivoKey Vault. עליך לאפשר ספק כניסה דו-שלבית נוסף למקרה שבו הYubiKey שלך לא זמין. פלטפורמות נתמכות:"
   },
   "twoFactorYubikeySupportUsb": {
     "message": "כספת רשת, אפליקציית שולחן עבודה, שורת הפקודה, וכל התוספים לדפדפן על מכשיר עם חיבור USB עבור הYubiKey שלך."
@@ -1239,7 +1239,7 @@
     "message": "בטל את כל המפתחות"
   },
   "twoFactorDuoDesc": {
-    "message": "הזן את פרטי אפליקציית Bitwarden מתוך עמוד הניהול של Duo."
+    "message": "הזן את פרטי אפליקציית VivoKey Vault מתוך עמוד הניהול של Duo."
   },
   "twoFactorDuoIntegrationKey": {
     "message": "מפתח אינטגרציה"
@@ -1287,7 +1287,7 @@
     "message": "שמור את הטופס."
   },
   "twoFactorU2fWarning": {
-    "message": "עקב מגבלות פלטפורמה, לא ניתן להשתמש בFIDO U2F בכל האפליקציות של Bitwarden. עליך לאפשר ספק כניסה דו-שלבית נוסף למקרה שבו הFIDO U2F שלך לא זמין. פלטפורמות נתמכות:"
+    "message": "עקב מגבלות פלטפורמה, לא ניתן להשתמש בFIDO U2F בכל האפליקציות של VivoKey Vault. עליך לאפשר ספק כניסה דו-שלבית נוסף למקרה שבו הFIDO U2F שלך לא זמין. פלטפורמות נתמכות:"
   },
   "twoFactorU2fSupportWeb": {
     "message": "כספת ברשת ותוספי אבטחה למחשב נייח\\נייד עם דפדפן תומך בU2F (כרום, אופרה, Vivaldi, או פיירפוקס עם תמיכה בFIDO U2F)."
@@ -1396,7 +1396,7 @@
     "message": "דו\"ח סיסמאות חלשות"
   },
   "weakPasswordsReportDesc": {
-    "message": "Weak passwords can easily be guessed by hackers and automated tools that are used to crack passwords. The Bitwarden password generator can help you create strong passwords."
+    "message": "Weak passwords can easily be guessed by hackers and automated tools that are used to crack passwords. The VivoKey Vault password generator can help you create strong passwords."
   },
   "weakPasswordsFound": {
     "message": "נמצאו סיסמאות חלשות"
@@ -1507,11 +1507,11 @@
   },
   "accountCredit": {
     "message": "מאזן החשבון",
-    "description": "Financial term. In the case of Bitwarden, a positive balance means that you owe money, while a negative balance means that you have a credit (Bitwarden owes you money)."
+    "description": "Financial term. In the case of VivoKey Vault, a positive balance means that you owe money, while a negative balance means that you have a credit (VivoKey Vault owes you money)."
   },
   "accountBalance": {
     "message": "יתרת חשבון",
-    "description": "Financial term. In the case of Bitwarden, a positive balance means that you owe money, while a negative balance means that you have a credit (Bitwarden owes you money)."
+    "description": "Financial term. In the case of VivoKey Vault, a positive balance means that you owe money, while a negative balance means that you have a credit (VivoKey Vault owes you money)."
   },
   "addCredit": {
     "message": "הוסף קרדיט",
@@ -2111,7 +2111,7 @@
     "message": "הזמן משתמש"
   },
   "inviteUserDesc": {
-    "message": "Invite a new user to your organization by entering their Bitwarden account email address below. If they do not have a Bitwarden account already, they will be prompted to create a new account."
+    "message": "Invite a new user to your organization by entering their VivoKey Vault account email address below. If they do not have a VivoKey Vault account already, they will be prompted to create a new account."
   },
   "inviteMultipleEmailDesc": {
     "message": "You can invite up to $COUNT$ users at a time by comma separating a list of email addresses.",
@@ -2567,7 +2567,7 @@
     "message": "הצטרף לארגון"
   },
   "joinOrganizationDesc": {
-    "message": "הוזמנת להצטרף לארגון הרשום לעיל. בכדי להסכים, עליך להתחבר או ליצור חשבון Bitwarden חדש."
+    "message": "הוזמנת להצטרף לארגון הרשום לעיל. בכדי להסכים, עליך להתחבר או ליצור חשבון VivoKey Vault חדש."
   },
   "inviteAccepted": {
     "message": "ההזמנה התקבלה"
@@ -2609,7 +2609,7 @@
     "message": "אם החשבון שלך אכן קיים, שלחנו אליך מייל עם הוראות נוספות."
   },
   "deleteRecoverConfirmDesc": {
-    "message": "ביקשת למחוק את חשבון ה-Bitwarden שלך. לחץ על הכפתור למטה בכדי לאשר זאת."
+    "message": "ביקשת למחוק את חשבון ה-VivoKey Vault שלך. לחץ על הכפתור למטה בכדי לאשר זאת."
   },
   "myOrganization": {
     "message": "הארגון שלי"
@@ -2774,7 +2774,7 @@
     "message": "התחלנו להשתמש במפתחות הצפנה גדולים יותר בכדי לספק אבטחה טובה יותר ולאפשר גישה ליכולות חדשות. תהליך עדכון מפתחות האבטחה שלך הוא קל ומהיר. פשוט הזן את הסיסמה הראשית שלך. שים לב שעדכון זה יהפוך להכרחי בסופו של דבר."
   },
   "updateEncryptionKeyWarning": {
-    "message": "After updating your encryption key, you are required to log out and back in to all Bitwarden applications that you are currently using (such as the mobile app or browser extensions). Failure to log out and back in (which downloads your new encryption key) may result in data corruption. We will attempt to log you out automatically, however, it may be delayed."
+    "message": "After updating your encryption key, you are required to log out and back in to all VivoKey Vault applications that you are currently using (such as the mobile app or browser extensions). Failure to log out and back in (which downloads your new encryption key) may result in data corruption. We will attempt to log you out automatically, however, it may be delayed."
   },
   "subscription": {
     "message": "מנוי"
@@ -2933,7 +2933,7 @@
     "message": "מפתח API"
   },
   "apiKeyDesc": {
-    "message": "Your API key can be used to authenticate to the Bitwarden public API."
+    "message": "Your API key can be used to authenticate to the VivoKey Vault public API."
   },
   "apiKeyRotateDesc": {
     "message": "Rotating the API key will invalidate the previous key. You can rotate your API key if you believe that the current key is no longer safe to use."

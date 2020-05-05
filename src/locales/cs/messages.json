@@ -5,7 +5,7 @@
     "placeholders": {
       "app_name": {
         "content": "$1",
-        "example": "Bitwarden"
+        "example": "VivoKey Vault"
       }
     }
   },
@@ -878,7 +878,7 @@
     "message": "Přihlaste se prosím znovu."
   },
   "logBackInOthersToo": {
-    "message": "Přihlaste se prosím znovu. Používáte-li jiné Bitwarden aplikace, přihlaste se znovu i v nich."
+    "message": "Přihlaste se prosím znovu. Používáte-li jiné VivoKey Vault aplikace, přihlaste se znovu i v nich."
   },
   "changeMasterPassword": {
     "message": "Změnit hlavní heslo"
@@ -914,7 +914,7 @@
     }
   },
   "kdfIterationsWarning": {
-    "message": "Nastavení příliš vysoké hodnoty počtu KDF iterací může mít za následek špatný výkon při přihlašování (a odemykání) aplikace Bitwarden na zařízeních se slabým procesorem. Doporučujeme hodnotu navyšovat přírůstkově po $INCREMENT$ a vyzkoušet všechna vaše zařízení.",
+    "message": "Nastavení příliš vysoké hodnoty počtu KDF iterací může mít za následek špatný výkon při přihlašování (a odemykání) aplikace VivoKey Vault na zařízeních se slabým procesorem. Doporučujeme hodnotu navyšovat přírůstkově po $INCREMENT$ a vyzkoušet všechna vaše zařízení.",
     "placeholders": {
       "increment": {
         "content": "$1",
@@ -1051,7 +1051,7 @@
     "message": "Doménová pravidla"
   },
   "domainRulesDesc": {
-    "message": "Pokud máte stejné přihlašovací údaje napříč různými doménami, můžete je označit jako „ekvivalentní“. Bitwarden za vás již vytvořil seznam globálních domén."
+    "message": "Pokud máte stejné přihlašovací údaje napříč různými doménami, můžete je označit jako „ekvivalentní“. VivoKey Vault za vás již vytvořil seznam globálních domén."
   },
   "globalEqDomains": {
     "message": "Globální ekvivalentní domény"
@@ -1197,7 +1197,7 @@
     "message": "Uložte formulář."
   },
   "twoFactorYubikeyWarning": {
-    "message": "Z důvodu omezení různých platforem, nemůže být YubiKey použit ve všech aplikacích Bitwarden. Měli byste povolit jiný způsob dvoufázového přihlášení pro případy, kdy nelze YubiKey použít. Podporované platformy:"
+    "message": "Z důvodu omezení různých platforem, nemůže být YubiKey použit ve všech aplikacích VivoKey Vault. Měli byste povolit jiný způsob dvoufázového přihlášení pro případy, kdy nelze YubiKey použít. Podporované platformy:"
   },
   "twoFactorYubikeySupportUsb": {
     "message": "Webový trezor, aplikace, CLI a rozšíření pro prohlížeče na zařízeních s USB portem."
@@ -1239,7 +1239,7 @@
     "message": "Zakázat všechny klíče"
   },
   "twoFactorDuoDesc": {
-    "message": "Zadejte informace o aplikaci Bitwarden z panelu Duo Admin."
+    "message": "Zadejte informace o aplikaci VivoKey Vault z panelu Duo Admin."
   },
   "twoFactorDuoIntegrationKey": {
     "message": "Integrační klíč"
@@ -1287,7 +1287,7 @@
     "message": "Uložte formulář."
   },
   "twoFactorU2fWarning": {
-    "message": "Z důvodu omezení různých platforem, nemůže být FIDO U2F použit ve všech aplikacích Bitwarden. Měli byste povolit jiný způsob dvoufázového přihlášení pro případy, kdy nelze FIDO U2F použít. Podporované platformy:"
+    "message": "Z důvodu omezení různých platforem, nemůže být FIDO U2F použit ve všech aplikacích VivoKey Vault. Měli byste povolit jiný způsob dvoufázového přihlášení pro případy, kdy nelze FIDO U2F použít. Podporované platformy:"
   },
   "twoFactorU2fSupportWeb": {
     "message": "Webový trezor a rozšíření pro prohlížeče s podporou U2F (Chrome, Opera, Vivaldi nebo Firefox)."
@@ -1396,7 +1396,7 @@
     "message": "Hlášení o slabých heslech"
   },
   "weakPasswordsReportDesc": {
-    "message": "Slabá hesla mohou být snadno uhodnuta hackery či automatickými nástroji určenými pro prolomení hesel. Generátor hesel Bitwarden vám pomůže vytvořit silná hesla."
+    "message": "Slabá hesla mohou být snadno uhodnuta hackery či automatickými nástroji určenými pro prolomení hesel. Generátor hesel VivoKey Vault vám pomůže vytvořit silná hesla."
   },
   "weakPasswordsFound": {
     "message": "Nalezena slabá hesla"
@@ -1507,11 +1507,11 @@
   },
   "accountCredit": {
     "message": "Kredit na účtu",
-    "description": "Financial term. In the case of Bitwarden, a positive balance means that you owe money, while a negative balance means that you have a credit (Bitwarden owes you money)."
+    "description": "Financial term. In the case of VivoKey Vault, a positive balance means that you owe money, while a negative balance means that you have a credit (VivoKey Vault owes you money)."
   },
   "accountBalance": {
     "message": "Zůstatek na účtu",
-    "description": "Financial term. In the case of Bitwarden, a positive balance means that you owe money, while a negative balance means that you have a credit (Bitwarden owes you money)."
+    "description": "Financial term. In the case of VivoKey Vault, a positive balance means that you owe money, while a negative balance means that you have a credit (VivoKey Vault owes you money)."
   },
   "addCredit": {
     "message": "Dobít kredit",
@@ -2111,7 +2111,7 @@
     "message": "Pozvat uživatele"
   },
   "inviteUserDesc": {
-    "message": "Pozvěte nového uživatele do vaší organizace zadáním e-mailové adresy jejich Bitwarden účtu. Pokud ještě nemají Bitwarden účet, budou vyzváni k vytvoření nového účtu."
+    "message": "Pozvěte nového uživatele do vaší organizace zadáním e-mailové adresy jejich VivoKey Vault účtu. Pokud ještě nemají VivoKey Vault účet, budou vyzváni k vytvoření nového účtu."
   },
   "inviteMultipleEmailDesc": {
     "message": "Najednou můžete pozvat až $COUNT$ uživatelů pomocí seznamu jejich e-mailových adres, oddělených čárkami.",
@@ -2609,7 +2609,7 @@
     "message": "Pokud váš účet existuje, zaslali jsme vám e-mail s dalšími pokyny."
   },
   "deleteRecoverConfirmDesc": {
-    "message": "Vyžádali jste si odstranění vašeho Bitwarden účtu. Klepnutím na tlačítko níže akci potvrďte."
+    "message": "Vyžádali jste si odstranění vašeho VivoKey Vault účtu. Klepnutím na tlačítko níže akci potvrďte."
   },
   "myOrganization": {
     "message": "Má organizace"
@@ -2774,7 +2774,7 @@
     "message": "Přešli jsme na delší šifrovací klíče, které poskytují vyšší úroveň zabezpečení a přístup k novým funkcím. Aktualizace vašeho šifrovacího klíče je rychlá a snadná. Stačí níže zadat vaše hlavní heslo. Provedení této aktualizace může být v budoucnu povinné."
   },
   "updateEncryptionKeyWarning": {
-    "message": "Po aktualizace šifrovacího klíče dojde k odhlášení a budete se muset opětovně přihlásit do všech Bitwarden aplikací, které aktuálně používáte (např. mobilní aplikace či rozšíření pro prohlížeč). Nezdaří-li se odhlášení a opětovné přihlášení (během něhož bude stažen nový šifrovací klíč), může dojít k poškození údajů. Pokusíme se vás automaticky odhlásit, nicméně, může to chvíli trvat."
+    "message": "Po aktualizace šifrovacího klíče dojde k odhlášení a budete se muset opětovně přihlásit do všech VivoKey Vault aplikací, které aktuálně používáte (např. mobilní aplikace či rozšíření pro prohlížeč). Nezdaří-li se odhlášení a opětovné přihlášení (během něhož bude stažen nový šifrovací klíč), může dojít k poškození údajů. Pokusíme se vás automaticky odhlásit, nicméně, může to chvíli trvat."
   },
   "subscription": {
     "message": "Odběr"
@@ -2889,7 +2889,7 @@
     "message": "Slabé hlavní heslo"
   },
   "weakMasterPasswordDesc": {
-    "message": "Zvolené hlavní heslo je slabé. Pro správnou ochranu účtu Bitwarden byste měli použít silné hlavní heslo (nebo heslovou frázi). Opravdu chcete toto heslo použít?"
+    "message": "Zvolené hlavní heslo je slabé. Pro správnou ochranu účtu VivoKey Vault byste měli použít silné hlavní heslo (nebo heslovou frázi). Opravdu chcete toto heslo použít?"
   },
   "rotateAccountEncKey": {
     "message": "Změnit také šifrovací klíč k mému účtu"
@@ -2933,7 +2933,7 @@
     "message": "API klíč"
   },
   "apiKeyDesc": {
-    "message": "Váš API klíč může být použit pro ověření přístupu k veřejnému Bitwarden API."
+    "message": "Váš API klíč může být použit pro ověření přístupu k veřejnému VivoKey Vault API."
   },
   "apiKeyRotateDesc": {
     "message": "Změna API klíče zruší platnost předchozího klíče. API klíč můžete změnit, pokud se domníváte, že aktuální klíč již není bezpečný."

@@ -5,7 +5,7 @@
     "placeholders": {
       "app_name": {
         "content": "$1",
-        "example": "Bitwarden"
+        "example": "VivoKey Vault"
       }
     }
   },
@@ -878,7 +878,7 @@
     "message": "Per favore accedi nuovamente."
   },
   "logBackInOthersToo": {
-    "message": "Per favore accedi nuovamente. Se ci sono altre sessioni di Bitwarden attive, ripeti l'accesso anche su quei dispositivi."
+    "message": "Per favore accedi nuovamente. Se ci sono altre sessioni di VivoKey Vault attive, ripeti l'accesso anche su quei dispositivi."
   },
   "changeMasterPassword": {
     "message": "Cambia Password Principale"
@@ -914,7 +914,7 @@
     }
   },
   "kdfIterationsWarning": {
-    "message": "L'impostazione delle iterazioni KDF troppo elevata potrebbe comportare prestazioni scadenti durante l'accesso (e lo sblocco) di Bitwarden su dispositivi con CPU lente. Ti consigliamo di aumentare il valore in incrementi di $INCREMENT$ e poi testare tutti i tuoi dispositivi.",
+    "message": "L'impostazione delle iterazioni KDF troppo elevata potrebbe comportare prestazioni scadenti durante l'accesso (e lo sblocco) di VivoKey Vault su dispositivi con CPU lente. Ti consigliamo di aumentare il valore in incrementi di $INCREMENT$ e poi testare tutti i tuoi dispositivi.",
     "placeholders": {
       "increment": {
         "content": "$1",
@@ -1051,7 +1051,7 @@
     "message": "Regole dei domini"
   },
   "domainRulesDesc": {
-    "message": "Se utilizzi le stesse credenziali per accedere a servizi ospitati su domini diversi, puoi contrassegnare quei domini come \"equivalenti\". I domini \"globali\" sono già stati definiti da Bitwarden per te."
+    "message": "Se utilizzi le stesse credenziali per accedere a servizi ospitati su domini diversi, puoi contrassegnare quei domini come \"equivalenti\". I domini \"globali\" sono già stati definiti da VivoKey Vault per te."
   },
   "globalEqDomains": {
     "message": "Domini globali equivalenti"
@@ -1096,7 +1096,7 @@
     "message": "Richiedi la verifica in due passaggi per gli utenti della tua organizzazione configurando dei metodi a livello di organizzazione."
   },
   "twoStepLoginRecoveryWarning": {
-    "message": "Con la verifica in due passaggi potresti bloccare permanentemente il tuo account di Bitwarden. Un codice di recupero ti permette di accedere al tuo account nel caso in cui non fossi più in grado di utilizzare il tuo solito metodo di verifica (ad esempio se perdi il tuo telefono). L'assistenza di Bitwarden non sarà in grado di aiutarti qualora dovessi perdere l'accesso al tuo account. Ti raccomandiamo di scrivere o stampare il tuo codice di recupero e di conservarlo in un luogo sicuro."
+    "message": "Con la verifica in due passaggi potresti bloccare permanentemente il tuo account di VivoKey Vault. Un codice di recupero ti permette di accedere al tuo account nel caso in cui non fossi più in grado di utilizzare il tuo solito metodo di verifica (ad esempio se perdi il tuo telefono). L'assistenza di VivoKey Vault non sarà in grado di aiutarti qualora dovessi perdere l'accesso al tuo account. Ti raccomandiamo di scrivere o stampare il tuo codice di recupero e di conservarlo in un luogo sicuro."
   },
   "viewRecoveryCode": {
     "message": "Mostra il codice di recupero"
@@ -1197,7 +1197,7 @@
     "message": "Salva il modulo."
   },
   "twoFactorYubikeyWarning": {
-    "message": "A causa di limitazioni della piattaforma, YubiKey non può essere utilizzato su tutte le applicazioni Bitwarden. Si consiglia di abilitare un altro metodo di verifica in due passaggi in modo da poter accedere al tuo account anche dove YubiKeys non può essere usato. Piattaforme supportate:"
+    "message": "A causa di limitazioni della piattaforma, YubiKey non può essere utilizzato su tutte le applicazioni VivoKey Vault. Si consiglia di abilitare un altro metodo di verifica in due passaggi in modo da poter accedere al tuo account anche dove YubiKeys non può essere usato. Piattaforme supportate:"
   },
   "twoFactorYubikeySupportUsb": {
     "message": "La cassaforte Web, l'applicazione desktop, la CLI e tutte le estensioni per browser su un dispositivo con una porta USB in grado di accettare la tua YubiKey."
@@ -1239,7 +1239,7 @@
     "message": "Disabilita tutte le chiavi"
   },
   "twoFactorDuoDesc": {
-    "message": "Inserisci le informazioni della applicazione Bitwarden dal tuo pannello amministratore Duo."
+    "message": "Inserisci le informazioni della applicazione VivoKey Vault dal tuo pannello amministratore Duo."
   },
   "twoFactorDuoIntegrationKey": {
     "message": "Chiave di integrazione"
@@ -1287,7 +1287,7 @@
     "message": "Salva il modulo."
   },
   "twoFactorU2fWarning": {
-    "message": "A causa di limitazioni della piattaforma, FIDO U2F non può essere utilizzato su tutte le applicazioni Bitwarden. Si consiglia di abilitare un altro metodo di verifica in due passaggi in modo da poter accedere al tuo account anche dove FIDO U2F non può essere usato. Piattaforme supportate:"
+    "message": "A causa di limitazioni della piattaforma, FIDO U2F non può essere utilizzato su tutte le applicazioni VivoKey Vault. Si consiglia di abilitare un altro metodo di verifica in due passaggi in modo da poter accedere al tuo account anche dove FIDO U2F non può essere usato. Piattaforme supportate:"
   },
   "twoFactorU2fSupportWeb": {
     "message": "Cassaforte Web ed estensione per il browser desktop/laptop con un U2F browser abilitato (Chrome, Opera, Vivaldi o Firefox con FIDO U2F abilitato)."
@@ -1302,7 +1302,7 @@
     "message": "Si è verificato un problema durante la lettura della chiave di sicurezza. Riprova."
   },
   "twoFactorRecoveryYourCode": {
-    "message": "Il tuo codice di recupero Bitwarden per la verifica in due passaggi"
+    "message": "Il tuo codice di recupero VivoKey Vault per la verifica in due passaggi"
   },
   "twoFactorRecoveryNoCode": {
     "message": "Non hai ancora abilitato alcun metodo per la verifica in due passaggi. Dopo aver abilitato un metodo per la verifica in due passaggi torna qui per trovare il tuoi codice di recupero."
@@ -1396,7 +1396,7 @@
     "message": "Rapporto sulle password deboli"
   },
   "weakPasswordsReportDesc": {
-    "message": "Le password deboli possono essere facilmente intuite dagli hacker e dagli strumenti automatici utilizzati per decifrare le password. Il generatore di password di Bitwarden può aiutarti a creare password complesse."
+    "message": "Le password deboli possono essere facilmente intuite dagli hacker e dagli strumenti automatici utilizzati per decifrare le password. Il generatore di password di VivoKey Vault può aiutarti a creare password complesse."
   },
   "weakPasswordsFound": {
     "message": "Trovate password deboli"
@@ -1507,11 +1507,11 @@
   },
   "accountCredit": {
     "message": "Credito account",
-    "description": "Financial term. In the case of Bitwarden, a positive balance means that you owe money, while a negative balance means that you have a credit (Bitwarden owes you money)."
+    "description": "Financial term. In the case of VivoKey Vault, a positive balance means that you owe money, while a negative balance means that you have a credit (VivoKey Vault owes you money)."
   },
   "accountBalance": {
     "message": "Saldo account",
-    "description": "Financial term. In the case of Bitwarden, a positive balance means that you owe money, while a negative balance means that you have a credit (Bitwarden owes you money)."
+    "description": "Financial term. In the case of VivoKey Vault, a positive balance means that you owe money, while a negative balance means that you have a credit (VivoKey Vault owes you money)."
   },
   "addCredit": {
     "message": "Aggiungi credito",
@@ -2111,7 +2111,7 @@
     "message": "Invita utente"
   },
   "inviteUserDesc": {
-    "message": "Invita un nuovo utente alla tua organizzazione inserendo il suo indirizzo email dell'account Bitwarden di seguito. Se non hanno già un account Bitwarden, verrà richiesto di creare un nuovo account."
+    "message": "Invita un nuovo utente alla tua organizzazione inserendo il suo indirizzo email dell'account VivoKey Vault di seguito. Se non hanno già un account VivoKey Vault, verrà richiesto di creare un nuovo account."
   },
   "inviteMultipleEmailDesc": {
     "message": "Puoi invitare fino a $COUNT$ utenti alla volta inserendo una lista di email separate da una virgola.",
@@ -2567,7 +2567,7 @@
     "message": "Unisciti all'organizzazione"
   },
   "joinOrganizationDesc": {
-    "message": "Sei stato invitato a far parte dell'organizzazione sopra elencata. Per accettare l'invito, è necessario accedere o creare un nuovo account di Bitwarden."
+    "message": "Sei stato invitato a far parte dell'organizzazione sopra elencata. Per accettare l'invito, è necessario accedere o creare un nuovo account di VivoKey Vault."
   },
   "inviteAccepted": {
     "message": "Invito accettato"
@@ -2609,7 +2609,7 @@
     "message": "Se il tuo account è già esistente, ti invieremo una email con maggiori informazioni."
   },
   "deleteRecoverConfirmDesc": {
-    "message": "Hai richiesto di eliminare il tuo account Bitwarden. Clicca il pulsante pe confermare."
+    "message": "Hai richiesto di eliminare il tuo account VivoKey Vault. Clicca il pulsante pe confermare."
   },
   "myOrganization": {
     "message": "La mia organizzazione"
@@ -2774,7 +2774,7 @@
     "message": "Ci siamo spostati alle più grandi chiavi di crittografia che forniscono maggiore sicurezza e accesso alle funzionalità più recenti. Aggiornare la chiave di crittografia è semplice e veloce. Basta digitare la password principale qui sotto. Questo aggiornamento eventualmente diventerà obbligatorio."
   },
   "updateEncryptionKeyWarning": {
-    "message": "Dopo aver aggiornato la chiave di crittografia, verrà richiesto di disconnettersi e connettersi in tutte le applicazioni Bitwarden che stai utilizzando (come l'applicazione mobile o l'estensione del browser). Non effettuando la disconnessione e la riconnessione (per scaricare la nuova chiave di crittografia) potrà risultare in dati corrotti, Cercheremo di disconnetterti automaticamente, ma potrà esserci un ritardo."
+    "message": "Dopo aver aggiornato la chiave di crittografia, verrà richiesto di disconnettersi e connettersi in tutte le applicazioni VivoKey Vault che stai utilizzando (come l'applicazione mobile o l'estensione del browser). Non effettuando la disconnessione e la riconnessione (per scaricare la nuova chiave di crittografia) potrà risultare in dati corrotti, Cercheremo di disconnetterti automaticamente, ma potrà esserci un ritardo."
   },
   "subscription": {
     "message": "Abbonamento"
@@ -2889,7 +2889,7 @@
     "message": "Password Principale Debole"
   },
   "weakMasterPasswordDesc": {
-    "message": "La password principale che hai scelto è debole. È necessario utilizzare una password principale avanzata (o una Frase segreta) per proteggere adeguatamente il tuo account Bitwarden. Sei sicuro di voler utilizzare questa password principale?"
+    "message": "La password principale che hai scelto è debole. È necessario utilizzare una password principale avanzata (o una Frase segreta) per proteggere adeguatamente il tuo account VivoKey Vault. Sei sicuro di voler utilizzare questa password principale?"
   },
   "rotateAccountEncKey": {
     "message": "Ruota anche la chiave di crittografia del mio account"
@@ -2933,7 +2933,7 @@
     "message": "Chiave API"
   },
   "apiKeyDesc": {
-    "message": "La tua chiave API può essere usata per autenticarsi all'API pubblica Bitwarden."
+    "message": "La tua chiave API può essere usata per autenticarsi all'API pubblica VivoKey Vault."
   },
   "apiKeyRotateDesc": {
     "message": "Ruotare la chiave API invaliderà la chiave precedente. Puoi ruotare la tua chiave API se credi che la chiave attuale non sia più sicura da usare."

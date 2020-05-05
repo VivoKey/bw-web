@@ -5,7 +5,7 @@
     "placeholders": {
       "app_name": {
         "content": "$1",
-        "example": "Bitwarden"
+        "example": "VivoKey Vault"
       }
     }
   },
@@ -878,7 +878,7 @@
     "message": "Prosím, opäť sa prihláste."
   },
   "logBackInOthersToo": {
-    "message": "Prosím odhláste sa. Ak používate iné Bitwarden aplikácie, odhláste sa a opäť sa prihláste aj v nich."
+    "message": "Prosím odhláste sa. Ak používate iné VivoKey Vault aplikácie, odhláste sa a opäť sa prihláste aj v nich."
   },
   "changeMasterPassword": {
     "message": "Zmeniť hlavné heslo"
@@ -914,7 +914,7 @@
     }
   },
   "kdfIterationsWarning": {
-    "message": "Nastavenie KDF iterácií príliš vysoko môže viesť k spomalení pri prihlasovaní sa do Bitwarden (a pri odomykaní) v zariadeniach s pomalším procesorom. Odporúčame zvýšiť hodnotu v prírastkoch po $INCREMENT$ a potom testovať na všetkých vašich zariadeniach.",
+    "message": "Nastavenie KDF iterácií príliš vysoko môže viesť k spomalení pri prihlasovaní sa do VivoKey Vault (a pri odomykaní) v zariadeniach s pomalším procesorom. Odporúčame zvýšiť hodnotu v prírastkoch po $INCREMENT$ a potom testovať na všetkých vašich zariadeniach.",
     "placeholders": {
       "increment": {
         "content": "$1",
@@ -1051,7 +1051,7 @@
     "message": "Pravidlá pre domény"
   },
   "domainRulesDesc": {
-    "message": "Ak máte rovnaké prihlasovacie údaje naprieč rôznymi doménami, môžete stránky označiť ako \"ekvivalentné\". \"Globálne\" domény sú tie, ktoré pre vás vopred nastavil Bitwarden."
+    "message": "Ak máte rovnaké prihlasovacie údaje naprieč rôznymi doménami, môžete stránky označiť ako \"ekvivalentné\". \"Globálne\" domény sú tie, ktoré pre vás vopred nastavil VivoKey Vault."
   },
   "globalEqDomains": {
     "message": "Globálne Ekvivalentné Domény"
@@ -1096,7 +1096,7 @@
     "message": "Vynúťte dvojstupňové prihlásenie pre členov organizácie nastavením poskytovateľov na úrovni organizácie."
   },
   "twoStepLoginRecoveryWarning": {
-    "message": "Zapnutie dvojstupňového prihlásenia vás môže natrvalo vymknúť z vášho Bitwarden účtu. Záchranný kód umožňuje prístup k vášmu kontu v prípade že už nemôžete použiť svoj normálny dvojstupňový spôsob overenia. (napríklad ak stratíte zariadenie) Zákaznícka podpora nebude schopná pomôcť vám ak stratíte prístup k účtu. Preto vám odporúčame zapísať si, alebo si vytlačiť záchranný kód a uložiť ho na bezpečnom mieste."
+    "message": "Zapnutie dvojstupňového prihlásenia vás môže natrvalo vymknúť z vášho VivoKey Vault účtu. Záchranný kód umožňuje prístup k vášmu kontu v prípade že už nemôžete použiť svoj normálny dvojstupňový spôsob overenia. (napríklad ak stratíte zariadenie) Zákaznícka podpora nebude schopná pomôcť vám ak stratíte prístup k účtu. Preto vám odporúčame zapísať si, alebo si vytlačiť záchranný kód a uložiť ho na bezpečnom mieste."
   },
   "viewRecoveryCode": {
     "message": "Zobraziť záchranný kód"
@@ -1197,7 +1197,7 @@
     "message": "Ulož formulár."
   },
   "twoFactorYubikeyWarning": {
-    "message": "Vzhľadom na obmedzenia platform, YubiKey nemôže byť použitý vo všetkých Bitwarden aplikáciách. Mali by ste povoliť inú formu dvojitého overenia, aby ste sa mohli prihlásiť k svojmu účtu ak nie je možné použiť YubiKey. Podporované platformy:"
+    "message": "Vzhľadom na obmedzenia platform, YubiKey nemôže byť použitý vo všetkých VivoKey Vault aplikáciách. Mali by ste povoliť inú formu dvojitého overenia, aby ste sa mohli prihlásiť k svojmu účtu ak nie je možné použiť YubiKey. Podporované platformy:"
   },
   "twoFactorYubikeySupportUsb": {
     "message": "Webový trezor, desktopová aplikácia, CLI aplikácia a všetky rozšírenia pre browser na zariadení s USB portom akceptujúcim váš YubiKey."
@@ -1239,7 +1239,7 @@
     "message": "Zakázať všetky hardvérové kľúče"
   },
   "twoFactorDuoDesc": {
-    "message": "Zadajte informácie pre Bitwarden z vášho DUO Admin panelu."
+    "message": "Zadajte informácie pre VivoKey Vault z vášho DUO Admin panelu."
   },
   "twoFactorDuoIntegrationKey": {
     "message": "Integračný kľúč"
@@ -1287,7 +1287,7 @@
     "message": "Ulož formulár."
   },
   "twoFactorU2fWarning": {
-    "message": "Vzhľadom na obmedzenia platform, FIDO U2F nemôže byť použitý vo všetkých Bitwarden aplikáciách. Mali by ste povoliť inú formu dvojitého overenia, aby ste sa mohli prihlásiť k svojmu účtu ak nie je možné použiť FIDO U2F. Podporované platformy:"
+    "message": "Vzhľadom na obmedzenia platform, FIDO U2F nemôže byť použitý vo všetkých VivoKey Vault aplikáciách. Mali by ste povoliť inú formu dvojitého overenia, aby ste sa mohli prihlásiť k svojmu účtu ak nie je možné použiť FIDO U2F. Podporované platformy:"
   },
   "twoFactorU2fSupportWeb": {
     "message": "Webový trezor a rozšírenia prehliadača na pracovnej stanici s prehliadačom podporujúcim U2F (Chrome, Opera, Vivaldi, alebo Firefox so zapnutou podporou FIDO U2F)."
@@ -1302,7 +1302,7 @@
     "message": "Problém pri čítaní bezpečnostného kľúča. Skúste to znova."
   },
   "twoFactorRecoveryYourCode": {
-    "message": "Váš Bitwarden záchranný kód pre dvojstupňové overovanie"
+    "message": "Váš VivoKey Vault záchranný kód pre dvojstupňové overovanie"
   },
   "twoFactorRecoveryNoCode": {
     "message": "Zatiaľ ste nepovolili žiadneho poskytovateľa dvojstupňového overenia. Po tom, čo ste nejakého poskytovateľa povolili, môžete sa sem vrátiť pre získanie záchranného kódu."
@@ -1396,7 +1396,7 @@
     "message": "Správa o slabých heslách"
   },
   "weakPasswordsReportDesc": {
-    "message": "Slabé heslá sa dajú ľahko uhádnuť alebo prelomiť nástrojmi. Generátor hesiel Bitwarden vám pomôže vytvoríť silné heslá."
+    "message": "Slabé heslá sa dajú ľahko uhádnuť alebo prelomiť nástrojmi. Generátor hesiel VivoKey Vault vám pomôže vytvoríť silné heslá."
   },
   "weakPasswordsFound": {
     "message": "Našli sa slabé heslá"
@@ -1507,11 +1507,11 @@
   },
   "accountCredit": {
     "message": "Kredit na konte",
-    "description": "Financial term. In the case of Bitwarden, a positive balance means that you owe money, while a negative balance means that you have a credit (Bitwarden owes you money)."
+    "description": "Financial term. In the case of VivoKey Vault, a positive balance means that you owe money, while a negative balance means that you have a credit (VivoKey Vault owes you money)."
   },
   "accountBalance": {
     "message": "Zostatok na účte",
-    "description": "Financial term. In the case of Bitwarden, a positive balance means that you owe money, while a negative balance means that you have a credit (Bitwarden owes you money)."
+    "description": "Financial term. In the case of VivoKey Vault, a positive balance means that you owe money, while a negative balance means that you have a credit (VivoKey Vault owes you money)."
   },
   "addCredit": {
     "message": "Pridať kredit",
@@ -2111,7 +2111,7 @@
     "message": "Pozvať používateľa"
   },
   "inviteUserDesc": {
-    "message": "Pozvite používateľov do vašej organizácie zadaním emailovej adresy ich Bitwarden účtu nižšie. Ak ešte nemajú Bitwarden účet, obdržia požiadavku na jeho vytvorenie."
+    "message": "Pozvite používateľov do vašej organizácie zadaním emailovej adresy ich VivoKey Vault účtu nižšie. Ak ešte nemajú VivoKey Vault účet, obdržia požiadavku na jeho vytvorenie."
   },
   "inviteMultipleEmailDesc": {
     "message": "Môžete pozvať až $COUNT$ používateľov naraz tak, že zadáte zoznam emailových adries oddelených čiarkou.",
@@ -2567,7 +2567,7 @@
     "message": "Pripojte sa k organizácii"
   },
   "joinOrganizationDesc": {
-    "message": "Obdržali ste pozvánku do vyššie menovanej Organizácie. Ak chcete pozvánku prijať, musíte sa prihlásiť alebo si vytvoriť nový Bitwarden účet."
+    "message": "Obdržali ste pozvánku do vyššie menovanej Organizácie. Ak chcete pozvánku prijať, musíte sa prihlásiť alebo si vytvoriť nový VivoKey Vault účet."
   },
   "inviteAccepted": {
     "message": "Pozvánka prijatá"
@@ -2609,7 +2609,7 @@
     "message": "Ak váš účet existuje, zaslali sme vám email s ďalšími inštrukciami."
   },
   "deleteRecoverConfirmDesc": {
-    "message": "Požiadali ste o zrušenie vášho Bitwarden účtu. Pre potvrdenie operácie kliknite nižšie."
+    "message": "Požiadali ste o zrušenie vášho VivoKey Vault účtu. Pre potvrdenie operácie kliknite nižšie."
   },
   "myOrganization": {
     "message": "Moja organizácia"
@@ -2774,7 +2774,7 @@
     "message": "Prešli sme na väčšie šifrovacie kľúče, ktoré poskytujú lepšiu bezpečnosť a prístup k novým funkciám. Aktualizácia šifrovacieho kľúča je rýchla a jednoduchá. Jednoducho zadajte vaše hlavné heslo nižšie. Táto aktualizácia bude po nejakom čase povinná."
   },
   "updateEncryptionKeyWarning": {
-    "message": "Po aktualizácii šifrovacieho kľúča budete požiadaní o opätovné prihlásenie do všetkých Bitwarden aplikácii ktoré momentálne používate (napríklad mobilné aplikácie, alebo rozšírenia v prehliadači). Ak sa opätovne neprihlásite (touto operáciou sa stiahnu nové šifrovacie kľúče), mohlo by to viesť k poškodeniu uložených dát. Pokúsime sa odhlásiť vás automaticky, ale môže to chvíľu trvať."
+    "message": "Po aktualizácii šifrovacieho kľúča budete požiadaní o opätovné prihlásenie do všetkých VivoKey Vault aplikácii ktoré momentálne používate (napríklad mobilné aplikácie, alebo rozšírenia v prehliadači). Ak sa opätovne neprihlásite (touto operáciou sa stiahnu nové šifrovacie kľúče), mohlo by to viesť k poškodeniu uložených dát. Pokúsime sa odhlásiť vás automaticky, ale môže to chvíľu trvať."
   },
   "subscription": {
     "message": "Predplatné"
@@ -2889,7 +2889,7 @@
     "message": "Slabé hlavné heslo"
   },
   "weakMasterPasswordDesc": {
-    "message": "Hlavné heslo ktoré ste zadali je slabé. Mali by ste použiť silné heslo (alebo frázu) aby ste spoľahlivo ochránili váš Bitwarden účet. Naozaj chcete použiť toto heslo?"
+    "message": "Hlavné heslo ktoré ste zadali je slabé. Mali by ste použiť silné heslo (alebo frázu) aby ste spoľahlivo ochránili váš VivoKey Vault účet. Naozaj chcete použiť toto heslo?"
   },
   "rotateAccountEncKey": {
     "message": "Obnoviť aj môj šifrovací kľúč k účtu"
@@ -2933,7 +2933,7 @@
     "message": "API kľúč"
   },
   "apiKeyDesc": {
-    "message": "API kľúč možno použiť na autentifikáciu pre použitie verejného Bitwarden API."
+    "message": "API kľúč možno použiť na autentifikáciu pre použitie verejného VivoKey Vault API."
   },
   "apiKeyRotateDesc": {
     "message": "Obnovením kľúča API zneplatníte predchádzajúci API kľúč. API kľúč môžete obnoviť ak si myslíte že súčasný kľúč už nie je bezpečný."

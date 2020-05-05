@@ -5,7 +5,7 @@
     "placeholders": {
       "app_name": {
         "content": "$1",
-        "example": "Bitwarden"
+        "example": "VivoKey Vault"
       }
     }
   },
@@ -878,7 +878,7 @@
     "message": "다시 로그인해 주세요."
   },
   "logBackInOthersToo": {
-    "message": "다시 로그인해 주세요. 다른 Bitwarden 앱을 사용 중인 경우 해당 앱에서도 다시 로그인해야 합니다."
+    "message": "다시 로그인해 주세요. 다른 VivoKey Vault 앱을 사용 중인 경우 해당 앱에서도 다시 로그인해야 합니다."
   },
   "changeMasterPassword": {
     "message": "마스터 비밀번호 변경"
@@ -1096,7 +1096,7 @@
     "message": "조직 수준에서 제공자를 구성하여 조직 내 사용자에게 2단계 로그인을 요구합니다."
   },
   "twoStepLoginRecoveryWarning": {
-    "message": "2단계 로그인을 활성화하면 Bitwarden 계정을 영원히 잠글 수 있습니다. 복구 코드를 사용하면 정상적인 2단계 로그인 제공자를 더 이상 사용할 수 없는 경우(예. 장치를 잃어버렸을 때) 계정에 액세스할 수 있습니다. 계정에 접근하지 못한다면 Bitwarden 지원팀은 어떤 도움도 줄 수 없습니다. 복구 코드를 기록하거나 출력하여 안전한 장소에 보관할 것을 권장합니다."
+    "message": "2단계 로그인을 활성화하면 VivoKey Vault 계정을 영원히 잠글 수 있습니다. 복구 코드를 사용하면 정상적인 2단계 로그인 제공자를 더 이상 사용할 수 없는 경우(예. 장치를 잃어버렸을 때) 계정에 액세스할 수 있습니다. 계정에 접근하지 못한다면 VivoKey Vault 지원팀은 어떤 도움도 줄 수 없습니다. 복구 코드를 기록하거나 출력하여 안전한 장소에 보관할 것을 권장합니다."
   },
   "viewRecoveryCode": {
     "message": "복구 코드"
@@ -1239,7 +1239,7 @@
     "message": "Disable All Keys"
   },
   "twoFactorDuoDesc": {
-    "message": "Duo 관리자 패널에서 Bitwarden 애플리케이션 정보를 입력하십시오."
+    "message": "Duo 관리자 패널에서 VivoKey Vault 애플리케이션 정보를 입력하십시오."
   },
   "twoFactorDuoIntegrationKey": {
     "message": "Integration Key"
@@ -1302,7 +1302,7 @@
     "message": "보안 키를 읽어오는데 문제가 발생했습니다. 다시 시도해보십시오."
   },
   "twoFactorRecoveryYourCode": {
-    "message": "Bitwarden 2단계 로그인 복구 코드"
+    "message": "VivoKey Vault 2단계 로그인 복구 코드"
   },
   "twoFactorRecoveryNoCode": {
     "message": "아직 2단계 로그인 제공자를 사용하도록 설정하지 않았습니다. 2단계 로그인 제공자를 사용하도록 설정한 후 여기에서 복구 코드를 확인하십시오."
@@ -1396,7 +1396,7 @@
     "message": "취약한 비밀번호 보고서"
   },
   "weakPasswordsReportDesc": {
-    "message": "취약한 비밀번호는 해커와 암호 해독에 사용되는 자동화 도구로 쉽게 짐작할 수 있습니다. Bitwarden 암호 생성기는 강력한 암호를 만드는데 도움을 줄 것입니다."
+    "message": "취약한 비밀번호는 해커와 암호 해독에 사용되는 자동화 도구로 쉽게 짐작할 수 있습니다. VivoKey Vault 암호 생성기는 강력한 암호를 만드는데 도움을 줄 것입니다."
   },
   "weakPasswordsFound": {
     "message": "취약한 비밀번호가 발견됨"
@@ -1507,11 +1507,11 @@
   },
   "accountCredit": {
     "message": "계정 크레딧",
-    "description": "Financial term. In the case of Bitwarden, a positive balance means that you owe money, while a negative balance means that you have a credit (Bitwarden owes you money)."
+    "description": "Financial term. In the case of VivoKey Vault, a positive balance means that you owe money, while a negative balance means that you have a credit (VivoKey Vault owes you money)."
   },
   "accountBalance": {
     "message": "계정 잔액",
-    "description": "Financial term. In the case of Bitwarden, a positive balance means that you owe money, while a negative balance means that you have a credit (Bitwarden owes you money)."
+    "description": "Financial term. In the case of VivoKey Vault, a positive balance means that you owe money, while a negative balance means that you have a credit (VivoKey Vault owes you money)."
   },
   "addCredit": {
     "message": "크레딧 추가",
@@ -2111,7 +2111,7 @@
     "message": "사용자 초대"
   },
   "inviteUserDesc": {
-    "message": "아래에 Bitwarden 계정 이메일 주소를 입력하여 조직에 새 사용자를 초대하십시오. Bitwarden 계정을 가지고 있지 않다면, 새로운 계정을 만들라는 메시지가 표시됩니다."
+    "message": "아래에 VivoKey Vault 계정 이메일 주소를 입력하여 조직에 새 사용자를 초대하십시오. VivoKey Vault 계정을 가지고 있지 않다면, 새로운 계정을 만들라는 메시지가 표시됩니다."
   },
   "inviteMultipleEmailDesc": {
     "message": "이메일 주소 목록을 쉼표(,)로 구분하여 한 번에 최대 $COUNT$명의 사용자를 초대할 수 있습니다.",
@@ -2567,7 +2567,7 @@
     "message": "조직 참가"
   },
   "joinOrganizationDesc": {
-    "message": "이 조직에서 귀하에게 가입 초대를 보냈습니다. 초대를 수락하려면 로그인하거나 Bitwarden 계정을 생성해야 합니다."
+    "message": "이 조직에서 귀하에게 가입 초대를 보냈습니다. 초대를 수락하려면 로그인하거나 VivoKey Vault 계정을 생성해야 합니다."
   },
   "inviteAccepted": {
     "message": "초대 수락됨"
@@ -2774,7 +2774,7 @@
     "message": "우리는 더 나은 보안 및 새로운 기능에 대한 액세스를 제공하는 더 큰 암호화 키로 이동했습니다. 암호화 키를 업데이트하는 것은 빠르고 쉽습니다. 그저 마스터 비밀번호를 입력하면 됩니다. 이 업데이트는 결국 필수사항이 될 것입니다."
   },
   "updateEncryptionKeyWarning": {
-    "message": "암호화 키를 업데이트하고난 후 현재 사용 중인 모든 Bitwarden 애플리케이션(예. 모바일 앱 혹은 브라우저 확장 기능)에서 로그아웃 후 다시 로그인해야 합니다. 재로그인하지 않으면 (새 암호화 키를 다운로드받는 경우) 데이터 손실이 발생할 수 있습니다. 자동으로 로그아웃을 시도하지만 지연될 수 있습니다."
+    "message": "암호화 키를 업데이트하고난 후 현재 사용 중인 모든 VivoKey Vault 애플리케이션(예. 모바일 앱 혹은 브라우저 확장 기능)에서 로그아웃 후 다시 로그인해야 합니다. 재로그인하지 않으면 (새 암호화 키를 다운로드받는 경우) 데이터 손실이 발생할 수 있습니다. 자동으로 로그아웃을 시도하지만 지연될 수 있습니다."
   },
   "subscription": {
     "message": "구독"
@@ -2889,7 +2889,7 @@
     "message": "취약한 마스터 비밀번호"
   },
   "weakMasterPasswordDesc": {
-    "message": "선택한 마스터 비밀번호는 취약합니다. Bitwarden 계정을 확실히 보호하려면 강력한 마스터 비밀번호(혹은 패스프레이즈)를 사용해야 합니다. 정말 이 마스터 비밀번호를 사용하시겠습니까?"
+    "message": "선택한 마스터 비밀번호는 취약합니다. VivoKey Vault 계정을 확실히 보호하려면 강력한 마스터 비밀번호(혹은 패스프레이즈)를 사용해야 합니다. 정말 이 마스터 비밀번호를 사용하시겠습니까?"
   },
   "rotateAccountEncKey": {
     "message": "내 계정의 암호화 키 회전"
@@ -2933,7 +2933,7 @@
     "message": "API 키"
   },
   "apiKeyDesc": {
-    "message": "API 키를 사용하여 Bitwarden 공용 API에 인증할 수 있습니다."
+    "message": "API 키를 사용하여 VivoKey Vault 공용 API에 인증할 수 있습니다."
   },
   "apiKeyRotateDesc": {
     "message": "API 키를 교체하면 이전 키는 무효화됩니다. 현재 키가 더 이상 안전하지 않다고 판단되면 API 키를 교체할 수 있습니다."

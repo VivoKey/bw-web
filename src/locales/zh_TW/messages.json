@@ -5,7 +5,7 @@
     "placeholders": {
       "app_name": {
         "content": "$1",
-        "example": "Bitwarden"
+        "example": "VivoKey Vault"
       }
     }
   },
@@ -878,7 +878,7 @@
     "message": "請重新登入。"
   },
   "logBackInOthersToo": {
-    "message": "請重新登入。如果您還在使用其他 Bitwarden 應用程式，也請登出並重新登入。"
+    "message": "請重新登入。如果您還在使用其他 VivoKey Vault 應用程式，也請登出並重新登入。"
   },
   "changeMasterPassword": {
     "message": "變更主密碼"
@@ -914,7 +914,7 @@
     }
   },
   "kdfIterationsWarning": {
-    "message": "若將 KDF 迭代次數設太高會導致在 CPU 較慢的裝置上登入 ( 與解鎖) Bitwarden 時降低效能。我們建議您增加 $INCREMENT$ 的值並且在所有的裝置上測試。",
+    "message": "若將 KDF 迭代次數設太高會導致在 CPU 較慢的裝置上登入 ( 與解鎖) VivoKey Vault 時降低效能。我們建議您增加 $INCREMENT$ 的值並且在所有的裝置上測試。",
     "placeholders": {
       "increment": {
         "content": "$1",
@@ -1051,7 +1051,7 @@
     "message": "網域規則"
   },
   "domainRulesDesc": {
-    "message": "如果您在多個不同網站使用相同的登入資料，您可以把這些網站標記為 “通用”。Bitwarden 會為您設定 “全域” 域名。"
+    "message": "如果您在多個不同網站使用相同的登入資料，您可以把這些網站標記為 “通用”。VivoKey Vault 會為您設定 “全域” 域名。"
   },
   "globalEqDomains": {
     "message": "全域通用域名"
@@ -1096,7 +1096,7 @@
     "message": "可透過組織等級的設定，要求所有使用者都必須開啟兩階段登入。"
   },
   "twoStepLoginRecoveryWarning": {
-    "message": "啟用兩步驟登入可以永久鎖定您的 Bitwarden 帳戶。如果您無法正常使用兩步驟登入驗證應用程式（例如，您遺失了裝置），則可以使用復原碼造訪您的帳戶。 如果您失去造訪帳戶的權限，Bitwarden 便無法幫助您。所以我們建議您記下或列印復原碼，並將其妥善保管。"
+    "message": "啟用兩步驟登入可以永久鎖定您的 VivoKey Vault 帳戶。如果您無法正常使用兩步驟登入驗證應用程式（例如，您遺失了裝置），則可以使用復原碼造訪您的帳戶。 如果您失去造訪帳戶的權限，VivoKey Vault 便無法幫助您。所以我們建議您記下或列印復原碼，並將其妥善保管。"
   },
   "viewRecoveryCode": {
     "message": "檢視復原碼"
@@ -1197,7 +1197,7 @@
     "message": "儲存表單"
   },
   "twoFactorYubikeyWarning": {
-    "message": "由於平台限制，無法於所有 Bitwarden 應用程式使用 YubiKeys。請開啟另一套兩階段登入供應者，以確保可在 YubiKeys 無法使用時還能存取帳號。支援的平台有:"
+    "message": "由於平台限制，無法於所有 VivoKey Vault 應用程式使用 YubiKeys。請開啟另一套兩階段登入供應者，以確保可在 YubiKeys 無法使用時還能存取帳號。支援的平台有:"
   },
   "twoFactorYubikeySupportUsb": {
     "message": "在包含可接受您的 YubiKey 的 USB 埠的電腦上的網頁密碼庫、桌面應用程式、命令行介面、所有瀏覽器擴充套件。"
@@ -1239,7 +1239,7 @@
     "message": "停用全部金鑰"
   },
   "twoFactorDuoDesc": {
-    "message": "請輸入來自您的 Duo 管理面板的 Bitwarden 應用程式資訊。"
+    "message": "請輸入來自您的 Duo 管理面板的 VivoKey Vault 應用程式資訊。"
   },
   "twoFactorDuoIntegrationKey": {
     "message": "整合金鑰"
@@ -1287,7 +1287,7 @@
     "message": "儲存表單"
   },
   "twoFactorU2fWarning": {
-    "message": "由於平台限制，無法於所有 Bitwarden 應用程式使用 FIDO U2F。請開啟另一套兩階段登入供應者，以確保 FIDO U2F 無法使用時還能存取帳號。支援的平台有："
+    "message": "由於平台限制，無法於所有 VivoKey Vault 應用程式使用 FIDO U2F。請開啟另一套兩階段登入供應者，以確保 FIDO U2F 無法使用時還能存取帳號。支援的平台有："
   },
   "twoFactorU2fSupportWeb": {
     "message": "支援 U2F 的桌面/筆記本電腦上的網頁密碼庫和啓用 U2F 的瀏覽器 (Chrome, Opera, Vivaldi, 或啓用了 FIDO U2F 的 Firefox)。"
@@ -1302,7 +1302,7 @@
     "message": "讀取安全金鑰時發生問題。請重試。"
   },
   "twoFactorRecoveryYourCode": {
-    "message": "您的 Bitwarden 兩步驟登入復原碼"
+    "message": "您的 VivoKey Vault 兩步驟登入復原碼"
   },
   "twoFactorRecoveryNoCode": {
     "message": "您尚未啟用任何兩步驟登入提供者。等你啟用兩步驟登入提供者後，您可回來這裡取得復原碼。"
@@ -1396,7 +1396,7 @@
     "message": "弱強度密碼報告"
   },
   "weakPasswordsReportDesc": {
-    "message": "弱密碼可以輕易的被駭客和用於破解密碼的自動化工具猜中。Bitwarden 密碼生成器可以幫助您創建強密碼。"
+    "message": "弱密碼可以輕易的被駭客和用於破解密碼的自動化工具猜中。VivoKey Vault 密碼生成器可以幫助您創建強密碼。"
   },
   "weakPasswordsFound": {
     "message": "發現不夠安全的密碼"
@@ -1507,11 +1507,11 @@
   },
   "accountCredit": {
     "message": "帳戶餘額",
-    "description": "Financial term. In the case of Bitwarden, a positive balance means that you owe money, while a negative balance means that you have a credit (Bitwarden owes you money)."
+    "description": "Financial term. In the case of VivoKey Vault, a positive balance means that you owe money, while a negative balance means that you have a credit (VivoKey Vault owes you money)."
   },
   "accountBalance": {
     "message": "帳戶餘額",
-    "description": "Financial term. In the case of Bitwarden, a positive balance means that you owe money, while a negative balance means that you have a credit (Bitwarden owes you money)."
+    "description": "Financial term. In the case of VivoKey Vault, a positive balance means that you owe money, while a negative balance means that you have a credit (VivoKey Vault owes you money)."
   },
   "addCredit": {
     "message": "增加信用額度",
@@ -2111,7 +2111,7 @@
     "message": "邀請使用者"
   },
   "inviteUserDesc": {
-    "message": "Invite a new user to your organization by entering their Bitwarden account email address below. If they do not have a Bitwarden account already, they will be prompted to create a new account."
+    "message": "Invite a new user to your organization by entering their VivoKey Vault account email address below. If they do not have a VivoKey Vault account already, they will be prompted to create a new account."
   },
   "inviteMultipleEmailDesc": {
     "message": "You can invite up to $COUNT$ users at a time by comma separating a list of email addresses.",
@@ -2567,7 +2567,7 @@
     "message": "加入組織"
   },
   "joinOrganizationDesc": {
-    "message": "You've been invited to join the organization listed above. To accept the invitation, you need to log in or create a new Bitwarden account."
+    "message": "You've been invited to join the organization listed above. To accept the invitation, you need to log in or create a new VivoKey Vault account."
   },
   "inviteAccepted": {
     "message": "邀請已接受"
@@ -2609,7 +2609,7 @@
     "message": "如果您的帳號存在，我們已寄送包含進一步指示的電子信件。"
   },
   "deleteRecoverConfirmDesc": {
-    "message": "您已請求刪除您的 Bitwarden 帳號。點擊下方的按鈕確認。"
+    "message": "您已請求刪除您的 VivoKey Vault 帳號。點擊下方的按鈕確認。"
   },
   "myOrganization": {
     "message": "我的組織"
@@ -2774,7 +2774,7 @@
     "message": "We've moved to larger encryption keys that provide better security and access to newer features. Updating your encryption key is quick and easy. Just type your master password below. This update will eventually become mandatory."
   },
   "updateEncryptionKeyWarning": {
-    "message": "After updating your encryption key, you are required to log out and back in to all Bitwarden applications that you are currently using (such as the mobile app or browser extensions). Failure to log out and back in (which downloads your new encryption key) may result in data corruption. We will attempt to log you out automatically, however, it may be delayed."
+    "message": "After updating your encryption key, you are required to log out and back in to all VivoKey Vault applications that you are currently using (such as the mobile app or browser extensions). Failure to log out and back in (which downloads your new encryption key) may result in data corruption. We will attempt to log you out automatically, however, it may be delayed."
   },
   "subscription": {
     "message": "訂閱"
@@ -2933,7 +2933,7 @@
     "message": "API 金鑰"
   },
   "apiKeyDesc": {
-    "message": "您的 API 金鑰可用來驗證 Bitwarden 公用 API。"
+    "message": "您的 API 金鑰可用來驗證 VivoKey Vault 公用 API。"
   },
   "apiKeyRotateDesc": {
     "message": "更新 API 金鑰將使前一份金鑰失效。若您認為當前的金鑰不在安全，您可以更新您的 API 金鑰。"

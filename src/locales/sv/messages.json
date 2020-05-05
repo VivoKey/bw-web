@@ -5,7 +5,7 @@
     "placeholders": {
       "app_name": {
         "content": "$1",
-        "example": "Bitwarden"
+        "example": "VivoKey Vault"
       }
     }
   },
@@ -878,7 +878,7 @@
     "message": "Vänligen logga in igen."
   },
   "logBackInOthersToo": {
-    "message": "Vänligen logga in igen. Om du använder andra Bitwarden-applikationer, logga ut och in igen i dem också."
+    "message": "Vänligen logga in igen. Om du använder andra VivoKey Vault-applikationer, logga ut och in igen i dem också."
   },
   "changeMasterPassword": {
     "message": "Ändra huvudlösenord"
@@ -914,7 +914,7 @@
     }
   },
   "kdfIterationsWarning": {
-    "message": "Att ställa in dina KDF-iterationer för högt kan resultera i dålig prestanda när du loggar in (och låser upp) Bitwarden på enheter med långsammare processorer. Vi rekommenderar att du ökar värdet i steg om $INCREMENT$ och sedan testar alla dina enheter.",
+    "message": "Att ställa in dina KDF-iterationer för högt kan resultera i dålig prestanda när du loggar in (och låser upp) VivoKey Vault på enheter med långsammare processorer. Vi rekommenderar att du ökar värdet i steg om $INCREMENT$ och sedan testar alla dina enheter.",
     "placeholders": {
       "increment": {
         "content": "$1",
@@ -1051,7 +1051,7 @@
     "message": "Domänregler"
   },
   "domainRulesDesc": {
-    "message": "Om du har samma inloggningsinformation på flera olika domäner kan du markera webbplatsen som \"motsvarande\". \"Globala\" domäner är de som redan skapats åt dig av Bitwarden."
+    "message": "Om du har samma inloggningsinformation på flera olika domäner kan du markera webbplatsen som \"motsvarande\". \"Globala\" domäner är de som redan skapats åt dig av VivoKey Vault."
   },
   "globalEqDomains": {
     "message": "Globala motsvarande domäner"
@@ -1096,7 +1096,7 @@
     "message": "Kräv tvåstegsverifiering för din organisations användare genom att konfigurera metoder på organisationsnivå."
   },
   "twoStepLoginRecoveryWarning": {
-    "message": "Att aktivera tvåstegsverifiering kan låsa ute dig från ditt Bitwarden-konto permanent. En återställningskod låter dig komma åt ditt konto om du inte längre kan använda din vanliga metod för tvåstegsverifiering (t.ex. om du förlorar din enhet). Bitwardens kundservice kommer inte att kunna hjälpa dig om du förlorar åtkomst till ditt konto. Vi rekommenderar att du skriver ner eller skriver ut återställningskoden och förvarar den på ett säkert ställe."
+    "message": "Att aktivera tvåstegsverifiering kan låsa ute dig från ditt VivoKey Vault-konto permanent. En återställningskod låter dig komma åt ditt konto om du inte längre kan använda din vanliga metod för tvåstegsverifiering (t.ex. om du förlorar din enhet). Bitwardens kundservice kommer inte att kunna hjälpa dig om du förlorar åtkomst till ditt konto. Vi rekommenderar att du skriver ner eller skriver ut återställningskoden och förvarar den på ett säkert ställe."
   },
   "viewRecoveryCode": {
     "message": "Visa återställningskod"
@@ -1197,7 +1197,7 @@
     "message": "Spara formuläret."
   },
   "twoFactorYubikeyWarning": {
-    "message": "På grund av plattformsbegränsningar kan YubiKeys inte användas i alla Bitwarden-applikationer. Du bör aktivera en annan metod för tvåstegsverifiering så att du kan komma åt ditt konto när YubiKeys inte kan användas. Plattformar som stöds:"
+    "message": "På grund av plattformsbegränsningar kan YubiKeys inte användas i alla VivoKey Vault-applikationer. Du bör aktivera en annan metod för tvåstegsverifiering så att du kan komma åt ditt konto när YubiKeys inte kan användas. Plattformar som stöds:"
   },
   "twoFactorYubikeySupportUsb": {
     "message": "Webbvalvet, skrivbordsprogrammet, CLI:n och alla webbläsartillägg på en enhet med en USB-port som kan acceptera din YubiKey."
@@ -1287,7 +1287,7 @@
     "message": "Spara formuläret."
   },
   "twoFactorU2fWarning": {
-    "message": "På grund av plattformsbegränsningar kan FIDO U2F inte användas i alla Bitwarden-applikationer. Du bör aktivera en annan metod för tvåstegsverifiering så att du kan komma åt ditt konto när FIDO U2F inte kan användas. Plattformar som stöds:"
+    "message": "På grund av plattformsbegränsningar kan FIDO U2F inte användas i alla VivoKey Vault-applikationer. Du bör aktivera en annan metod för tvåstegsverifiering så att du kan komma åt ditt konto när FIDO U2F inte kan användas. Plattformar som stöds:"
   },
   "twoFactorU2fSupportWeb": {
     "message": "Webbvalvet och webbläsartillägg på en stationär eller bärbar dator med en U2F-aktiverad webbläsare (Chrome, Opera, Vivaldi eller Firefox med FIDO U2F aktiverat)."
@@ -1507,11 +1507,11 @@
   },
   "accountCredit": {
     "message": "Kontokredit",
-    "description": "Financial term. In the case of Bitwarden, a positive balance means that you owe money, while a negative balance means that you have a credit (Bitwarden owes you money)."
+    "description": "Financial term. In the case of VivoKey Vault, a positive balance means that you owe money, while a negative balance means that you have a credit (VivoKey Vault owes you money)."
   },
   "accountBalance": {
     "message": "Kontosaldo",
-    "description": "Financial term. In the case of Bitwarden, a positive balance means that you owe money, while a negative balance means that you have a credit (Bitwarden owes you money)."
+    "description": "Financial term. In the case of VivoKey Vault, a positive balance means that you owe money, while a negative balance means that you have a credit (VivoKey Vault owes you money)."
   },
   "addCredit": {
     "message": "Lägg till kredit",
@@ -2111,7 +2111,7 @@
     "message": "Bjud in användare"
   },
   "inviteUserDesc": {
-    "message": "Bjud in en ny användare till din organisation genom att ange e-postadressen som tillhör deras Bitwarden-konto nedan. Om de inte redan har ett Bitwarden-konto kommer de uppmanas att skapa ett."
+    "message": "Bjud in en ny användare till din organisation genom att ange e-postadressen som tillhör deras VivoKey Vault-konto nedan. Om de inte redan har ett VivoKey Vault-konto kommer de uppmanas att skapa ett."
   },
   "inviteMultipleEmailDesc": {
     "message": "Du kan bjuda in upp till $COUNT$ användare samtidigt med en kommaseparerad lista av e-postadresser.",
@@ -2567,7 +2567,7 @@
     "message": "Gå med i organisation"
   },
   "joinOrganizationDesc": {
-    "message": "Du har bjudits in att gå med i organisationen ovan. För att acceptera inbjudan måste du logga in eller skapa ett nytt Bitwarden-konto."
+    "message": "Du har bjudits in att gå med i organisationen ovan. För att acceptera inbjudan måste du logga in eller skapa ett nytt VivoKey Vault-konto."
   },
   "inviteAccepted": {
     "message": "Inbjudan accepterades"
@@ -2609,7 +2609,7 @@
     "message": "Om ditt konto finns så har vi skickat ett e-postmeddelande till dig med vidare instruktioner."
   },
   "deleteRecoverConfirmDesc": {
-    "message": "Du har begärt att radera ditt Bitwarden-konto. Klicka på knappen nedan för att bekräfta."
+    "message": "Du har begärt att radera ditt VivoKey Vault-konto. Klicka på knappen nedan för att bekräfta."
   },
   "myOrganization": {
     "message": "Min organisation"
@@ -2774,7 +2774,7 @@
     "message": "Vi har övergått till större krypteringsnycklar som ger bättre säkerhet och tillgång till nyare funktioner. Att uppdatera din krypteringsnyckel är snabbt och smidigt. Skriv bara in ditt huvudlösenord nedan. Denna uppdatering kommer så småningom bli obligatorisk."
   },
   "updateEncryptionKeyWarning": {
-    "message": "Efter att ha uppdaterat din krypteringsnyckel, måste du logga ut och in igen i alla Bitwarden-program som du använder (t.ex. mobilappen och webbläsartillägget). Att inte logga ut och in igen (vilket hämtar din nya krypteringsnyckel) kan resultera i datakorruption. Vi kommer försöka logga ut dig automatiskt, men det kan vara fördröjt."
+    "message": "Efter att ha uppdaterat din krypteringsnyckel, måste du logga ut och in igen i alla VivoKey Vault-program som du använder (t.ex. mobilappen och webbläsartillägget). Att inte logga ut och in igen (vilket hämtar din nya krypteringsnyckel) kan resultera i datakorruption. Vi kommer försöka logga ut dig automatiskt, men det kan vara fördröjt."
   },
   "subscription": {
     "message": "Abonnemang"
@@ -2889,7 +2889,7 @@
     "message": "Svagt huvudlösenord"
   },
   "weakMasterPasswordDesc": {
-    "message": "Huvudlösenordet du har valt är svagt. Du bör använda ett starkt huvudlösenord (eller en lösenordsfras) för att skydda ditt Bitwarden-konto ordentligt. Är du säker på att du vill använda detta huvudlösenord?"
+    "message": "Huvudlösenordet du har valt är svagt. Du bör använda ett starkt huvudlösenord (eller en lösenordsfras) för att skydda ditt VivoKey Vault-konto ordentligt. Är du säker på att du vill använda detta huvudlösenord?"
   },
   "rotateAccountEncKey": {
     "message": "Rotera även mitt kontos krypteringsnyckel"

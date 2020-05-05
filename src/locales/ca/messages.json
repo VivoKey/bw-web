@@ -5,7 +5,7 @@
     "placeholders": {
       "app_name": {
         "content": "$1",
-        "example": "Bitwarden"
+        "example": "VivoKey Vault"
       }
     }
   },
@@ -878,7 +878,7 @@
     "message": "Torneu a iniciar sessió."
   },
   "logBackInOthersToo": {
-    "message": "Torneu a iniciar la sessió. Si esteu utilitzant altres aplicacions Bitwarden, tanqueu-les i torneu-les a obrir també."
+    "message": "Torneu a iniciar la sessió. Si esteu utilitzant altres aplicacions VivoKey Vault, tanqueu-les i torneu-les a obrir també."
   },
   "changeMasterPassword": {
     "message": "Canvia la contrasenya mestra"
@@ -914,7 +914,7 @@
     }
   },
   "kdfIterationsWarning": {
-    "message": "L'establiment de massa iteracions de KDF pot provocar un rendiment deficient en els inicis de sessió (i desbloqueig) de Bitwarden en dispositius amb CPUs lentes. Recomanem que augmenteu el valor en increments de $INCREMENT$ i, a continuació, proveu-ho en tots els vostres dispositius.",
+    "message": "L'establiment de massa iteracions de KDF pot provocar un rendiment deficient en els inicis de sessió (i desbloqueig) de VivoKey Vault en dispositius amb CPUs lentes. Recomanem que augmenteu el valor en increments de $INCREMENT$ i, a continuació, proveu-ho en tots els vostres dispositius.",
     "placeholders": {
       "increment": {
         "content": "$1",
@@ -1051,7 +1051,7 @@
     "message": "Regles de domini"
   },
   "domainRulesDesc": {
-    "message": "Si teniu el mateix inici de sessió en diversos dominis web diferents, podeu marcar el lloc web com a \"equivalent\". Els dominis \"globals\" són els que Bitwarden ja ha creat per a vosaltres."
+    "message": "Si teniu el mateix inici de sessió en diversos dominis web diferents, podeu marcar el lloc web com a \"equivalent\". Els dominis \"globals\" són els que VivoKey Vault ja ha creat per a vosaltres."
   },
   "globalEqDomains": {
     "message": "Dominis equivalents globals"
@@ -1096,7 +1096,7 @@
     "message": "Demana un inici de sessió en dues passes per als usuaris de la vostra organització mitjançant la configuració de proveïdors a nivell de l'organització."
   },
   "twoStepLoginRecoveryWarning": {
-    "message": "Si habiliteu l'inici de sessió en dues passes, pot bloquejar-vos de manera definitiva el compte de Bitwarden. Un codi de recuperació us permet accedir al vostre compte en cas que no pugueu utilitzar el proveïdor d'inici de sessió en dues passes (p. Ex. Perdre el dispositiu). El suport de Bitwarden no podrà ajudar-vos si perdeu l'accés al vostre compte. Us recomanem que escriviu o imprimiu el codi de recuperació i el mantingueu en un lloc segur."
+    "message": "Si habiliteu l'inici de sessió en dues passes, pot bloquejar-vos de manera definitiva el compte de VivoKey Vault. Un codi de recuperació us permet accedir al vostre compte en cas que no pugueu utilitzar el proveïdor d'inici de sessió en dues passes (p. Ex. Perdre el dispositiu). El suport de VivoKey Vault no podrà ajudar-vos si perdeu l'accés al vostre compte. Us recomanem que escriviu o imprimiu el codi de recuperació i el mantingueu en un lloc segur."
   },
   "viewRecoveryCode": {
     "message": "Mostra el codi de recuperació"
@@ -1197,7 +1197,7 @@
     "message": "Guardeu el formulari."
   },
   "twoFactorYubikeyWarning": {
-    "message": "A causa de les limitacions de la plataforma, les YubiKeys no es poden utilitzar en totes les aplicacions de Bitwarden. Heu d'habilitar un altre proveïdor d'inici de sessió en dues passes per accedir al compte quan no es puguen utilitzar les YubiKeys. Plataformes compatibles:"
+    "message": "A causa de les limitacions de la plataforma, les YubiKeys no es poden utilitzar en totes les aplicacions de VivoKey Vault. Heu d'habilitar un altre proveïdor d'inici de sessió en dues passes per accedir al compte quan no es puguen utilitzar les YubiKeys. Plataformes compatibles:"
   },
   "twoFactorYubikeySupportUsb": {
     "message": "Caixa forta web, aplicació d'escriptori, CLI i totes les extensions de navegador en un dispositiu amb un port USB que puga acceptar la vostra YubiKey."
@@ -1239,7 +1239,7 @@
     "message": "Deshabilita totes les claus"
   },
   "twoFactorDuoDesc": {
-    "message": "Introduïu la informació de l'aplicació Bitwarden des del vostre tauler d'Administrador de Duo."
+    "message": "Introduïu la informació de l'aplicació VivoKey Vault des del vostre tauler d'Administrador de Duo."
   },
   "twoFactorDuoIntegrationKey": {
     "message": "Clau d'integració"
@@ -1287,7 +1287,7 @@
     "message": "Guardeu el formulari."
   },
   "twoFactorU2fWarning": {
-    "message": "A causa de les limitacions de la plataforma, FIDO U2F no es pot utilitzar en totes les aplicacions de Bitwarden. Heu d'habilitar un altre proveïdor d'inici de sessió en dues passes perquè pugueu accedir al vostre compte quan FIDO U2F no es puga utilitzar. Plataformes compatibles:"
+    "message": "A causa de les limitacions de la plataforma, FIDO U2F no es pot utilitzar en totes les aplicacions de VivoKey Vault. Heu d'habilitar un altre proveïdor d'inici de sessió en dues passes perquè pugueu accedir al vostre compte quan FIDO U2F no es puga utilitzar. Plataformes compatibles:"
   },
   "twoFactorU2fSupportWeb": {
     "message": "Caixa forta web i extensions de navegador en un escriptori/portàtil amb un navegador compatible amb U2F (Chrome, Opera, Vivaldi, o Firefox amb FIDO U2F activat)."
@@ -1302,7 +1302,7 @@
     "message": "Hi ha hagut un problema en llegir la clau de seguretat. Torneu-ho a provar."
   },
   "twoFactorRecoveryYourCode": {
-    "message": "El codi de recuperació d'inici de sessió en dues passes de Bitwarden"
+    "message": "El codi de recuperació d'inici de sessió en dues passes de VivoKey Vault"
   },
   "twoFactorRecoveryNoCode": {
     "message": "Encara no heu habilitat cap proveïdor d'inici de sessió en dues passes. Després d'activar-lo, podeu consultar ací el codi de recuperació."
@@ -1396,7 +1396,7 @@
     "message": "Informe de contrasenyes poc segures"
   },
   "weakPasswordsReportDesc": {
-    "message": "Les contrasenyes poc segures poden ser descobertes fàcilment per pirates informàtics amb eines automatitzades que s'utilitzen per trencar contrasenyes. El generador de contrasenyes Bitwarden us pot ajudar a crear contrasenyes fortes."
+    "message": "Les contrasenyes poc segures poden ser descobertes fàcilment per pirates informàtics amb eines automatitzades que s'utilitzen per trencar contrasenyes. El generador de contrasenyes VivoKey Vault us pot ajudar a crear contrasenyes fortes."
   },
   "weakPasswordsFound": {
     "message": "S'han trobat contrasenyes poc segures"
@@ -1507,11 +1507,11 @@
   },
   "accountCredit": {
     "message": "Compte de crèdit",
-    "description": "Financial term. In the case of Bitwarden, a positive balance means that you owe money, while a negative balance means that you have a credit (Bitwarden owes you money)."
+    "description": "Financial term. In the case of VivoKey Vault, a positive balance means that you owe money, while a negative balance means that you have a credit (VivoKey Vault owes you money)."
   },
   "accountBalance": {
     "message": "Saldo del compte",
-    "description": "Financial term. In the case of Bitwarden, a positive balance means that you owe money, while a negative balance means that you have a credit (Bitwarden owes you money)."
+    "description": "Financial term. In the case of VivoKey Vault, a positive balance means that you owe money, while a negative balance means that you have a credit (VivoKey Vault owes you money)."
   },
   "addCredit": {
     "message": "Afegeix crèdit",
@@ -2111,7 +2111,7 @@
     "message": "Convida usuari"
   },
   "inviteUserDesc": {
-    "message": "Convida un nou usuari a la vostra organització introduint l'adreça electrònica del compte de Bitwarden a continuació. Si encara no tenen un compte de Bitwarden, se us demanarà que creeu un compte nou."
+    "message": "Convida un nou usuari a la vostra organització introduint l'adreça electrònica del compte de VivoKey Vault a continuació. Si encara no tenen un compte de VivoKey Vault, se us demanarà que creeu un compte nou."
   },
   "inviteMultipleEmailDesc": {
     "message": "Podeu convidar fins a $COUNT$ usuaris alhora separant per comes les adreces de correu electrònic.",
@@ -2567,7 +2567,7 @@
     "message": "Uneix-te a l'organització"
   },
   "joinOrganizationDesc": {
-    "message": "Heu estat convidat a unir-vos a l'organització llistada més amunt. Per acceptar la invitació, heu d'iniciar sessió o crear un compte nou a Bitwarden."
+    "message": "Heu estat convidat a unir-vos a l'organització llistada més amunt. Per acceptar la invitació, heu d'iniciar sessió o crear un compte nou a VivoKey Vault."
   },
   "inviteAccepted": {
     "message": "Invitació acceptada"
@@ -2609,7 +2609,7 @@
     "message": "Si el vostre compte existeix, rebreu un correu electrònic amb més instruccions."
   },
   "deleteRecoverConfirmDesc": {
-    "message": "Heu sol·licitat suprimir el compte de Bitwarden. Feu clic al botó seguüent per confirmar-ho."
+    "message": "Heu sol·licitat suprimir el compte de VivoKey Vault. Feu clic al botó seguüent per confirmar-ho."
   },
   "myOrganization": {
     "message": "La meua organització"
@@ -2774,7 +2774,7 @@
     "message": "Hem canviat a claus de xifratge més grans que proporcionen una millor seguretat i accés a característiques més noves. L'actualització de la vostra clau de xifratge és ràpida i senzilla. Només cal que introduïu la vostra contrasenya mestra a continuació. Aquesta actualització es convertirà en obligatòria en qualsevol moment."
   },
   "updateEncryptionKeyWarning": {
-    "message": "Després d'actualitzar la vostra clau de xifratge, heu de tancar la sessió i tornar a entrar a totes les aplicacions de Bitwarden que esteu utilitzant actualment (com ara l'aplicació mòbil o les extensions del navegador). Si no es tanca i torna a iniciar la sessió (la qual descarrega la vostra nova clau de xifratge) pot provocar corrupció en les dades. Intentarem registrar-vos automàticament, però, es pot retardar."
+    "message": "Després d'actualitzar la vostra clau de xifratge, heu de tancar la sessió i tornar a entrar a totes les aplicacions de VivoKey Vault que esteu utilitzant actualment (com ara l'aplicació mòbil o les extensions del navegador). Si no es tanca i torna a iniciar la sessió (la qual descarrega la vostra nova clau de xifratge) pot provocar corrupció en les dades. Intentarem registrar-vos automàticament, però, es pot retardar."
   },
   "subscription": {
     "message": "Subscripció"
@@ -2889,7 +2889,7 @@
     "message": "Contrasenya mestra poc segura"
   },
   "weakMasterPasswordDesc": {
-    "message": "La contrasenya mestra que heu triat és poc segura. Heu d'utilitzar una contrasenya mestra segura (o una frase de pas) per protegir correctament el vostre compte de Bitwarden. Esteu segur que voleu utilitzar aquesta contrasenya mestra?"
+    "message": "La contrasenya mestra que heu triat és poc segura. Heu d'utilitzar una contrasenya mestra segura (o una frase de pas) per protegir correctament el vostre compte de VivoKey Vault. Esteu segur que voleu utilitzar aquesta contrasenya mestra?"
   },
   "rotateAccountEncKey": {
     "message": "Rota també la clau de xifratge del meu compte"
@@ -2933,7 +2933,7 @@
     "message": "Clau de l'API"
   },
   "apiKeyDesc": {
-    "message": "La vostra clau API es pot utilitzar per autenticar-se a l'API pública de Bitwarden."
+    "message": "La vostra clau API es pot utilitzar per autenticar-se a l'API pública de VivoKey Vault."
   },
   "apiKeyRotateDesc": {
     "message": "La rotació de la clau de l'API invalidarà la clau anterior. Podeu rotar la clau d'API si creu que la clau actual ja no és segura d'utilitzar."
